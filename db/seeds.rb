@@ -5,8 +5,51 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+categories = ["Jobs", "Projects", "Other"]
+
 10.times do 
   User.create(
-    username: 
+    username: Faker::GameOfThrones.character,
+    password: "password",
+    testimonal: Faker::Lorem.sentence(2)
+  )
+
+  Post.create(
+    title: Faker::HarryPotter.quote,
+    body: Faker::Lorem.sentence(10),
+    category: categories.sample,
+    user_id: rand(1..10) 
+  )
+
+  Project.create(
+    title: Faker::App.name,
+    description: Faker::Lorem.sentence(1),
+    url: Faker::Internet.url
+  )
+
+  UserProject.create(
+    user_id: rand(1..10),
+    project_id: rand(1..10)
+  )
+end
+
+
+20.times do 
+  Job.create(
+    title: Faker::Job.title,
+    company_id: rand(1..20),
+    user_id: rand(1..10)
+  )
+
+  Company.create(
+    name: Faker::Company.name,
+    description: Faker::Lorem.sentence(1),
+    url: Faker::Internet.url
+  )
+
+  CompanyUser.create(
+    user_id: rand(1..10),
+    company_id: rand(1..20)
   )
 end 
+
