@@ -4,9 +4,9 @@ class User < ApplicationRecord
   has_many :posts 
   has_many :jobs
   has_many :user_projects 
-  has_many :companies_users
+  has_many :company_users
   has_many :projects, through: :user_projects
-  has_many :companies, through: :companies_users
+  has_many :companies, through: :company_users
 
   has_secure_password
 
