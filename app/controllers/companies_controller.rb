@@ -5,11 +5,11 @@ class CompaniesController < ApplicationController
   end
 
   def new
-    
+    @company = Company.new
   end
 
   def create
-    
+    @company = Company.create(company_params)
   end
 
   def edit
@@ -19,4 +19,11 @@ class CompaniesController < ApplicationController
   def destroy
     
   end
+
+  private 
+
+  def company_params
+    params.fetch(:company).permit(:name, :description, :logo, :url)
+  end  
+
 end
