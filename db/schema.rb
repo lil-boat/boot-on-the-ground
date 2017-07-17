@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170717193128) do
     t.string "body", null: false
     t.integer "post_id"
     t.integer "user_id"
-    t.integer "likes_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
