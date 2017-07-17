@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 categories = ["Jobs", "Projects", "Other"]
+likes = ["Post", "Comment", "Project"]
+
 
 10.times do 
   User.create(
@@ -50,6 +52,18 @@ end
   CompanyUser.create(
     user_id: rand(1..10),
     company_id: rand(1..20)
+  )
+
+  Comment.create(
+    body: Faker::Lorem.sentence(1),
+    post_id: rand(1..10),
+    user_id: rand(1..10)
+  )
+
+  Like.create(
+    likeable_type: likes.sample,
+    likeable_id: rand(1..10),
+    user_id: rand(1..10)
   )
 end 
 
