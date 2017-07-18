@@ -12,8 +12,13 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.create(company_params)
-    redirect_to companies_path
+    @company = Company.new(company_params)
+    if @company.save
+      redirect_to companies_path
+    else 
+      @errors = @company.errors.full_messages
+      render 'new'
+    end
   end
 
   def edit
@@ -22,8 +27,12 @@ class CompaniesController < ApplicationController
 
   def update
     @company = Company.find(params[:id])
-    @company.update_attributes(company_params)
-    redirect_to '/companies'
+    if  @company.update_attributes(company_params)
+      redirect_to '/companies'
+    else 
+      @errors = @company.errors.full_messages
+      render 'edit'
+    end
   end
 
   def destroy
