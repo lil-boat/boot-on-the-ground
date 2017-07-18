@@ -1,13 +1,10 @@
 
 
-<%= form_for @post do |f| %>
-<%= f.label :category %>
-<%= f.select :category, options_for_select(["Job", "Projects", "Other"]) %>
-<%= f.label :Title %>
-<%= f.text_area :title %>
-<%= f.label :body %>
-<%= f.text_area :body %>
+  <%= form_for @post do |f| %>
+  <%= f.select (:category, ["Job", "Projects", "Other"], {}, { :class => 'input-field' })%>
 
-<%= f.submit "Save" %>
-<% end %>
-
+    <%= f.text_field :title, placeholder: 'Title', :class => 'input-field' %>
+    <%= f.text_area :body, placeholder: 'content...', :class => 'input-field' %>
+    <%= f.submit "Save", :class => 'form-submit-button' %>
+    <% end %>
+  </div>

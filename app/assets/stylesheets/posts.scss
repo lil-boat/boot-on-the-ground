@@ -2,8 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .comment-container {
   margin-left: 2%;
   color: grey;
+}
+
+.form-container {
+  margin: auto;
+  color: #DEF2F1;
+  width: 400px;
+  background-color: #17252A;
+  border-radius: 5px;
+
+}
+
+.form-container h2 {
+  padding-top: 30px;
+  text-align: center;
+ 
+
+}
+
+.input-field{
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  padding: 10px;
+  width: 276px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 14pt;
+  color: #DEF2F1;
+  border: 1px solid #DEF2F1;
+  background-color: #17252A;
+
+}
+
+.form-submit-button{
+  
+  margin-left:50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 300px;
+  font-size: 18pt;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #3FBFB8;
+  &:hover {
+    background-color: #3AAFA9;
+  }
+
+
 }
