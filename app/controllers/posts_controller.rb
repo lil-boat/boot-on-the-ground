@@ -10,7 +10,20 @@ class PostsController < ApplicationController
   end
 
   def create
-    
+    @post = Post.new(post_params)
+    p "***************"
+    p params[:post]
+    if @post.save
+      redirect_to "posts#index"
+      p"&&&&&&&&&&&&&&&&"
+      p @person
+    else
+      @errors = @post.errors.full_messages
+      p "$$$$$$$$$$$$"
+      p "didn't save"
+      render 'new'
+
+    end 
   end
 
   def edit
@@ -23,5 +36,11 @@ class PostsController < ApplicationController
 
   def destroy
     
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:category, :title, :body)
   end
 end
