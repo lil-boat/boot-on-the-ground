@@ -13,7 +13,7 @@ likes = ["Post", "Comment", "Project"]
   User.create(
     username: Faker::GameOfThrones.character,
     password: "password",
-    testimonal: Faker::Lorem.sentence(2)
+    testimonial: Faker::Lorem.sentence(2)
   )
 
   Post.create(
