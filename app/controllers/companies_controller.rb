@@ -8,6 +8,9 @@ class CompaniesController < ApplicationController
     @company = Company.new
   end
 
+  def show
+  end
+
   def create
     @company = Company.create(company_params)
     redirect_to companies_path
@@ -20,7 +23,7 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find(params[:id])
     @company.update_attributes(company_params)
-    redirect_to companies_path
+    redirect_to '/companies'
   end
 
   def destroy
