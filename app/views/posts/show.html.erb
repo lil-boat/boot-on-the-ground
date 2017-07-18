@@ -1,1 +1,13 @@
-<h1>post show will go here</h1>
+<h1>individual post  will go here</h1>
+<br>
+<h2><%=  @post.title %></h2>
+  <p><%= @post.body %></p>
+  <p><b>-<%= @post.user.username %> </b></p>
+  <div class="comment-container">
+    <%if @post.comments.length != 0 %>
+        <h3>Comments</h3>
+          <%@post.comments.each do |comment| %>
+            <p><%= comment.body %>(likes: <%= comment.likes.count %>)- <%= comment.user.username %><p>
+          <% end %>
+        <% end %>
+  </div>

@@ -12,12 +12,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    p "***************"
-    p params[:post]
     if @post.save
       redirect_to posts_path
-      p"&&&&&&&&&&&&&&&&"
-      p @post
     else
       @errors = @post.errors.full_messages
       render 'new'
@@ -30,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    
+    @post = Post.find(params[:id])
   end
 
   def destroy
