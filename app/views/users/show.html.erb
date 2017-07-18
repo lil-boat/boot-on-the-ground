@@ -1,1 +1,12 @@
-<h1>profile page</h1>
+<h1>Profile Page</h1>
+<%= @user.username %><br><br>
+
+Testimonial:
+<%= @user.testimonial %><br><br>
+
+Previous Titles:<br>
+<% if @job %>
+<% @job.each do |job| %>
+<%= job.title %><br>
+<% end %>
+<% end %>
