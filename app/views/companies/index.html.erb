@@ -1,8 +1,8 @@
 <h1>Here the companies: </h1>
 
 	<% @companies.each do |comp| %> 	
-	<%= comp.name %> 
-	<%= link_to "Edit Company", edit_company_path(comp)%>
-  <%= link_to 'Delete Posting', company_path(comp), method: :delete %>
+		<%= comp.name %> 
+		<%= link_to "Edit Company", edit_company_path(comp)%>
+	  <%= link_to 'Delete Posting', company_path(comp), method: :delete %>
   <br>
 	<% end %> 

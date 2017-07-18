@@ -1,11 +1,13 @@
-<%= form_for @company do |f| %>
-	<%= f.label "Company Name:" %>
-  <%= f.text_field :name %><br>
-	<%= f.label "Company Description:" %>
-  <%= f.text_area :description, size: "50x5" %> <br>
-  <%= f.label "Company Logo:" %> 
-  <%= f.file_field :avatar %> <br>
-  <%= f.label "Company Link:" %>
-  <%= f.text_field :url %><br>
-  <%= f.submit %>
-<% end %>
+<div class="form-container"> 
+	<%= form_for @company do |f| %>
+		<%= f.label "Company Name:" %>
+	  <%= f.text_field :name %><br>
+		<%= f.label "Company Description:" %>
+	  <%= f.text_area :description, size: "50x5" %> <br>
+	  <%= f.label "Company Logo:" %> 
+	  <%= f.file_field :avatar %> <br>
+	  <%= f.label "Company Link:" %>
+	  <%= f.text_field :url %><br>
+	  <%= f.submit %>
+	<% end %>
+</div>
