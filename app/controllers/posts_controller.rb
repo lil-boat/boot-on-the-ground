@@ -15,13 +15,11 @@ class PostsController < ApplicationController
     p "***************"
     p params[:post]
     if @post.save
-      redirect_to "posts#index"
+      redirect_to posts_path
       p"&&&&&&&&&&&&&&&&"
-      p @person
+      p @post
     else
       @errors = @post.errors.full_messages
-      p "$$$$$$$$$$$$"
-      p "didn't save"
       render 'new'
 
     end 
