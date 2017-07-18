@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
       render 'new'
     end 
   end
-  
+
 
   def edit
     @project = Project.find(params[:id])
