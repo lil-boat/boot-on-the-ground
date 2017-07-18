@@ -1,1 +1,9 @@
-<h1>all companies here</h1>
+<div class="container">
+  <h1>companies</h1>
+  <% @companies.each do |company| %>
+    <h2><%= company.name %></h2>
+      <% company.users.each do |employee| %>
+        <%= link_to employee.username, user_path(employee) %>
+      <% end  %>
+    <% end  %>
+</div>
