@@ -19,11 +19,8 @@ class CompaniesController < ApplicationController
 
   def update
     @company = Company.find(params[:id])
-     if @company.update(params[:company].permit(:name, :description, :logo, :url ))
-      redirect_to companies_path
-    else
-      render 'edit'
-    end 
+    @company.update_attributes(company_params)
+    redirect_to companies_path
   end
 
   def destroy
