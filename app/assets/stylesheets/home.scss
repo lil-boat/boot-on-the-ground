@@ -45,8 +45,50 @@
 /*ABOUT*/
 
 .about {
-  height: 500px;
   background-color: #00cc99;
+}
+
+.descriptions {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.first-description {
+  padding-top: 100px;
+  border-bottom: solid 2px white;
+  p {
+    letter-spacing: 0.225em;
+    font-size: 27px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 15px;
+  }
+}
+
+.second-description {
+  padding-top: 15px;
+  p {
+    letter-spacing: 0.225em;
+    font-size: 27px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 50px;
+  }
+}
+
+.dbc-image {
+  margin: auto;
+  height: 206px;
+  width: 500px;
+  background-image: url("http://www.sandiegobusiness.org/sites/default/files/images/DBC_S_2C_RGB_500w.jpg");
+  margin-bottom: 10px;
+}
+
+.blank-space {
+  height: 100px;
 }
 
 /*JOBS*/
