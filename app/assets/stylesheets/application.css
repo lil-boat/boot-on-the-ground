@@ -14,9 +14,14 @@
  *= require_self
  */
 
-html,
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -24,3 +29,7 @@ body {
   width: 95%;
   margin: auto;
 }
+
+
+
+

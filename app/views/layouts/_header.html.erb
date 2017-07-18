@@ -1,6 +1,6 @@
 <div class="header">
   <p class="boots-title">boots on the ground</p>
-  <% if current_user %>
+  <% if logged_in? %>
     <p class="logout home-links"><%= link_to "logout", session_path(current_user), :method => :delete %></p>
   <% else %>
     <p class="login"> <%= link_to "login", new_session_path %> </p>

@@ -9,7 +9,9 @@
   </head>
 
   <body>
-  <%= render partial: '/layouts/header' %>
+  <% if !@no_header %>
+    <%= render partial: '/layouts/header' %>
+  <% end %>
     <%= yield %>
   </body>
 </html>
