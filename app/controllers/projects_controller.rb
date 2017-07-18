@@ -5,12 +5,22 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new
+    if current_user
+      @project = Project.new
+    else
+      redirect_to root_path
+    end 
   end
 
   def create
-    
+    @project = Project.new(project_params)
+    if @project.save
+      redirect_to root_path
+    else
+      render 'new'
+    end 
   end
+
 
   def edit
     @project = Project.find(params[:id])
