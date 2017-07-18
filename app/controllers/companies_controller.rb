@@ -12,8 +12,13 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.create(company_params)
-    redirect_to companies_path
+    @company = Company.new(company_params)
+    if @company.save
+      redirect_to companies_path
+    else 
+      @errors = @company.errors.full_messages
+      render 'new'
+    end
   end
 
   def edit
