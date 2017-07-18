@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.create(company_params)
+    redirect_to '/companies'
   end
 
   def edit
