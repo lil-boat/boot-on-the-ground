@@ -37,9 +37,47 @@
   padding-top: 40px;
 }
 
-.testimonials {
-  height: 500px;
-  width: 100%;
+.log-in-home-button {
+  font-size: 25px;
+  width: 150px;
+  height: 50px;
+  background-color: #3fbfb8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  cursor: pointer;
+}
+
+.log-button {
+  width: 160px;
+  margin: 30px auto;
+}
+
+.explore {
+  color: white;
+  font-size: 25px;
+  width: 200px;
+  font-weight: 800;
+  text-align: center;
+  margin: 150px auto 0px auto;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.arrow {
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  width: 100px;
+  margin: 20px auto;
+  text-align: center;
+
+  .fa-arrow-down {
+    color: white;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .carousel {
@@ -141,4 +179,32 @@
 .boots-in-the-world {
   height: 600px;
   background-color: #236361;
+}
+
+/*MEDIA QUEREY*/
+
+@media (max-width: 1271px) {
+  .right-desc {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 1153px) {
+  .jobs,
+  .projects,
+  .testimonials {
+    height: 700px;
+  }
+  .right-desc {
+    margin-right: 0;
+  }
+
+  .section-description {
+    margin: 6em 25% 6em 25%;
+  }
+  .carousel {
+    margin-left: 25%;
+    margin-right: 25%;
+    float: right;
+  }
 }

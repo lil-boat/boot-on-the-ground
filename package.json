@@ -1,5 +1,7 @@
 {
   "name": "boots-on-the-ground",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-ujs": "^1.2.2"
+  }
 }
