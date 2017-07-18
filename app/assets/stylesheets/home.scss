@@ -42,10 +42,34 @@
   width: 100%;
 }
 
+.carousel {
+  height: 400px;
+  width: 550px;
+  margin: 0;
+  background-image: url("https://unsplash.it/1250/800?image=672");
+  display: inline-block;
+}
+
+.section-description {
+  width: 600px;
+  text-align: center;
+  display: inline-block;
+  letter-spacing: 0.225em;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 6em auto;
+}
+
+.right-desc {
+  margin-right: 6em;
+}
+
 /*ABOUT*/
 
 .about {
-  background-color: #00cc99;
+  background-color: #3aafa9;
 }
 
 .descriptions {
@@ -94,17 +118,27 @@
 /*JOBS*/
 
 .jobs {
-  height: 500px;
+  height: 400px;
+  background-color: rgba(23, 37, 42, .952);
 }
 
 /*PROJECTS*/
 
 .projects {
-  height: 500px;
+  height: 400px;
+  background-color: rgba(23, 37, 42, .97);
 }
 
 /*TESTIMONIALS*/
 
 .testimonials {
-  height: 500px;
+  height: 400px;
+  background-color: #17252a;
+}
+
+/*BOOTS IN THE WORLD*/
+
+.boots-in-the-world {
+  height: 600px;
+  background-color: #236361;
 }
