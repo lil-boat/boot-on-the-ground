@@ -5,29 +5,63 @@
 .big-picture {
   height: 100vh;
   width: 100%;
-  background-image: url("https://unsplash.it/1250/800?image=817");
+  background-image: url("https://unsplash.it/1250/800?image=672");
   background-attachment: fixed;
   background-repeat: none;
   background-size: cover;
-  h1 {
-    color: white;
-    font-size: 40px;
-    height: 40%;
-    line-height: 500px;
-    width: 800px;
-    margin: auto;
-    text-align: center;
-    text-shadow: 0.5px 0.5px 0.5px #000;
-  }
-  p {
-    color: white;
-    font-size: 30px;
-    width: 800px;
-    margin: auto;
-    text-align: center;
-    text-shadow: 0.5px 0.5px 0.5px #000;
-  }
 }
+
+/*bus 672*/
+/*building feet 817*/
+
+.page-title {
+  color: white;
+  font-size: 50px;
+  height: 50px;
+  width: 950px;
+  margin: auto;
+  padding-top: 250px;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.page-description {
+  color: white;
+  font-size: 25px;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  text-shadow: 1.5px 1.5px 1.5px black;
+  padding-top: 40px;
+}
+
+.testimonials {
+  height: 500px;
+  width: 100%;
+}
+
+/*ABOUT*/
+
+.about {
+  height: 500px;
+  background-color: #00cc99;
+}
+
+/*JOBS*/
+
+.jobs {
+  height: 500px;
+}
+
+/*PROJECTS*/
+
+.projects {
+  height: 500px;
+}
+
+/*TESTIMONIALS*/
 
 .testimonials {
   height: 500px;
