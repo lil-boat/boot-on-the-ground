@@ -1,1 +1,9 @@
 <h1>all jobs</h1>
+  <% @users.each do |user| %>
+  <div class="user-box">
+    <p><%= user.username %></p>
+    <% user.jobs.each do |job| %>
+      <p><%= job.title %>, at <%= job.company.name %></p>
+    <% end  %>
+  </div>
+  <% end  %>
