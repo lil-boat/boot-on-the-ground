@@ -5,5 +5,9 @@
       <% company.users.each do |employee| %>
         <%= link_to employee.username, user_path(employee) %>
       <% end  %>
+      <%= link_to "Edit Company", edit_company_path(comp)%>
+    <%= link_to 'Delete Posting', company_path(comp), method: :delete %>
     <% end  %>
 </div>
+
+
