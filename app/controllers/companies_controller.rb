@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
           format.html { redirect_to companies_path, notice: "Company Created" }
           format.json { render :index }
           format.js
-      else 
+      else
           format.html { render :new}
           format.json { render json: @company.errors }
           format.js
