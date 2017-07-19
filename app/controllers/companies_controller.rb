@@ -43,12 +43,11 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find(params[:id])
     @company.destroy
-
     respond_to do |format|
-      format.html { redirect_to companies_path }
+      format.html { redirect_to companies_path}
       format.json { head :no_content }
-      format.js   { render :layout => false }
-   end
+      format.js
+    end
   end
 
   private 
