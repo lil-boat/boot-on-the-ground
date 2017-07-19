@@ -9,26 +9,21 @@
 
 /****** Form css ******/
 
-
-
 .form-container {
   margin: auto;
-  color: #DEF2F1;
+  color: #def2f1;
   width: 400px;
-  background-color: #17252A;
+  background-color: #17252a;
   border-radius: 5px;
-
 }
 
 .form-container h2 {
   padding-top: 30px;
-  text-align: center;  
+  text-align: center;
   margin-bottom: 25px;
- 
-
 }
 
-.input-field{
+.input-field {
   display: block;
   margin-left: 50px;
   margin-right: 50px;
@@ -38,10 +33,9 @@
   border-style: none;
   border-radius: 5px;
   font-size: 14pt;
-  color: #DEF2F1;
-  border: 1px solid #DEF2F1;
-  background-color: #17252A;
-
+  color: #def2f1;
+  border: 1px solid #def2f1;
+  background-color: #17252a;
 }
 
 .input-field-dropdown {
@@ -54,17 +48,16 @@
   border-style: none;
   border-radius: 5px;
   font-size: 14pt;
-  color: #DEF2F1;
-  border: 1px solid #DEF2F1;
-  background-color: #17252A;
+  color: #def2f1;
+  border: 1px solid #def2f1;
+  background-color: #17252a;
 }
 
 select option {
-  background-color:  red;
+  background-color: red;
 }
-.form-submit-button{
-  
-  margin-left:50px;
+.form-submit-button {
+  margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
   padding: 10px;
@@ -73,40 +66,37 @@ select option {
   color: white;
   border-style: none;
   border-radius: 5px;
-  background-color: #3FBFB8;
+  background-color: #3fbfb8;
   &:hover {
-    background-color: #3AAFA9;
+    background-color: #3aafa9;
   }
-
 }
 /****** message board css ******/
 
-.post-container{
+.post-container {
   margin: auto;
   margin-bottom: 10px;
   width: 500px;
   border-radius: 5px;
   background-color: white;
-  
 }
 
-.post-author-info{
+.post-author-info {
   margin: auto;
   width: 480px;
   padding-top: 10px;
   padding-bottom: 10px;
-  
-  
 }
 
-.author-picture{
+.author-picture {
   display: inline-block;
   height: 50px;
   width: 50px;
-  background-color: lightgrey;
+  /*background-color: lightgrey;*/
+  background-image: url("https://unsplash.it/50/50?image=62");
 }
 
-.author-name{
+.author-name {
   display: inline-block;
   color: #236361;
   font-weight: bold;
@@ -120,61 +110,56 @@ select option {
   margin: auto;
   width: 480px;
   padding-bottom: 10px;
-  font-size: 12pt
-
+  font-size: 12pt;
 }
 
-.like-and-comment-section{
+.like-and-comment-section {
   margin: auto;
   width: 480px;
   padding-bottom: 10px;
-  
+
   color: #236361;
 }
 
-.like-and-comment-section img{
+.like-and-comment-section img {
   width: 35px;
 }
 
-.like-and-comment-section p{
-  color: #DEF2F1;
+.like-and-comment-section p {
+  color: #def2f1;
   display: inline-block;
   padding-top: 16px;
   vertical-align: top;
 }
 
-.comment-container{
+.comment-container {
   width: 500px;
-  background-color: rgb(246,247,249);
+  background-color: rgb(246, 247, 249);
   padding-bottom: 10px;
 }
 
-
-.individual-comment-container{
+.individual-comment-container {
   margin: auto;
   width: 480px;
   border-top: 1px solid rgba(35, 99, 97, 0.5);
-  background-color: rgb(246,247,249);
-
-
+  background-color: rgb(246, 247, 249);
 }
 
 .post-comment {
   width: 500px;
-
 }
 
-.comment-author-picture{
+.comment-author-picture {
   display: inline-block;
   margin-left: 10px;
   margin-top: 5px;
   height: 40px;
   width: 40px;
-  background-color: lightgrey;
-
+  /*background-color: lightgrey;*/
+  background-image: url("https://unsplash.it/50/50?image=162");
 }
 
-.comment-author-name{
+.comment-author-name {
   display: inline-block;
   color: #236361;
   font-weight: bold;
@@ -184,16 +169,10 @@ select option {
   font-size: 10pt;
 }
 
-.post-comment{
+.post-comment {
   width: 420px;
   margin-left: 60px;
   margin-top: -22px;
   padding-bottom: 10px;
   font-size: 10pt;
-  
-  
-  
-
 }
-
-
