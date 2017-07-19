@@ -42,7 +42,7 @@ var aboutButtonListener = function() {
       {
         scrollTop: $('.about').offset().top
       },
-      1000
+      1500
     );
   });
 };
@@ -53,7 +53,7 @@ var jobsButtonListener = function() {
       {
         scrollTop: $('.jobs').offset().top
       },
-      1000
+      1500
     );
   });
 };
@@ -64,7 +64,7 @@ var projectsButtonListener = function() {
       {
         scrollTop: $('.projects').offset().top
       },
-      1000
+      1500
     );
   });
 };
@@ -75,7 +75,7 @@ var testimonialsButtonListener = function() {
       {
         scrollTop: $('.testimonials').offset().top
       },
-      1000
+      1500
     );
   });
 };
@@ -86,7 +86,7 @@ var bootsInTheWorldButtonListener = function() {
       {
         scrollTop: $('.boots-in-the-world').offset().top
       },
-      1000
+      1500
     );
   });
 };
@@ -97,7 +97,7 @@ var bootsOnTheGroundButtonListener = function() {
       {
         scrollTop: $('.big-picture').offset().top
       },
-      1000
+      1500
     );
   });
 };
