@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  
+
   def index
     @companies = Company.all
   end
@@ -13,11 +13,16 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params)
-    if @company.save
-      redirect_to companies_path
-    else 
-      @errors = @company.errors.full_messages
-      render 'new'
+    respond_to do |format|
+      if @company.save
+          format.html { redirect_to companies_path, notice: "Company Created" }
+          format.json { render :index }
+          format.js
+      else 
+          format.html { render :new}
+          format.json { render json: @company.errors }
+          format.js
+      end
     end
   end
 
@@ -38,7 +43,11 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find(params[:id])
     @company.destroy
-    redirect_to companies_path
+    respond_to do |format|
+      format.html { redirect_to companies_path}
+      format.json { head :no_content }
+      format.js
+    end
   end
 
   private 
