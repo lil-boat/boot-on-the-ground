@@ -7,9 +7,6 @@
   padding: 0;
 }
 
-body {
-  background-color: #DEF2F1;
-}
 /****** Form css ******/
 
 
@@ -136,7 +133,14 @@ select option {
 }
 
 .like-and-comment-section img{
-  width: 20px;
+  width: 35px;
+}
+
+.like-and-comment-section p{
+  color: #DEF2F1;
+  display: inline-block;
+  padding-top: 16px;
+  vertical-align: top;
 }
 
 .comment-container{
