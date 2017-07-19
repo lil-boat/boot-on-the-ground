@@ -30,6 +30,7 @@ class CompaniesController < ApplicationController
       end
     end
   end
+  end
 
   def edit
     @company = Company.find(params[:id])

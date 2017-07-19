@@ -16,7 +16,6 @@
  *= require_self
  */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -28,15 +27,26 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+  background-color: white;
 }
 
 .container {
   width: 95%;
   margin: auto;
+  /*background-color: rgb(245, 245, 245);*/
 }
 
 .right {
   float: right;
+}
+
+.section-title {
+  font-size: 50px;
+  width: 950px;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /*HEADER*/
@@ -46,6 +56,8 @@ body {
   height: 50px;
   margin-bottom: 10px;
   border-bottom: 2px solid #eee;
+  background-color: #17252a;
+  color: white;
 }
 
 #bars {
