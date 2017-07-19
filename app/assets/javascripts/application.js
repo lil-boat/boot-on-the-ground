@@ -24,39 +24,41 @@ $(document).ready(function() {
   testimonialsButtonListener();
   bootsInTheWorldButtonListener();
   bootsOnTheGroundButtonListener();
-  jobsCarousel();
-  projectsCarousel();
+  // jobsCarousel();
+  // projectsCarousel();
   // tCarousel();
 });
 
-var myIndex = 0;
-var jobsCarousel = function() {
-  var i;
-  var x = document.getElementsByClassName('jobSlide');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
-  }
-  x[myIndex - 1].style.display = 'block';
-  setTimeout(jobsCarousel, 3100);
-};
 
-var projectsCarousel = function() {
-  var i;
-  var x = document.getElementsByClassName('projectSlide');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
-  }
-  x[myIndex - 1].style.display = 'block';
-  setTimeout(projectsCarousel, 3000);
-};
+
+var myIndex = 0;
+// var jobsCarousel = function() {
+//   var i;
+//   var x = document.getElementsByClassName('jobSlide');
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = 'none';
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {
+//     myIndex = 1;
+//   }
+//   x[myIndex - 1].style.display = 'block';
+//   setTimeout(jobsCarousel, 3100);
+// };
+
+// var projectsCarousel = function() {
+//   var i;
+//   var x = document.getElementsByClassName('projectSlide');
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = 'none';
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {
+//     myIndex = 1;
+//   }
+//   x[myIndex - 1].style.display = 'block';
+//   setTimeout(projectsCarousel, 3000);
+// };
 
 var tCarousel = function() {
   var i;
