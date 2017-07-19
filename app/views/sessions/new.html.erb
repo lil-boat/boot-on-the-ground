@@ -1,18 +1,14 @@
 <div class="container">
-  <h1>login</h1>
-  <div id="login-form">
+  
+  <div class="form-container">
+    <h2>Login</h2>
       <%= form_tag sessions_path do  %>
-      <p>
-        <div class="field"><%= text_field_tag :username, params[:username], placeholder: "me" %></div>
-      </p>
+      <%= text_field_tag :username, params[:username], placeholder: "me", :class => 'input-field'  %>
+     <%= password_field_tag :password, params[:password], placeholder:"password", :class => 'input-field' %>
       
-      <p>
-        <div class="field"><%= password_field_tag :password, params[:password], placeholder:"password" %></div>
-      </p>
 
-      <p>
-        <div><%= submit_tag "Login" %></div>
-      </p>
+      <%= submit_tag "Login", :class => 'form-submit-button' %>
+     
       <% end %>
   </div>
 </div>
