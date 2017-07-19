@@ -73,6 +73,7 @@ body {
   transition: 0.5s;
   padding-top: 20px;
   float: right;
+  transition: all 0.5s ease;
 }
 
 .sidenav a {
@@ -81,7 +82,7 @@ body {
   font-size: 25px;
   color: white;
   display: block;
-  transition: 0.3s;
+  transition: all 0.5s ease;
 }
 
 .sidenav a:hover,
@@ -90,11 +91,14 @@ body {
 }
 
 .sidenav .closebtn {
-  /*position: absolute;*/
   top: 0;
   left: 30px;
   font-size: 36px;
   margin-left: 5px;
+}
+
+.closebtn {
+  width: 50px;
 }
 
 @media screen and (max-height: 450px) {
