@@ -1,6 +1,7 @@
-<div class="container">
-<%= link_to "Add New Company", new_company_path%> 
+<div class="container" >
+<%= link_to "Add New Company", new_company_path, remote: true %> 
   <h1>companies</h1>
+  <div class= "company-list">
   <% @companies.each do |company| %>
     <div class="company-box">
       <h2><%= company.name %></h2>
@@ -11,6 +12,7 @@
       <p><%= link_to 'Delete Posting', company_path(company), method: :delete %></p>
     </div>
   <% end  %>
+  </div>
 </div>
 
 
