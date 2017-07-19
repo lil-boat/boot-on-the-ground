@@ -1,5 +1,6 @@
 <div class="container" id="container">
 <h1>all jobs</h1>
+<%= link_to 'Add Job', 'jobs/new' %>
   <% @users.each do |user| %>
     <div class="user-box">
       <h2><%= user.username %></h2>
