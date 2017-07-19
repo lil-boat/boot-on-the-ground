@@ -10,8 +10,6 @@ class JobsController < ApplicationController
   end
 
   def create
-    p "*" * 100
-    p job_params
     @job = Job.new
     @job.title = job_params[:title]
     @job.user_id = current_user.id
