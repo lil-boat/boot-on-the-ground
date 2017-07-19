@@ -14,6 +14,6 @@ class CreateCompanies < ActiveRecord::Migration[5.1]
   end
 
   def down
-    remove_attachment :users, :logo
+    remove_attachment :companies, :logo
   end
 end
