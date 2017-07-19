@@ -2,9 +2,11 @@ class JobsController < ApplicationController
 
   def index
     @users = User.all
+    @jobs = Jobs.all
   end
 
   def new
+    @job = Job.new
     
   end
 
@@ -13,6 +15,7 @@ class JobsController < ApplicationController
   end
 
   def edit
+     @job = Job.find(params[:id])
     
   end
 

@@ -36,3 +36,76 @@ body {
 .right {
   float: right;
 }
+
+/*HEADER*/
+
+.header {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+#bars {
+  display: inline-block;
+  float: right;
+  margin: 18px 25px 0px 20px;
+  cursor: pointer;
+}
+.header p {
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 20px 20px 0px 20px;
+}
+
+/*SIDENAV*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #17252a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  float: right;
+  transition: all 0.5s ease;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #3fbfb8;
+}
+
+.sidenav .closebtn {
+  top: 0;
+  left: 30px;
+  font-size: 36px;
+  margin-left: 5px;
+}
+
+.closebtn {
+  width: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}

@@ -24,7 +24,53 @@ $(document).ready(function() {
   testimonialsButtonListener();
   bootsInTheWorldButtonListener();
   bootsOnTheGroundButtonListener();
+  jobsCarousel();
+  projectsCarousel();
+  // tCarousel();
 });
+
+var myIndex = 0;
+var jobsCarousel = function() {
+  var i;
+  var x = document.getElementsByClassName('jobSlide');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  myIndex++;
+  if (myIndex > x.length) {
+    myIndex = 1;
+  }
+  x[myIndex - 1].style.display = 'block';
+  setTimeout(jobsCarousel, 3100);
+};
+
+var projectsCarousel = function() {
+  var i;
+  var x = document.getElementsByClassName('projectSlide');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  myIndex++;
+  if (myIndex > x.length) {
+    myIndex = 1;
+  }
+  x[myIndex - 1].style.display = 'block';
+  setTimeout(projectsCarousel, 3000);
+};
+
+var tCarousel = function() {
+  var i;
+  var x = document.getElementsByClassName('testimonialSlide');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  myIndex++;
+  if (myIndex > x.length) {
+    myIndex = 1;
+  }
+  x[myIndex - 1].style.display = 'block';
+  setTimeout(tCarousel, 3000);
+};
 
 var scrollListener = function() {
   $(window).on('scroll', function() {
@@ -101,4 +147,3 @@ var bootsOnTheGroundButtonListener = function() {
     );
   });
 };
-
