@@ -18,6 +18,16 @@ class CompaniesController < ApplicationController
     else
       @errors = @company.errors.full_messages
       render 'new'
+    respond_to do |format|
+      if @company.save
+          format.html { redirect_to companies_path, notice: "Company Created" }
+          format.json { render :index }
+          format.js
+      else 
+          format.html { render :new}
+          format.json { render json: @company.errors }
+          format.js
+      end
     end
   end
 
