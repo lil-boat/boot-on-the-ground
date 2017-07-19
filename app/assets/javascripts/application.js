@@ -29,9 +29,9 @@ $(document).ready(function() {
 var scrollListener = function() {
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 700) {
-      $('.header').show();
+      $('.home-header').show();
     } else {
-      $('.header').hide();
+      $('.home-header').hide();
     }
   });
 };
