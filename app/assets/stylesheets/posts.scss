@@ -6,10 +6,13 @@
   margin: 0;
   padding: 0;
 }
-.comment-container {
-  margin-left: 2%;
-  color: grey;
+
+body {
+  background-color: #DEF2F1;
 }
+/****** Form css ******/
+
+
 
 .form-container {
   margin: auto;
@@ -78,5 +81,115 @@ select option {
     background-color: #3AAFA9;
   }
 
+}
+/****** message board css ******/
+
+.post-container{
+  margin: auto;
+  margin-bottom: 10px;
+  width: 500px;
+  border-radius: 5px;
+  background-color: white;
+  
+}
+
+.post-author-info{
+  margin: auto;
+  width: 480px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  
+}
+
+.author-picture{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: lightgrey;
+}
+
+.author-name{
+  display: inline-block;
+  color: #236361;
+  font-weight: bold;
+  margin-top: 17px;
+  margin-left: 5px;
+  vertical-align: top;
+  font-size: 12pt;
+}
+
+.post-main-content {
+  margin: auto;
+  width: 480px;
+  padding-bottom: 10px;
+  font-size: 12pt
 
 }
+
+.like-and-comment-section{
+  margin: auto;
+  width: 480px;
+  padding-bottom: 10px;
+  
+  color: #236361;
+}
+
+.like-and-comment-section img{
+  width: 20px;
+}
+
+.comment-container{
+  width: 500px;
+  background-color: rgb(246,247,249);
+  padding-bottom: 10px;
+}
+
+
+.individual-comment-container{
+  margin: auto;
+  width: 480px;
+  border-top: 1px solid rgba(35, 99, 97, 0.5);
+  background-color: rgb(246,247,249);
+
+
+}
+
+.post-comment {
+  width: 500px;
+
+}
+
+.comment-author-picture{
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: lightgrey;
+
+}
+
+.comment-author-name{
+  display: inline-block;
+  color: #236361;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+  vertical-align: top;
+  font-size: 10pt;
+}
+
+.post-comment{
+  width: 420px;
+  margin-left: 60px;
+  margin-top: -22px;
+  padding-bottom: 10px;
+  font-size: 10pt;
+  
+  
+  
+
+}
+
+
