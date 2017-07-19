@@ -18,16 +18,87 @@
 
 $(document).ready(function() {
   scrollListener();
+  aboutButtonListener();
+  jobsButtonListener();
+  projectsButtonListener();
+  testimonialsButtonListener();
+  bootsInTheWorldButtonListener();
+  bootsOnTheGroundButtonListener();
 });
 
 var scrollListener = function() {
   $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 800) {
-      $('.header').addClass('white');
-      $('.ian').addClass('show');
+    if ($(window).scrollTop() > 700) {
+      $('.header').show();
     } else {
-      $('.header').removeClass('white');
-      $('.ian').removeClass('show');
+      $('.header').hide();
     }
   });
 };
+
+var aboutButtonListener = function() {
+  $('.scroll-to-about').on('click', function() {
+    $('html, body').animate(
+      {
+        scrollTop: $('.about').offset().top
+      },
+      1000
+    );
+  });
+};
+
+var jobsButtonListener = function() {
+  $('.jobs-button').on('click', function() {
+    $('html, body').animate(
+      {
+        scrollTop: $('.jobs').offset().top
+      },
+      1000
+    );
+  });
+};
+
+var projectsButtonListener = function() {
+  $('.projects-button').on('click', function() {
+    $('html, body').animate(
+      {
+        scrollTop: $('.projects').offset().top
+      },
+      1000
+    );
+  });
+};
+
+var testimonialsButtonListener = function() {
+  $('.testimonials-button').on('click', function() {
+    $('html, body').animate(
+      {
+        scrollTop: $('.testimonials').offset().top
+      },
+      1000
+    );
+  });
+};
+
+var bootsInTheWorldButtonListener = function() {
+  $('.boots-in-the-world-button').on('click', function() {
+    $('html, body').animate(
+      {
+        scrollTop: $('.boots-in-the-world').offset().top
+      },
+      1000
+    );
+  });
+};
+
+var bootsOnTheGroundButtonListener = function() {
+  $('.boots-button').on('click', function() {
+    $('html, body').animate(
+      {
+        scrollTop: $('.big-picture').offset().top
+      },
+      1000
+    );
+  });
+};
+

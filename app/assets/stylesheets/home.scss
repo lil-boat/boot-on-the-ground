@@ -47,6 +47,9 @@
   color: white;
   text-shadow: 0.5px 0.5px 0.5px #000;
   cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
 }
 
 .log-button {
@@ -102,6 +105,39 @@
 
 .right-desc {
   margin-right: 6em;
+}
+
+/*HEADER*/
+
+.header {
+  display: none;
+  height: 50px;
+  width: 100%;
+  background-color: #17252a;
+  position: fixed;
+  transition: all 0.5s ease;
+}
+
+.scroll-buttons {
+  float: right;
+  font-size: 20px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  outline: none;
+  &:hover {
+    color: #3fbfb8;
+  }
+}
+
+.boots-button {
+  float: none;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 /*ABOUT*/
