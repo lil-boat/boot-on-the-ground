@@ -17,16 +17,17 @@
 
     <div class="like-and-comment-section">
       <img src="images/like_icon.png">
-      Likes <%= post.likes.count %>
+      Kudos <%= post.likes.count %>
     </div>
 
     
       <%if post.comments.length != 0 %>
+
       <div class="comment-container">
           <%post.comments.each do |comment| %>
           <div class="individual-comment-container">
             <div class="comment-author-picture"></div>
-            <div class="author-name">
+            <div class="comment-author-name">
               <%= comment.user.username %>
             </div>
             <div class="post-comment">
@@ -34,7 +35,6 @@
             </div>
           </div>
           <% end %>
-
         <% end %>
     </div>
   </div>   

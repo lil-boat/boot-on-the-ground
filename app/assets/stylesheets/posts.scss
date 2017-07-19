@@ -123,9 +123,20 @@ select option {
   margin: auto;
   width: 480px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #236361;
   font-size: 12pt
 
+}
+
+.like-and-comment-section{
+  margin: auto;
+  width: 480px;
+  padding-bottom: 10px;
+  
+  color: #236361;
+}
+
+.like-and-comment-section img{
+  width: 20px;
 }
 
 .comment-container{
@@ -133,25 +144,17 @@ select option {
   background-color: rgb(246,247,249);
   padding-bottom: 10px;
 }
+
+
 .individual-comment-container{
   margin: auto;
   width: 480px;
-  border-bottom: 1px solid #236361;
+  border-top: 1px solid rgba(35, 99, 97, 0.5);
   background-color: rgb(246,247,249);
 
 
 }
-.like-and-comment-section{
-  margin: auto;
-  width: 480px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  color: #236361;
-}
 
-.like-and-comment-section img{
-  width: 20px;
-}
 .post-comment {
   width: 500px;
 
@@ -167,15 +170,23 @@ select option {
 
 }
 
-.post-comment{
+.comment-author-name{
   display: inline-block;
-  margin-top: 17px;
+  color: #236361;
+  font-weight: bold;
+  margin-top: 10px;
   margin-left: 5px;
-  padding: 0;
-  
   vertical-align: top;
   font-size: 10pt;
-  background-color: red;
+}
+
+.post-comment{
+  width: 420px;
+  margin-left: 60px;
+  margin-top: -22px;
+  padding-bottom: 10px;
+  font-size: 10pt;
+  
   
   
 
