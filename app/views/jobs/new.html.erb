@@ -1,10 +1,7 @@
 <div class="container">
-  <h1>new jobs form</h1>
-  <% @users.each do |user| %>
-  <div class="user-box">
-    <p><%= user.username %></p>
-      <% user.jobs.each do |job| %>
-      <p><%= job.title %>, <%= job.company %></p>
-    <% end  %>
-  </div>
+  <div class="form-container">
+    <h2>New Job</h2>
+    <%= render 'form' %>
+  </div> 
+  <%= render '/errors' %>
 </div>

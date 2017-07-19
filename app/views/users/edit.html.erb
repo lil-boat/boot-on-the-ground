@@ -1,19 +1,7 @@
-<h1>Edit Profile</h1>
+
 
 <div class=form-container>
-<%= form_for(@user) do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<br>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<br>
-<%= f.label :password_confirmation, "Confirmation" %>
-<%= f.password_field :password_confirmation %>
-<br>
-<%= f.label :testimonial %>
-<%= f.text_field :testimonial %>
-
-<%= f.submit "Save Changes" %>
-<% end %>
+  <h2>Edit Profile</h2>
+  <%= render 'form' %>
 </div>
+  <%= render '/errors' %>

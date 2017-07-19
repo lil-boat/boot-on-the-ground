@@ -1,0 +1,9 @@
+  #need to fix create for this. Form not functional yet
+  
+  <%= form_for @job do |f| %>
+    <%= f.text_field :title, placeholder: 'Job Title', :class => 'input-field' %>
+
+    <%= f.text_field :company, placeholder: 'Company', :class => 'input-field' %>
+    
+    <%= f.submit "Save", :class => 'form-submit-button' %>
+  <% end %>
