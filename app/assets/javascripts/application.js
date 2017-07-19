@@ -16,6 +16,16 @@
 //= require turbolinks
 //= require_tree
 
+function openNav() {
+  document.getElementById('mySidenav').style.width = '250px';
+  document.body.style.backgroundColor = 'rgba(0,0,0,0.05)';
+}
+
+function closeNav() {
+  document.getElementById('mySidenav').style.width = '0';
+  document.body.style.backgroundColor = 'white';
+}
+
 $(document).ready(function() {
   scrollListener();
   aboutButtonListener();
@@ -101,4 +111,3 @@ var bootsOnTheGroundButtonListener = function() {
     );
   });
 };
-
