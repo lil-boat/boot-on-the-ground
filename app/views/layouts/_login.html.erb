@@ -1,0 +1,14 @@
+<div class="login-popup" id="login-popup">
+  <div class="form-container">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>
+      <h2>Login</h2>
+        <%= form_tag sessions_path do  %>
+        <%= text_field_tag :username, params[:username], placeholder: "me", :class => 'input-field'  %>
+       <%= password_field_tag :password, params[:password], placeholder:"password", :class => 'input-field' %>
+        
+
+        <%= submit_tag "Login", :class => 'form-submit-button' %>
+       
+        <% end %>
+  </div>
+</div>
