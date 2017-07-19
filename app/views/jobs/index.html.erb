@@ -1,15 +1,19 @@
 <div class="container" id="container">
-  <h1>all jobs</h1>
+  <h1>employed boots</h1>
   <!-- # <%= link_to 'Add Job', 'jobs/new' %> -->
   <% @users.each do |user| %>
     <div class="user-box">
-      <div class="author-picture"></div>
-      <div class="author-name">
+      <div class="user-picture"></div>
+      <div class="user-name">
          <a href="/users/<%= user.id %>"><%= user.username %></a> 
       </div>
       <% user.jobs.each do |job| %>
-        <p><%= job.title %>, at <%= job.company.name %></p>
+        <p class="job-title"><%= job.title %></p>
+        <p class="job-company"><%= job.company.name %></p>
       <% end  %>
+      <div class="buttons">
+        <button class="connect-button">Connect</button>
+      </div>
     </div>
   <% end  %>
 </div>

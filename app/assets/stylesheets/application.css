@@ -27,12 +27,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  background-color: rgb(245, 245, 245);
+  background-color: white;
 }
 
 .container {
   width: 95%;
   margin: auto;
+  /*background-color: rgb(245, 245, 245);*/
 }
 
 .right {
