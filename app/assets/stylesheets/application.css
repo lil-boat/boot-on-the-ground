@@ -52,6 +52,10 @@ body {
   margin: 18px 25px 0px 20px;
   cursor: pointer;
 }
+
+#bars:hover {
+  color: #3fbfb8;
+}
 .header p {
   font-size: 20px;
   text-transform: uppercase;
@@ -98,7 +102,13 @@ body {
 }
 
 .closebtn {
+  top: 0;
+  left: 30px;
+  font-size: 36px;
+  margin-left: 5px;
   width: 50px;
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-height: 450px) {

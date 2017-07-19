@@ -91,7 +91,7 @@
   display: inline-block;
 }
 
-.jobsSlides {
+.jobSlides {
   display: none;
 }
 
@@ -219,6 +219,25 @@
 .boots-in-the-world {
   height: 700px;
   background-color: #236361;
+}
+
+/*LOGIN*/
+
+.login-popup {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(211, 211, 211, 0.4);
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: right;
+}
+
+.login-popup {
+  padding-top: 150px;
 }
 
 /*MEDIA QUEREY*/
