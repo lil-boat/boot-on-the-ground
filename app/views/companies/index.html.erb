@@ -4,7 +4,6 @@
   <div class= "company-list">
   <% @companies.each do |company| %>
     <div class="company-box">
- 
       <h2><%= company.name %></h2>
         <% company.users.each do |employee| %>
           <%= link_to employee.username, user_path(employee) %>
