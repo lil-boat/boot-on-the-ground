@@ -71,7 +71,7 @@ body {
   background-color: #17252a;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 20px;
   float: right;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 .sidenav .closebtn {
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   left: 30px;
   font-size: 36px;
