@@ -37,32 +37,210 @@
   padding-top: 40px;
 }
 
-.testimonials {
-  height: 500px;
+.log-in-home-button {
+  font-size: 25px;
+  width: 150px;
+  height: 50px;
+  background-color: #3fbfb8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+
+.log-button {
+  width: 160px;
+  margin: 30px auto;
+}
+
+.explore {
+  color: white;
+  font-size: 25px;
+  width: 200px;
+  font-weight: 800;
+  text-align: center;
+  margin: 150px auto 0px auto;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.arrow {
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  width: 100px;
+  margin: 20px auto;
+  text-align: center;
+
+  .fa-arrow-down {
+    color: white;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.carousel {
+  height: 400px;
+  width: 550px;
+  margin: 0;
+  background-image: url("https://unsplash.it/1250/800?image=630");
+  display: inline-block;
+}
+
+.section-description {
+  width: 600px;
+  text-align: center;
+  display: inline-block;
+  letter-spacing: 0.225em;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 6em auto;
+}
+
+.right-desc {
+  margin-right: 6em;
+}
+
+/*HEADER*/
+
+.home-header {
+  display: none;
+  height: 50px;
   width: 100%;
+  background-color: #17252a;
+  position: fixed;
+  transition: all 0.5s ease;
+}
+
+.scroll-buttons {
+  float: right;
+  font-size: 20px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  outline: none;
+  &:hover {
+    color: #3fbfb8;
+  }
+}
+
+.boots-button {
+  float: none;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 /*ABOUT*/
 
 .about {
-  height: 500px;
-  background-color: #00cc99;
+  background-color: #3aafa9;
+}
+
+.descriptions {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.first-description {
+  padding-top: 100px;
+  border-bottom: solid 2px white;
+  p {
+    letter-spacing: 0.225em;
+    font-size: 27px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 15px;
+  }
+}
+
+.second-description {
+  padding-top: 15px;
+  p {
+    letter-spacing: 0.225em;
+    font-size: 27px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 50px;
+  }
+}
+
+.dbc-image {
+  margin: auto;
+  height: 206px;
+  width: 500px;
+  background-image: url("http://www.sandiegobusiness.org/sites/default/files/images/DBC_S_2C_RGB_500w.jpg");
+  margin-bottom: 10px;
+}
+
+.blank-space {
+  height: 100px;
 }
 
 /*JOBS*/
 
 .jobs {
-  height: 500px;
+  height: 400px;
+  background-color: rgba(23, 37, 42, .952);
 }
 
 /*PROJECTS*/
 
 .projects {
-  height: 500px;
+  height: 400px;
+  background-color: rgba(23, 37, 42, .97);
 }
 
 /*TESTIMONIALS*/
 
 .testimonials {
-  height: 500px;
+  height: 400px;
+  background-color: #17252a;
+}
+
+/*BOOTS IN THE WORLD*/
+
+.boots-in-the-world {
+  height: 700px;
+  background-color: #236361;
+}
+
+/*MEDIA QUEREY*/
+
+@media (max-width: 1271px) {
+  .right-desc {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 1153px) {
+  .jobs,
+  .projects,
+  .testimonials {
+    height: 700px;
+  }
+  .right-desc {
+    margin-right: 0;
+  }
+
+  .section-description {
+    margin: 6em 25% 6em 25%;
+  }
+  .carousel {
+    margin-left: 25%;
+    margin-right: 25%;
+    float: right;
+  }
 }
