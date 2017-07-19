@@ -101,4 +101,3 @@ var bootsOnTheGroundButtonListener = function() {
     );
   });
 };
-

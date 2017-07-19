@@ -1,11 +1,13 @@
-<h1>all projects</h1>
-<div class="container">
-  <% @projects.each do |project| %>
-    <div class="project-card">
-      <h2 class="project-title"> <%= project.title %></h2>
-      <p class="project-description"><%= project.description %></p>
-      <a class="project-url" href="<%= project.url %>"><%= project.url %></a>
-      <p class="delete-link"><%= link_to "Delete", project_path(project), method: :delete %></p>
-    </div>
-  <% end  %>
+<div class="container" id="container">
+  <h1>all projects</h1>
+  <div class="container">
+    <% @projects.each do |project| %>
+      <div class="project-card">
+        <h2 class="project-title"> <%= project.title %></h2>
+        <p class="project-description"><%= project.description %></p>
+        <a class="project-url" href="<%= project.url %>"><%= project.url %></a>
+        <p class="delete-link"><%= link_to "Delete", project_path(project), method: :delete %></p>
+      </div>
+    <% end  %>
+  </div>
 </div>
