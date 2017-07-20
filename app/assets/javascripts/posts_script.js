@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 var addkudosEventListener = function(){
-  $(".message-board-container").on("click", ".kudos-vote", function(event){
+  $(".message-board-container").on("click", ".post-kudos-vote", function(event){
     console.log("is this on??");
     var clickedKudos = $(this)
     kudosAjaxCall(clickedKudos);
@@ -29,6 +29,7 @@ var kudosAjaxCall = function(clickedKudos){
     console.log(response)
   });
 }
+
 
 var addListenerToNewPostForm = function(){
   $("#new-post-form").submit(function(e){
