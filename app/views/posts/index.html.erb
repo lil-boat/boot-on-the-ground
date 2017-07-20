@@ -30,7 +30,7 @@
 
         <div class="like-and-comment-section">
           <img src="images/clappy-hands.png">
-          <button class="kudos-vote">Kudos <%= post.likes.count %></button>
+          <button class="post-kudos-vote">Kudos <%= post.likes.count %></button>
           <img src="images/comment-box1.png">
           <button class="comment-button">Comment</button>
         </div>
@@ -48,6 +48,12 @@
                 <div class="post-comment">
                   <p><%= comment.body %></p>
                 </div>
+                <div class="like-and-comment-section">
+                <img src="images/clappy-hands.png">
+                <button class="comment-kudos-vote">Kudos <%= comment.likes.count %></button>
+                <img src="images/comment-box1.png">
+                <button class="comment-button">Comment</button>
+              </div>
               </div>
               <% end %>
             <% end %>
