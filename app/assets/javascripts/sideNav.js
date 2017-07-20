@@ -7,3 +7,5 @@ function closeNav() {
   document.getElementById('sidenav').style.width = '0';
   document.body.style.backgroundColor = 'white';
 }
+
+
