@@ -30,7 +30,7 @@ before_action :user_is_logged_in
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation, :testimonial)
+    params.require(:user).permit(:username, :password, :password_confirmation, :testimonial, :image)
   end
 end
 
