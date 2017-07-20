@@ -11,14 +11,15 @@
 
 .form-container {
   margin: auto;
-  color: #def2f1;
+  /*color: #def2f1;*/
   width: 400px;
-  background-color: #17252a;
-  border-radius: 5px;
+  /*background-color: #17252a;*/
+  background-color: white;
+  border-radius: 2px;
 }
 
 .form-container h2 {
-  padding-top: 30px;
+  padding-top: 10px;
   text-align: center;
   margin-bottom: 25px;
 }
@@ -31,11 +32,31 @@
   padding: 10px;
   width: 276px;
   border-style: none;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   font-size: 14pt;
-  color: #def2f1;
-  border: 1px solid #def2f1;
-  background-color: #17252a;
+  /*color: #def2f1;*/
+  color: black;
+  /*border: 1px solid #def2f1;*/
+  border: 1px solid #8d8d8d;
+  /*background-color: #17252a;*/
+  background-color: white;
+  outline: none;
+}
+
+.log-field {
+  @extend .input-field;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8d8d8d;
+}
+
+select {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 12pt;
+  height: 20px;
 }
 
 .input-field-dropdown {
@@ -64,6 +85,7 @@
   border-style: none;
   border-radius: 5px;
   background-color: #3fbfb8;
+  cursor: pointer;
   &:hover {
     background-color: #3aafa9;
   }
