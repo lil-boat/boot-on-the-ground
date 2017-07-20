@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+before_action :user_is_logged_in
   def create
     @like = Like.new(likeable_id: likes_params, likeable_type: "Post", user_id: current_user.id)
     if @like.save

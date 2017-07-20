@@ -1,13 +1,12 @@
 <div id="sidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <%= link_to "Home", root_path %>
-  <%= link_to "Profile", user_path(current_user) %>
   <%= link_to "Companies", companies_path %>
   <%= link_to "Jobs", jobs_path %>
   <%= link_to "Message Board", posts_path %>
   <%= link_to "Projects", projects_path %>
   <% if current_user %>
-    
+  <%= link_to "Profile", user_path(current_user) %>
   <p class="logout home-links"><%= link_to "Logout", session_path(current_user), :method => :delete %></p>
   <% end %>
 </div>
