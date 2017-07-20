@@ -218,7 +218,7 @@
   width: 25px;
 }
 
-.like-and-comment-section button {
+#post-like-and-comment-section button {
   border: none;
   background-color: white;
   color: #3AAFA9;
@@ -228,6 +228,18 @@
   vertical-align: top;
   margin-right: 10px;
 }
+
+#comment-like-and-comment-section button {
+  border: none;
+  background-color: rgb(246, 247, 249);
+  color: #3AAFA9;
+  font-size: 12pt;
+  display: inline-block;
+  margin-top: 8px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
 
 .comment-container {
   width: 500px;
