@@ -1,8 +1,13 @@
+<div class="jobs-form" id="jobs-form">
+  <div class="form-container">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeJobs()">&times;</a>
+  <h2>New Job</h2>
+    <%= form_for @job do |f| %>
+      <%= f.text_field :title, placeholder: 'Job Title', :class => 'input-field' %>
 
-  <%= form_for @job do |f| %>
-    <%= f.text_field :title, placeholder: 'Job Title', :class => 'input-field' %>
+      <%= f.collection_select(:company, Company.all, :id, :name, include_blank:true, :class => 'input-field') %>
 
-    <%= f.collection_select(:company, Company.all, :id, :name, include_blank:true, :class => 'input-field') %>
-
-    <%= f.submit "Save", :class => 'form-submit-button' %>
-  <% end %>
+      <%= f.submit "Save", :class => 'form-submit-button' %>
+    <% end %>
+  </div>
+</div>

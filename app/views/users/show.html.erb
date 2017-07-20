@@ -1,12 +1,20 @@
+<%= render '/jobs/form' %>
+<%= render '/projects/form' %>
 <h1>Profile Page</h1>
+<%= image_tag @user.image.url(:medium) %>
 <%= @user.username %><br><br>
 
 Testimonial:
 <%= @user.testimonial %><br><br>
 
 Previous Titles:<br>
-<% if @job %>
-<% @job.each do |job| %>
+<% if @jobs %>
+<% @jobs.each do |job| %>
 <%= job.title %><br>
 <% end %>
 <% end %>
+
+<div class="user-buttons">
+  <button class="add-job-button user-button" id="add-job-button" onclick="jobPopUp()">add a job</button>
+  <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">add a project</button>
+</div>

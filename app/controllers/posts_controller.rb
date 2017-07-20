@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-
+    @post = Post.new
   end
 
   def new
@@ -10,16 +10,22 @@ class PostsController < ApplicationController
   end
 
   def create
+    @posts = Post.all
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    if @post.save
-      redirect_to posts_path
-    else
-      @errors = @post.errors.full_messages
-      render 'new'
+    respond_to do |format| 
+      if @post.save
+        format.html {render "_posts_partial", layout: false}
+        format.js
+        # render json: {new_post: @post }.to_json
+        # redirect_to posts_path
+      else
+        @errors = @post.errors.full_messages
+        render 'new'
 
+      end 
     end 
-  end
+  end 
 
   def edit
     @post = Post.find(params[:id])

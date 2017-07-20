@@ -2,7 +2,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @job = Job.where(user_id: params[:id])
+    @jobs = Job.where(user_id: params[:id])
+    @job = Job.new
+    @project = Project.new
   end
 
   def new
@@ -28,7 +30,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation, :testimonial)
+    params.require(:user).permit(:username, :password, :password_confirmation, :testimonial, :image)
   end
 end
 
