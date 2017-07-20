@@ -58,6 +58,6 @@ before_action :user_is_logged_in
   private
 
   def post_params
-    params.require(:post).permit(:category, :title, :body)
+    params.require(:post).permit(:category, :body)
   end
 end

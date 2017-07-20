@@ -17,7 +17,6 @@ likes = ["Post", "Comment", "Project"]
   )
 
   Post.create(
-    title: Faker::HarryPotter.quote,
     body: Faker::Lorem.sentence(10),
     category: categories.sample,
     user_id: rand(1..10) 

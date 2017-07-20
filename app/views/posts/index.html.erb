@@ -1,45 +1,58 @@
-<div class="message-board-container">
-  <div class="form-container" id="new-post-form">
-    <%= render "form" %> 
-  </div>
-  <div class= "post-field">
-    <% @posts.each do |post|%> 
-    <div class="post-container" id="<%= post.id %>">
-      <div class="post-author-info">
-        <div class="author-picture"></div>
-        <div class="author-name">
-          <%= post.user.username %> 
+<div id="posts-bg-color">
+  <div class="message-board-container">
+    <div class="form-container" id="new-post-form">
+      <%= form_for @post, remote: true do |f| %>
+    
+      <%= f.text_area :body, placeholder: 'Share article, project, or update', :class => 'input-field' %>
+
+      <div id="categories-drop-down">
+        <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, :id=>'cat-drop-down'%>
+      </div>
+    
+      <div id="post-submit">
+      <%= f.submit "Post", :id => 'post-submit-button'%>
+      </div>
+    <% end %>
+    </div>
+    <div class= "post-field">
+      <% @posts.each do |post|%> 
+      <div class="post-container" id="<%= post.id %>">
+        <div class="post-author-info">
+          <div class="author-picture"></div>
+          <div class="author-name">
+            <%= post.user.username %> 
+          </div>
         </div>
-      </div>
 
-      <div class="post-main-content">
-        <%= post.body %>
-      </div>
+        <div class="post-main-content">
+          <%= post.body %>
+        </div>
 
-      <div class="like-and-comment-section">
-        <img src="images/clappy-hands.png">
-        <p class="kudos-vote">Kudos <%= post.likes.count %></p>
-      </div>
+        <div class="like-and-comment-section">
+          <img src="images/clappy-hands.png">
+          <p class="kudos-vote">Kudos <%= post.likes.count %></p>
+        </div>
 
-      
-        <%if post.comments.length != 0 %>
+        
+          <%if post.comments.length != 0 %>
 
-        <div class="comment-container">
-            <%post.comments.each do |comment| %>
-            <div class="individual-comment-container">
-              <div class="comment-author-picture"></div>
-              <div class="comment-author-name">
-                <%= comment.user.username %>
+          <div class="comment-container">
+              <%post.comments.each do |comment| %>
+              <div class="individual-comment-container">
+                <div class="comment-author-picture"></div>
+                <div class="comment-author-name">
+                  <%= comment.user.username %>
+                </div>
+                <div class="post-comment">
+                  <p><%= comment.body %></p>
+                </div>
               </div>
-              <div class="post-comment">
-                <p><%= comment.body %></p>
-              </div>
-            </div>
+              <% end %>
             <% end %>
-          <% end %>
-      </div>
-    </div>   
-      <% end %>
+        </div>
+      </div>   
+        <% end %>
+    </div>
   </div>
 </div>
  

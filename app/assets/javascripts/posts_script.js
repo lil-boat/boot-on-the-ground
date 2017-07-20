@@ -49,6 +49,7 @@ var newPostAjaxCall = function(){
   request.done(function(response){ 
     console.log(response);
     $('.post-field').prepend(response)
+    $('#new_post')[0].reset()
   })
 
 }
