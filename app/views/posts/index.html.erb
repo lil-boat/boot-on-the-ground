@@ -1,9 +1,6 @@
-<div class="container" id="container">
-
-
-  
+<div class="message-board-container">
     <% @posts.each do |post|%>
-  <div class="post-container">
+  <div class="post-container" id="<%= post.id %>">
     <div class="post-author-info">
       <div class="author-picture"></div>
       <div class="author-name">
@@ -17,7 +14,7 @@
 
     <div class="like-and-comment-section">
       <img src="images/clappy-hands.png">
-      <p>Kudos <%= post.likes.count %></p>
+      <p class="kudos-vote">Kudos <%= post.likes.count %></p>
     </div>
 
     
@@ -39,4 +36,5 @@
     </div>
   </div>   
     <% end %>
+</div>
  
