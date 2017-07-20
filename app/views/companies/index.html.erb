@@ -4,7 +4,7 @@
   <div class= "company-list">
   <% @companies.each do |company| %>
     <div class="company-box">
-<!--            This line of code will enable you to view project images <%= image_tag company.image.url(:medium) %> -->
+<!--            This line of code will enable you to view project images <%= image_tag company.logo.url(:medium) %> -->
 
       <h2><%= company.name %></h2>
         <% company.users.each do |employee| %>
