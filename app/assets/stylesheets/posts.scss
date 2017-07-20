@@ -93,7 +93,6 @@ select option {
   display: inline-block;
   height: 50px;
   width: 50px;
-  /*background-color: lightgrey;*/
   background-image: url("https://unsplash.it/50/50?image=62");
 }
 
@@ -118,7 +117,7 @@ select option {
   margin: auto;
   width: 480px;
   padding-bottom: 10px;
-  color: #236361;
+  color: red;
 }
 
 .like-and-comment-section img {
@@ -127,7 +126,7 @@ select option {
 
 
 .like-and-comment-section p {
-  color: #def2f1;
+  color: #236361;
   display: inline-block;
   padding-top: 16px;
   vertical-align: top;
