@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20170717193128) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title", null: false
     t.string "body", null: false
     t.string "category", null: false
     t.integer "user_id"
