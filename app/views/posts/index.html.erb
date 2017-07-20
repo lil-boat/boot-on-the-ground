@@ -2,25 +2,25 @@
   <div class="message-board-container">
     <div class="form-container" id="new-post-form">
       <%= form_for @post, remote: true do |f| %>
-    
+
       <%= f.text_area :body, placeholder: 'Share article, project, or update', :class => 'input-field' %>
 
       <div id="categories-drop-down">
         <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, :id=>'cat-drop-down'%>
       </div>
-    
+
       <div id="post-submit">
       <%= f.submit "Post", :id => 'post-submit-button'%>
       </div>
     <% end %>
     </div>
     <div class= "post-field">
-      <% @posts.each do |post|%> 
+      <% @posts.each do |post|%>
       <div class="post-container" id="<%= post.id %>">
         <div class="post-author-info">
           <div class="author-picture"></div>
           <div class="author-name">
-            <%= post.user.username %> 
+            <%= post.user.username %>
           </div>
         </div>
 
@@ -35,12 +35,12 @@
           <button class="comment-button">Comment</button>
         </div>
 
-        
+
           <%if post.comments.length != 0 %>
 
           <div class="comment-container">
               <%post.comments.each do |comment| %>
-              <div class="individual-comment-container">
+              <div class="individual-comment-container" id="<%= comment.id %>">
                 <div class="comment-author-picture"></div>
                 <div class="comment-author-name">
                   <%= comment.user.username %>
@@ -58,9 +58,9 @@
               <% end %>
             <% end %>
         </div>
-      </div>   
+      </div>
         <% end %>
     </div>
   </div>
 </div>
- 
+
