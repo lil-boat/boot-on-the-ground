@@ -2,12 +2,16 @@
   <div class="message-board-container">
     <div class="form-container" id="new-post-form">
       <%= form_for @post, remote: true do |f| %>
-  
-      <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, { :class => 'input-field-dropdown' }%>
     
-      <%= f.text_area :body, placeholder: 'content...', :class => 'input-field' %>
+      <%= f.text_area :body, placeholder: 'Share article, project, or update', :class => 'input-field' %>
+
+      <div id="categories-drop-down">
+        <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, :id=>'cat-drop-down'%>
+      </div>
     
-      <%= f.submit "Post", :class => 'form-submit-button', :id => "new-post-submit" %>
+      <div id="post-submit">
+      <%= f.submit "Post", :id => 'post-submit-button'%>
+      </div>
     <% end %>
     </div>
     <div class= "post-field">

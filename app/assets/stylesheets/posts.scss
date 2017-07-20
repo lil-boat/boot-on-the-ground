@@ -70,6 +70,10 @@
 }
 /****** message board css ******/
 
+.message-board-container{
+  padding: 10px;
+}
+
 #new-post-form{
   width: 500px;
   background-color: white;
@@ -77,21 +81,60 @@
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px
 }
 
 #new-post-form .input-field{
-  width: 500px
+  display: inline-block;
+  color: black;
+  font-size: 12pt;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(35, 99, 97, 0.5);
+  margin: 0;
+  margin-bottom: 5px;
+  width: 480px;
+  background-color: white;
 
 }
 
-#new-post-submit{
-  margin: 0;
-  margin-left: 430px;
-  margin-bottom: 10px;
-  border-radius: 0;
-  width: 60px;
+#categories-drop-down{
+  margin-left: 285px;
+  padding: 2.5px;
+  background-color: #236361;
+  display: inline-block;
+  
+}
+
+#cat-drop-down{
+  border: none;
   padding: 5px;
-  font-size: 10pt;
+  font-size: 12pt;
+  color: white;
+  background-color: #236361;
+}
+
+#post-submit{
+  background-color: blue;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  align-content: center;
+  
+}
+
+#post-submit-button{
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  background-color: #236361;
+  &:hover {
+    background-color: #3aafa9;
+  }
 }
 
 #posts-bg-color{
