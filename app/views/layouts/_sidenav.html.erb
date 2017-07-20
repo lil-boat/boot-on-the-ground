@@ -1,6 +1,7 @@
 <div id="sidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <%= link_to "Home", root_path %>
+  <%= link_to "Profile", user_path(current_user) %>
   <%= link_to "Companies", companies_path %>
   <%= link_to "Jobs", jobs_path %>
   <%= link_to "Message Board", posts_path %>

@@ -5,7 +5,7 @@
 .project-card {
   perspective: 1000px;
   display: inline-block;
-  margin: 3em;
+  margin: 1em;
   cursor: pointer;
   transition: all 0.5s ease;
   box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.34);
@@ -40,6 +40,14 @@
   width: 300;
   text-align: center;
   margin-top: 20px;
+}
+
+.project-title-front {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 300;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .flipper {

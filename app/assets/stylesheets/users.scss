@@ -1,3 +1,57 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-buttons {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.user-button {
+  margin: 20px auto;
+  width: 150px;
+  height: 35px;
+  font-size: 20px;
+  background-color: #3fbfb8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+
+.jobs-form {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(211, 211, 211, 0.4);
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: right;
+}
+
+.jobs-form {
+  padding-top: 150px;
+}
+
+.project-form {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(211, 211, 211, 0.4);
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: right;
+}
+
+.project-form {
+  padding-top: 150px;
+}

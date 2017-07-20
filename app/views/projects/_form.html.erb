@@ -1,13 +1,18 @@
+<div class="project-form" id="project-form">
+  <div class="form-container">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeProjects()">&times;</a>
+    <h2>New Project</h2>
+      <%= form_for @project do |f| %>
+      
+      <%= f.text_area :title, size:"40x1", placeholder: 'Title', :class => 'input-field' %>
 
-    <%= form_for @project do |f| %>
+      <%= f.text_area :description, size:"100x10", placeholder: 'Description', :class => 'input-field' %>
+
+       <%= f.file_field :image, placeholder: 'Upload Logo', :class => 'input-field' %> 
     
-    <%= f.text_area :title, size:"40x1", placeholder: 'Title', :class => 'input-field' %>
-
-    <%= f.text_area :description, size:"100x10", placeholder: 'Description', :class => 'input-field' %>
-
-     <%= f.file_field :image, placeholder: 'Upload Logo', :class => 'input-field' %> 
-  
-    <%= f.submit "Save", :class => 'form-submit-button' %> 
-    
-    <% end  %>
+      <%= f.submit "Save", :class => 'form-submit-button' %> 
+      
+      <% end  %>
+  </div>
+</div>
 
