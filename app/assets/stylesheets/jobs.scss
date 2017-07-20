@@ -20,6 +20,9 @@
     text-decoration: none;
     font-size: 25px;
     color: black;
+    &:hover {
+      border-bottom: 2px solid;
+    }
   }
 
   &:hover {
@@ -35,7 +38,7 @@
   height: 120px;
   width: 120px;
   margin: 10px auto;
-  border-radius: 70px;
+  border-radius: 90px;
   background-image: url("https://unsplash.it/120/120?image=62");
 }
 
@@ -65,4 +68,8 @@
   border: 1.5px solid #3aafa9;
   color: #3aafa9;
   cursor: pointer;
+  &:hover {
+    border-width: 3px;
+    /*background-color: #eee;*/
+  }
 }
