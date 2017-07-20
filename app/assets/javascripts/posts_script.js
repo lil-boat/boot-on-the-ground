@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
   addkudosEventListener();
+  addListenerToNewPostForm();
   console.log("hi");
 });
 
@@ -27,4 +28,27 @@ var kudosAjaxCall = function(clickedKudos){
     clickedKudos.text("Kudos " + response.like_count)
     console.log(response)
   });
+}
+
+var addListenerToNewPostForm = function(){
+  $("#new-post-form").submit(function(e){
+    e.preventDefault(); 
+    var formContainer = $(this); 
+    newPostAjaxCall();
+  })
+  
+}
+
+var newPostAjaxCall = function(){ 
+  var request = $.ajax({
+    url: $("#new_post").attr("action"),
+    method: $("#new_post").attr("method"),
+    data: $("#new_post").serialize()
+  }); 
+
+  request.done(function(response){ 
+    console.log(response);
+    $('.post-field').prepend(response)
+  })
+
 }

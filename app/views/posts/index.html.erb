@@ -1,40 +1,45 @@
 <div class="message-board-container">
-    <% @posts.each do |post|%>
-  <div class="post-container" id="<%= post.id %>">
-    <div class="post-author-info">
-      <div class="author-picture"></div>
-      <div class="author-name">
-        <%= post.user.username %> 
+  <div class="form-container" id="new-post-form">
+    <%= render "form" %> 
+  </div>
+  <div class= "post-field">
+    <% @posts.each do |post|%> 
+    <div class="post-container" id="<%= post.id %>">
+      <div class="post-author-info">
+        <div class="author-picture"></div>
+        <div class="author-name">
+          <%= post.user.username %> 
+        </div>
       </div>
-    </div>
 
-    <div class="post-main-content">
-      <%= post.body %>
-    </div>
+      <div class="post-main-content">
+        <%= post.body %>
+      </div>
 
-    <div class="like-and-comment-section">
-      <img src="images/clappy-hands.png">
-      <p class="kudos-vote">Kudos <%= post.likes.count %></p>
-    </div>
+      <div class="like-and-comment-section">
+        <img src="images/clappy-hands.png">
+        <p class="kudos-vote">Kudos <%= post.likes.count %></p>
+      </div>
 
-    
-      <%if post.comments.length != 0 %>
+      
+        <%if post.comments.length != 0 %>
 
-      <div class="comment-container">
-          <%post.comments.each do |comment| %>
-          <div class="individual-comment-container">
-            <div class="comment-author-picture"></div>
-            <div class="comment-author-name">
-              <%= comment.user.username %>
+        <div class="comment-container">
+            <%post.comments.each do |comment| %>
+            <div class="individual-comment-container">
+              <div class="comment-author-picture"></div>
+              <div class="comment-author-name">
+                <%= comment.user.username %>
+              </div>
+              <div class="post-comment">
+                <p><%= comment.body %></p>
+              </div>
             </div>
-            <div class="post-comment">
-              <p><%= comment.body %></p>
-            </div>
-          </div>
+            <% end %>
           <% end %>
-        <% end %>
-    </div>
-  </div>   
-    <% end %>
+      </div>
+    </div>   
+      <% end %>
+  </div>
 </div>
  
