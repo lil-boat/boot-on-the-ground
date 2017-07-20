@@ -2,7 +2,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @job = Job.where(user_id: params[:id])
+    @jobs = Job.where(user_id: params[:id])
+    @job = Job.new
+    @project = Project.new
   end
 
   def new
