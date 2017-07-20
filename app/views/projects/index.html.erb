@@ -7,10 +7,15 @@
             <h2 class="project-title"> <%= project.title %></h2>
           </div>
           <div class="back">
+          <h2 class="project-title"> <%= project.title %></h2>
             <p class="project-description"><%= project.description %></p>
             <a class="project-url" href="<%= project.url %>"><%= project.url %></a>
             <p class="delete-link"><%= link_to "Delete", project_path(project), method: :delete %></p>
 <!--            This line of code will enable you to view project images <%= image_tag project.image.url(:medium) %> -->
+            <h2 id="contributers-title">Contributers</h2>
+            <% project.users.each do |contributer| %>
+              <a href="/users/<%= contributer.id %>"><p class="contributer-name"><%= contributer.username %></p></a> 
+            <% end  %>
           </div>
         </div>
       </div>
