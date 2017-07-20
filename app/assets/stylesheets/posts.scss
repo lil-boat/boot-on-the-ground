@@ -51,13 +51,15 @@
   border-bottom: 1px solid #8d8d8d;
 }
 
-select {
+/* this is messing up some other styling. needs a new id or class tag */
+
+/*select {
   margin-left: 50px;
   margin-bottom: 20px;
   padding: 10px;
   font-size: 12pt;
   height: 20px;
-}
+}*/
 
 .input-field-dropdown {
   display: block;
@@ -213,14 +215,18 @@ select {
 }
 
 .like-and-comment-section img {
-  width: 35px;
+  width: 25px;
 }
 
-.like-and-comment-section p {
-  color: #236361;
+.like-and-comment-section button {
+  border: none;
+  background-color: white;
+  color: #3AAFA9;
+  font-size: 12pt;
   display: inline-block;
-  padding-top: 16px;
+  margin-top: 8px;
   vertical-align: top;
+  margin-right: 10px;
 }
 
 .comment-container {
