@@ -25,7 +25,7 @@ likes = ["Post", "Comment", "Project"]
 
   Project.create(
     title: Faker::App.name,
-    description: Faker::Lorem.sentence(1),
+    description: Faker::Lorem.sentence(8),
     url: Faker::Internet.url
   )
 
