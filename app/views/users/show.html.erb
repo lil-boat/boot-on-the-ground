@@ -12,8 +12,10 @@ Previous Titles:<br>
 <%= job.title %><br>
 <% end %>
 <% end %>
-
+<% if @user == current_user %>
+  
 <div class="user-buttons">
   <button class="add-job-button user-button" id="add-job-button" onclick="jobPopUp()">add a job</button>
   <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">add a project</button>
 </div>
+<% end %>

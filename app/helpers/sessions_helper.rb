@@ -22,5 +22,11 @@ def login(user)
       redirect_to_new_session_path
     end
   end
+
+  def user_is_logged_in
+    if !logged_in?
+        redirect_to root_path
+    end
+end
   
 end
