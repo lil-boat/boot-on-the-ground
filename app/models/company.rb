@@ -8,11 +8,11 @@ class Company < ApplicationRecord
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   after_update :crop_logo
 
+  validates :name, :description, presence: true
+
   def crop_logo
     logo.recreate_versions! if crop_x.present?
   end
-
-  validates :name, :description, presence: true
 
   def cropping?
     !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank?
