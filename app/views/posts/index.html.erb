@@ -33,8 +33,24 @@
               <img src="images/comment-box1.png">
               <button class="comment-button">Comment</button>
           </div>
+
+
+
+          <div class="comment-container" >
+                <div class= comment-form-container>
+                  <div class="comment-author-picture"></div>
+
+                  <div class = "comment-form">
+                    <%= form_for @comment, remote: true do |f| %>
+                      <% f.hidden_field :post_id, :value => post.id%>
+                      <%= f.text_area :body, size:"50x2", placeholder: 'write comment...' %>
+                      <div id="comment-submit">
+                        <%= f.submit "comment", :id => 'comment-submit-button'%>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
             <%if post.comments.length != 0 %>
-              <div class="comment-container">
                 <%post.comments.each do |comment| %>
                     <div class="individual-comment-container" id="<%= comment.id %>">
                       <div class="comment-author-picture"></div>
@@ -52,8 +68,9 @@
                       </div>
                     </div>
                   <% end %>
-              </div>
+              
             <% end %>
+            </div>
         </div>
       <% end %>
     </div>
