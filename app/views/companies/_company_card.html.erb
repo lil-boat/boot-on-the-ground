@@ -1,0 +1,17 @@
+<% @companies.each do |company| %>
+  <div class="company-card" onclick="flipCard()">
+    <div class="flipper">
+      <div class="front">
+        <div class="company-image"></div>
+        <h2 class="company-name-front"><%= company.name %></h2>
+      </div>
+      <div class="back">
+        <h2 class="company-name"><%= company.name %></h2>
+        <%= company.users.each do |employee| %>
+          employee.username
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+<% end %>
