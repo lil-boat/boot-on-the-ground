@@ -86,18 +86,23 @@ var addCommentEventListener = function(){
   $(".message-board-container").on("submit", ".new_comment", function(e){
     e.preventDefault();
     var commentForm = $(this).closest(".comment-container")
+    console.log("1st")
+    console.log(commentForm.find("#new_comment"))
 
     newCommentAjaxCall(commentForm);
   })
 }
 
 var newCommentAjaxCall = function(commentForm){
+  var newCommentForm = commentForm.find("#new_comment") 
   console.log($("#new_comment").serialize())
   var request = $.ajax({
-    url: $("#new_comment").attr("action"),
-    method: $("#new_comment").attr("method"),
-    data: $("#new_comment").serialize()
+    url: newCommentForm.attr("action"),
+    method: newCommentForm.attr("method"),
+    data: newCommentForm.serialize()
   });
+  console.log("2nd")
+  console.log(commentForm)
 
   request.done(function(response){
     console.log("we got a response")
