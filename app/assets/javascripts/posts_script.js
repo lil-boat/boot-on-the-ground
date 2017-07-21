@@ -85,21 +85,23 @@ var postCommentEventListener = function(){
 var addCommentEventListener = function(){
   $(".message-board-container").on("submit", ".new_comment", function(e){
     e.preventDefault();
-    var submitCommentButton = $(this)
-    newCommentAjaxCall();
+    var commentForm = $(this).closest(".comment-container")
+
+    newCommentAjaxCall(commentForm);
   })
 }
 
-var newCommentAjaxCall = function(){
+var newCommentAjaxCall = function(commentForm){
   console.log($("#new_comment").serialize())
   var request = $.ajax({
     url: $("#new_comment").attr("action"),
     method: $("#new_comment").attr("method"),
-    data: $("#new_comment :input, :hidden").serialize()
+    data: $("#new_comment").serialize()
   });
 
   request.done(function(response){
     console.log("we got a response")
     console.log(response)
+    $(commentForm).append(response)
   })
 }
