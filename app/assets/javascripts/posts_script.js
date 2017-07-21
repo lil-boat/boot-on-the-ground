@@ -1,8 +1,12 @@
 
 $(document).ready(function() {
+  $(".comment-form-container").hide();
   addkudosEventListener();
   addListenerToNewPostForm();
   addkudosCommentEventListener();
+  postCommentEventListener();
+  addCommentEventListener();
+
 });
 
 // Add Kudos to Post
@@ -63,4 +67,37 @@ var newPostAjaxCall = function(){
     $('#new_post')[0].reset()
   })
 
+}
+
+//jquery for comment form to slide in
+
+var postCommentEventListener = function(){
+  $(".message-board-container").on("click", ".comment-button", function(){
+    var clickedComment = $(this).parent().siblings().last().find(".comment-form-container")
+    clickedComment.slideDown();
+  })
+}
+
+// Ajax new comment under post
+
+var addCommentEventListener = function(){
+  $(".message-board-container").on("submit", ".new_comment", function(e){
+    e.preventDefault();
+    var submitCommentButton = $(this)
+    newCommentAjaxCall();
+  })
+}
+
+var newCommentAjaxCall = function(){
+  console.log($("#new_comment").serialize())
+  var request = $.ajax({
+    url: $("#new_comment").attr("action"),
+    method: $("#new_comment").attr("method"),
+    data: $("#new_comment").serialize()
+  });
+
+  request.done(function(response){
+    console.log("we got a response")
+    console.log(response)
+  })
 }
