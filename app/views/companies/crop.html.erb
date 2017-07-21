@@ -1,0 +1,22 @@
+<script src="http://jcrop-cdn.tapmodo.com/v0.9.12/js/jquery.Jcrop.min.js"></script>
+<link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v0.9.12/css/jquery.Jcrop.css" type="text/css" />
+<script language="Javascript">
+
+
+</script>
+
+
+
+<%= image_tag @company.logo.url(:large), :id => "cropbox" %>
+<%= form_for @company do |f| %> 
+	<% %w[x y w h].each do |attribute| %> 
+		<%= f.text_field "crop_#{attribute}" %> <br> 
+	<% end %> 
+	<div class="actions"> 
+		<%= f.submit "Crop" %> 
+	</div>
+<% end %> 
+
+<div style="width:100px; height:100px; overflow:hidden">
+  <%= image_tag @company.logo.url(:large), :id => "preview" %>
+</div>

@@ -33,6 +33,8 @@ gem 'faker'
 gem "paperclip", "~> 5.0.0"
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'jcrop-rails-v2'
+gem 'rails-assets-jcrop', source: "https://rails-assets.org"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
