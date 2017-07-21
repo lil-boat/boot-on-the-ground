@@ -5,6 +5,7 @@ before_action :user_is_logged_in
     @jobs = Job.where(user_id: params[:id])
     @job = Job.new
     @project = Project.new
+    @projects = @user.projects
   end
 
   def new
