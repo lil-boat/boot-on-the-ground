@@ -107,6 +107,8 @@ var newCommentAjaxCall = function(commentForm){
   request.done(function(response){
     console.log("we got a response")
     console.log(response)
-    $(commentForm).append(response)
+    $(commentForm).append(response);
+    $('.comment-form-container').slideUp();
+
   })
 }
