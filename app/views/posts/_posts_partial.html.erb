@@ -1,4 +1,4 @@
-
+<!-- 
   <div class="post-container" id="<%=@post.id %>">
     <div class="post-author-info">
       <div class="author-picture"></div>
@@ -33,4 +33,62 @@
           <% end %>
         <% end %>
     </div>
-  </div>   
+  </div>    -->
+
+
+     <div class="post-container" id="<%= @post.id %>">
+        <div class="post-author-info">
+          <div class="author-picture"></div>
+          <div class="author-name">
+            <%= @post.user.username %>
+          </div>
+        </div>
+
+        <div class="post-main-content">
+          <%= @post.body %>
+        </div>
+
+        <div class="like-and-comment-section" id = "post-like-and-comment-section">
+          <img src="images/clappy-hands.png">
+          <button class="post-kudos-vote">Kudos <%= @post.likes.count %></button>
+          <img src="images/comment-box1.png">
+          <button class="comment-button">Comment</button>
+        </div>
+
+
+          <%if @post.comments.length != 0 %>
+
+          <div class="comment-container">
+            <div class= comment-form-container>
+              <div class="comment-author-picture"></div>
+
+              <div class = "comment-form">
+                <%= form_for @comment, remote: true do |f| %>
+                <%= f.text_area :body, size:"50x2", placeholder: 'write comment...' %>
+                <div id="comment-submit">
+                <%= f.submit "comment", :id => 'comment-submit-button'%>
+                </div>
+                <% end %>
+              </div>
+
+            </div>
+              <%@post.comments.each do |comment| %>
+              <div class="individual-comment-container" id="<%= comment.id %>">
+                <div class="comment-author-picture"></div>
+                <div class="comment-author-name">
+                  <%= comment.user.username %>
+                </div>
+                <div class="post-comment">
+                  <p><%= comment.body %></p>
+                </div>
+                <div class="like-and-comment-section" id="comment-like-and-comment-section">
+                <img src="images/clappy-hands.png">
+                <button class="comment-kudos-vote">Kudos <%= comment.likes.count %></button>
+                <img src="images/comment-box1.png">
+                <button class="comment-button">Comment</button>
+              </div>
+              </div>
+              <% end %>
+            <% end %>
+        </div>
+      </div>

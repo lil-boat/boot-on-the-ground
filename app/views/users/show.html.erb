@@ -1,36 +1,39 @@
-<%= render '/jobs/form' %>
-<%= render '/projects/form' %>
-<% if @user.image.url(:medium) != "/images/medium/missing.png" %>
-  <%= image_tag @user.image.url(:medium) %>
-<% else %>
-  <div class="profile-pic"></div>
-<% end %>
-<p class="username-profile"><%= @user.username %></p><br>
+<div class="container">
+  
+  <div class="user-info">
+    <% if @user.image.url(:medium) != "/images/medium/missing.png" %>
+      <%= image_tag @user.image.url(:medium) %>
+    <% else %>
+      <div class="profile-pic"></div>
+    <% end %>
+    <p class="username-profile"><%= @user.username %></p><br>
 
-<div class="user-testimonial">
-  <%= @user.testimonial %>
-</div>
+    <div class="user-testimonial">
+      <%= @user.testimonial %>
+    </div>
 
-<div class="user-location">
-  <i class="fa fa-map-marker location-icon"></i>
-  <p class="location">San Francisco</p>
-</div>
+    <div class="user-location">
+      <i class="fa fa-map-marker location-icon"></i>
+      <p class="location">San Francisco</p>
+    </div>
 
-<div class="user-email">
-  <i class="fa fa-envelope-o email-icon"></i>
-  <a href="#" class="email">tom123@gmail.com</a>
-</div>
+    <div class="user-email">
+      <i class="fa fa-envelope-o email-icon"></i>
+      <a href="#" class="email">tom123@gmail.com</a>
+    </div>
 
-<!-- Previous Titles:<br> -->
-<% if @jobs %>
-<% @jobs.each do |job| %>
-<%= job.title %><br>
-<% end %>
-<% end %>
+    
 
-<% if @user == current_user %>
-  <div class="user-buttons">
-    <button class="add-job-button user-button" id="add-job-button" onclick="jobPopUp()">add a job</button>
-    <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">add a project</button>
+    <% if @user == current_user %>
+      <div class="user-buttons">
+        <button class="add-job-button user-button" id="add-job-button" onclick="jobPopUp()">add a job</button>
+        <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">add a project</button>
+      </div>
+    <% end %>
   </div>
-<% end %>
+  <div class="user-projects-container">
+    <%= render '/projects/project_card' %>
+  </div>
+  <%= render '/jobs/form' %>
+  <%= render '/projects/form' %>
+</div>

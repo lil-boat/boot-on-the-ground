@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   resources :projects
   resources :posts do
     resources :likes, only: [:create]
-  end 
+  end
+  resources :comments, only: [:create, :edit, :destroy] do
+    resources :likes, only: [:create]
+  end
   resources :companies, only: [:new, :create, :index, :edit, :update, :destroy]
   resources :jobs, only: [:index, :new, :create, :edit, :destroy]
 end
