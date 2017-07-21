@@ -1,6 +1,6 @@
 <div class="jobs-form" id="jobs-form">
   <div class="form-container">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeJobs()">&times;</a>
+  <a href="javascript:void(0)" class="logx" onclick="closeJobs()">&times;</a>
   <h2>New Job</h2>
     <%= form_for @job do |f| %>
       <%= f.text_field :title, placeholder: 'Job Title', :class => 'input-field' %>

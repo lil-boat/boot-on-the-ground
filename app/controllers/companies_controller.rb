@@ -25,7 +25,6 @@ before_action :user_is_logged_in
     end
   end
 
-
   def edit
     @company = Company.find(params[:id])
   end
