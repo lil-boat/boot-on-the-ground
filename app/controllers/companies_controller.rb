@@ -20,7 +20,6 @@ before_action :user_is_logged_in
       render 'new'
     end
   end
-  end
 
   def edit
     @company = Company.find(params[:id])
