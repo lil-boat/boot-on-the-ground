@@ -15,7 +15,7 @@ before_action :user_is_logged_in
     @company = Company.new(company_params)
     if @company.save
       redirect_to companies_path
-    else 
+    else
       @errors = @company.errors.full_messages
       render 'new'
     end
@@ -29,7 +29,7 @@ before_action :user_is_logged_in
     @company = Company.find(params[:id])
     if  @company.update_attributes(company_params)
       redirect_to '/companies'
-    else 
+    else
       @errors = @company.errors.full_messages
       render 'edit'
     end
