@@ -1,4 +1,5 @@
 <%= render './layouts/login' %>
+<%= render './layouts/signup' %>
 <div class="home-header">
   <button class="boots-button scroll-buttons">boots on the ground</button>
   <button class="boots-in-the-world-button scroll-buttons">boots in the world</button>
@@ -13,12 +14,12 @@
   <p class="page-description">a place to find what boots are up to post bootcamp</p>
   <div class="log-button">
     <% if current_user %>
-      <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">enter</button></a>
+      <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">view profile</button></a>
     <% else %>
-      <button class="log-in-home-button" onclick="openLogin()">log in</button>
+      <button class="log-in-home-button" onclick="openLogin()">log in</button><br><br>
+
+      <!--       <button class="sign-up-home-button" onclick="openSignUp()">register</button> -->
     <% end %>
-    <button>
-    </button>
   </div>
   <p class="explore">explore</p>
   <div class="arrow">
@@ -29,11 +30,11 @@
 <div class="about">
   <div class="descriptions">
     <div class="first-description">
-      <p class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      <p class="a">Devbootcamp has helped more than 2,700 students develop careers in tech
       </p>
     </div>
     <div class="second-description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      <p>The legacy will live on through the community of boots continuing to impact the world
       </p>
     </div>
   </div>
@@ -50,7 +51,7 @@
     <img class="jobSlide" src="https://unsplash.it/1250/800?image=472" style="height: 400px; width: 550px;">
   </div>
   <div class="section-description right right-desc">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <p>Alumni are currently working at ____, ____, ____, and ___, just to name a few. </p>
   </div>
 </div>
 
@@ -61,7 +62,7 @@
     <img class="projectSlide" src="https://unsplash.it/1250/800?image=572" style="height: 400px; width: 550px;">
   </div>
   <div class="section-description">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <p>Check out the beautiful and meaningful things they've made.</p>
   </div>
 </div>
 
@@ -72,12 +73,12 @@
     <img class="testimonialSlide" src="https://unsplash.it/1250/800?image=772" style="height: 400px; width: 550px;"> -->
   </div>
   <div class="section-description right right-desc">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <p>What we have to say:</p>
   </div>
 </div>
 
 <div class="boots-in-the-world">
-  <h1>boots in the world</h1>
+  <h1>Where we are now</h1>
 <!--   <div class="dbc-placeholder-pic">
 
   </div> -->

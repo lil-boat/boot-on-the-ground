@@ -93,16 +93,16 @@
   }
 }
 /****** message board css ******/
-#posts-bg-color{
+#posts-bg-color {
   width: 100%;
   background-color: rgb(233, 235, 238);
 }
 
-.message-board-container{
+.message-board-container {
   padding: 10px;
 }
 
-#new-post-form{
+#new-post-form {
   width: 500px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -110,10 +110,10 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 5px;
-  padding-bottom: 10px
+  padding-bottom: 10px;
 }
 
-#new-post-form .input-field{
+#new-post-form .input-field {
   display: inline-block;
   color: black;
   font-size: 12pt;
@@ -124,18 +124,16 @@
   margin-bottom: 5px;
   width: 480px;
   background-color: white;
-
 }
 
-#categories-drop-down{
+#categories-drop-down {
   margin-left: 285px;
   padding: 2.5px;
   background-color: #236361;
   display: inline-block;
-  
 }
 
-#cat-drop-down{
+#cat-drop-down {
   border: none;
   padding: 5px;
   font-size: 12pt;
@@ -143,20 +141,19 @@
   background-color: #236361;
 }
 
-#post-submit{
+#post-submit {
   background-color: blue;
   display: inline-block;
   float: right;
   margin-right: 10px;
   align-content: center;
-  
 }
 /*
 #comment-form-container{
   display: none;
 }*/
 
-#post-submit-button{
+#post-submit-button {
   padding: 5px;
   padding-right: 10px;
   padding-left: 10px;
@@ -168,8 +165,6 @@
     background-color: #3aafa9;
   }
 }
-
-
 
 .post-container {
   margin: auto;
@@ -225,7 +220,7 @@
 #post-like-and-comment-section button {
   border: none;
   background-color: white;
-  color: #3AAFA9;
+  color: #3aafa9;
   font-size: 12pt;
   display: inline-block;
   margin-top: 8px;
@@ -236,14 +231,13 @@
 #comment-like-and-comment-section button {
   border: none;
   background-color: rgb(246, 247, 249);
-  color: #3AAFA9;
+  color: #3aafa9;
   font-size: 12pt;
   display: inline-block;
   margin-top: 8px;
   vertical-align: top;
   margin-right: 10px;
 }
-
 
 .comment-container {
   width: 500px;
@@ -291,6 +285,7 @@
   font-size: 10pt;
 }
 
+
 .comment-form-container{
   display: none;
   margin: auto;
@@ -298,21 +293,21 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.comment-form{
+.comment-form {
   display: inline-block;
   vertical-align: top;
   margin-left: 5px;
   margin-top: 10px;
 }
 
-#comment-submit{
+#comment-submit {
   margin-left: 5px;
   display: inline-block;
   vertical-align: top;
   font-size: 12px;
 }
 
-#comment-submit-button{
+#comment-submit-button {
   padding: 5.5px;
   font-size: 14px;
   border: none;
@@ -321,6 +316,4 @@
   &:hover {
     background-color: #3aafa9;
   }
-
 }
-

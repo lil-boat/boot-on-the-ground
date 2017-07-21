@@ -52,6 +52,22 @@
   }
 }
 
+.sign-up-home-button {
+  font-size: 25px;
+  width: 150px;
+  height: 50px;
+  background-color: #3fbfb8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+
+
 .log-button {
   width: 160px;
   margin: 30px auto;
@@ -236,7 +252,24 @@
   float: right;
 }
 
+.signup-popup {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: right;
+}
+
 .login-popup {
+  padding-top: 150px;
+}
+
+.signup-popup {
   padding-top: 150px;
 }
 

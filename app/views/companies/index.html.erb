@@ -1,21 +1,8 @@
 <div class="container" >
-<%= link_to "Add New Company", new_company_path %> 
-  <h1>companies</h1>
-  <div class= "company-list">
-  <% @companies.each do |company| %>
-    <div class="company-box">
-<!--            This line of code will enable you to view project images <%= image_tag company.logo.url(:medium) %> -->
 
-      <h2><%= company.name %></h2>
-        <% company.users.each do |employee| %>
-          <%= link_to employee.username, user_path(employee) %>
-        <% end  %>
-      <p><%= link_to "Edit Company", edit_company_path(company)%></p>
-      <p><%= link_to 'Delete Posting', company_path(company), remote: true, method: :delete %></p>
-      
-    </div>
-  <% end  %>
-  </div>
+<%= render 'company_card' %>
+
+<%= link_to "Add New Company", new_company_path %>
 </div>
 
 
