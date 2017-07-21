@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $(".comment-form-container").hide();
+  // $(".comment-form-container").hide();
   addkudosEventListener();
   addListenerToNewPostForm();
   addkudosCommentEventListener();

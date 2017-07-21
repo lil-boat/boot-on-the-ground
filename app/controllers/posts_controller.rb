@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
 before_action :user_is_logged_in
   def index
+    @comment = Comment.new
+    p "*" * 50
+    p @comment.nil?
+    p "*" * 50
     @posts = Post.all.reverse
     @post = Post.new
     @comment = Comment.new
@@ -11,6 +15,7 @@ before_action :user_is_logged_in
   end
 
   def create
+    @comment = Comment.new
     @post = Post.new(post_params)
     @post.user = current_user
     puts "\n\nINSIDE CREATE\n\n"
