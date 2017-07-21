@@ -9,13 +9,13 @@ before_action :user_is_logged_in
       @project = Project.new
     else
       redirect_to root_path
-    end 
+    end
   end
 
   def create
     @project = Project.new(project_params)
-    
-    if @project.save 
+
+    if @project.save
       @user_project = UserProject.create(user_id: current_user.id, project_id: @project.id)
     p ("*"* 100)
     p @project.id
@@ -23,13 +23,13 @@ before_action :user_is_logged_in
       redirect_to user_path(current_user)
     else
       render 'new'
-    end 
+    end
   end
 
 
   def edit
     @project = Project.find(params[:id])
-    
+
   end
 
   def update
@@ -38,13 +38,13 @@ before_action :user_is_logged_in
       redirect_to "projects#index"
     else
       render 'edit'
-    end 
+    end
   end
 
   def destroy
     @project = Project.find(params[:id])
-    @project.destroy 
-    redirect_to root_path
+    @project.destroy
+    redirect_to "projects#index"
   end
 
 

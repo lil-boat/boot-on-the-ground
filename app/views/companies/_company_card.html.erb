@@ -7,11 +7,11 @@
       </div>
       <div class="back">
         <h2 class="company-name"><%= company.name %></h2>
-        <%= company.users.each do |employee| %>
-          employee.username
-        <% end %>
+        <h3 id="employees-title">Boots working here</h2>
+          <% company.users.each do |employee| %>
+            <p class="employee-name"><%= employee.username %></p>
+          <% end %>
       </div>
     </div>
-
   </div>
 <% end %>
