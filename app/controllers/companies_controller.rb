@@ -19,7 +19,7 @@ before_action :user_is_logged_in
       else
         render 'crop'
       end
-    else 
+    else
       @errors = @company.errors.full_messages
       render 'new'
     end
@@ -37,7 +37,7 @@ before_action :user_is_logged_in
       else
         render :action => 'crop'
       end
-    else 
+    else
       @errors = @company.errors.full_messages
       render 'edit'
     end
