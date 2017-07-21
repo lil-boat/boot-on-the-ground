@@ -86,7 +86,6 @@ var addCommentEventListener = function(){
   $(".message-board-container").on("submit", ".new_comment", function(e){
     e.preventDefault();
     var commentForm = $(this).closest(".comment-container")
-    console.log("1st")
     console.log(commentForm.find("#new_comment"))
 
     newCommentAjaxCall(commentForm);
@@ -101,8 +100,6 @@ var newCommentAjaxCall = function(commentForm){
     method: newCommentForm.attr("method"),
     data: newCommentForm.serialize()
   });
-  console.log("2nd")
-  console.log(commentForm)
 
   request.done(function(response){
     console.log("we got a response")
