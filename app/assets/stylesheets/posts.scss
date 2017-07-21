@@ -93,6 +93,11 @@
   }
 }
 /****** message board css ******/
+#posts-bg-color{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(233, 235, 238);
+}
 
 .message-board-container{
   padding: 10px;
@@ -165,11 +170,7 @@
   }
 }
 
-#posts-bg-color{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(233, 235, 238);
-}
+
 
 .post-container {
   margin: auto;

@@ -44,6 +44,7 @@
 
               <div class = "comment-form">
                 <%= form_for @comment, remote: true do |f| %>
+                <% f.hidden_field :post_id, :value => post.id%>
                 <%= f.text_area :body, size:"50x2", placeholder: 'write comment...' %>
                 <div id="comment-submit">
                 <%= f.submit "comment", :id => 'comment-submit-button'%>

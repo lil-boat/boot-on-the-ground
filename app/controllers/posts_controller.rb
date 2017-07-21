@@ -11,7 +11,6 @@ before_action :user_is_logged_in
   end
 
   def create
-    @posts = Post.all
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     respond_to do |format| 
