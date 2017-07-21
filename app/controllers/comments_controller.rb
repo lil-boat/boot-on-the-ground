@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   
   def create
-    p "$" * 50
-    p comment_params
+
     @comment = Comment.new(comment_params)
-    @comment.user_id = current_user.id
+    
+    p "$" * 50
     p @comment
     p "*" * 50
 

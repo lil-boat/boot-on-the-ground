@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-  // $(".comment-form-container").hide();
   addkudosEventListener();
   addListenerToNewPostForm();
   addkudosCommentEventListener();
@@ -96,7 +95,7 @@ var newCommentAjaxCall = function(){
   var request = $.ajax({
     url: $("#new_comment").attr("action"),
     method: $("#new_comment").attr("method"),
-    data: $("#new_comment").serialize()
+    data: $("#new_comment :input, :hidden").serialize()
   });
 
   request.done(function(response){
