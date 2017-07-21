@@ -1,79 +1,61 @@
 <div id="posts-bg-color">
   <div class="message-board-container">
     <div class="form-container" id="new-post-form">
-      <%= form_for @post, remote: true do |f| %>
-
-      <%= f.text_area :body, placeholder: 'Share article, project, or update', :class => 'input-field' %>
-
-      <div id="categories-drop-down">
-        <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, :id=>'cat-drop-down'%>
-      </div>
-
-      <div id="post-submit">
-      <%= f.submit "Post", :id => 'post-submit-button'%>
-      </div>
-    <% end %>
+      <%= form_for @post do |f| %>
+        <%= f.text_area :body, placeholder: 'Share article, project, or update', :class => 'input-field' %>
+        <div id="categories-drop-down">
+          <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, :id=>'cat-drop-down'%>
+        </div>
+        <div id="post-submit">
+          <%= f.submit "Post", :id => 'post-submit-button'%>
+        </div>
+      <% end %>
     </div>
     <div class= "post-field">
+
+
       <% @posts.each do |post|%>
-      <div class="post-container" id="<%= post.id %>">
-        <div class="post-author-info">
-          <div class="author-picture"></div>
-          <div class="author-name">
-            <%= post.user.username %>
-          </div>
-        </div>
-
-        <div class="post-main-content">
-          <%= post.body %>
-        </div>
-
-        <div class="like-and-comment-section" id = "post-like-and-comment-section">
-          <img src="images/clappy-hands.png">
-          <button class="post-kudos-vote">Kudos <%= post.likes.count %></button>
-          <img src="images/comment-box1.png">
-          <button class="comment-button">Comment</button>
-        </div>
-
-
-          <%if post.comments.length != 0 %>
-
-          <div class="comment-container">
-            <div class= comment-form-container>
-              <div class="comment-author-picture"></div>
-
-              <div class = "comment-form">
-                <%= form_for @comment, remote: true do |f| %>
-                <% f.hidden_field :post_id, :value => post.id%>
-                <%= f.text_area :body, size:"50x2", placeholder: 'write comment...' %>
-                <div id="comment-submit">
-                <%= f.submit "comment", :id => 'comment-submit-button'%>
-                </div>
-                <% end %>
-              </div>
-
+        <div class="post-container" id="<%= post.id %>">
+          <div class="post-author-info">
+            <div class="author-picture"></div>
+            <div class="author-name">
+              <%= post.user.username %>
             </div>
-              <%post.comments.each do |comment| %>
-              <div class="individual-comment-container" id="<%= comment.id %>">
-                <div class="comment-author-picture"></div>
-                <div class="comment-author-name">
-                  <%= comment.user.username %>
-                </div>
-                <div class="post-comment">
-                  <p><%= comment.body %></p>
-                </div>
-                <div class="like-and-comment-section" id="comment-like-and-comment-section">
-                <img src="images/clappy-hands.png">
-                <button class="comment-kudos-vote">Kudos <%= comment.likes.count %></button>
-                <img src="images/comment-box1.png">
-                <button class="comment-button">Comment</button>
+          </div>
+
+          <div class="post-main-content">
+              <%= post.body %>
+          </div>
+
+          <div class="like-and-comment-section" id = "post-like-and-comment-section">
+              <img src="images/clappy-hands.png">
+              <button class="post-kudos-vote">Kudos <%= post.likes.count %></button>
+              <img src="images/comment-box1.png">
+              <button class="comment-button">Comment</button>
+          </div>
+            <%if post.comments.length != 0 %>
+              <div class="comment-container">
+                <%post.comments.each do |comment| %>
+                    <div class="individual-comment-container" id="<%= comment.id %>">
+                      <div class="comment-author-picture"></div>
+                      <div class="comment-author-name">
+                        <%= comment.user.username %>
+                      </div>
+                      <div class="post-comment">
+                        <p><%= comment.body %></p>
+                      </div>
+                      <div class="like-and-comment-section" id="comment-like-and-comment-section">
+                      <img src="images/clappy-hands.png">
+                      <button class="comment-kudos-vote">Kudos <%= comment.likes.count %></button>
+                      <img src="images/comment-box1.png">
+                      <button class="comment-button">Comment</button>
+                      </div>
+                    </div>
+                  <% end %>
               </div>
-              </div>
-              <% end %>
             <% end %>
         </div>
-      </div>
-        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

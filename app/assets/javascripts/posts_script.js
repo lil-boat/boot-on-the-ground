@@ -49,20 +49,23 @@ var kudosCommentAjaxCall = function(clickedCommentKudos){
 
 // Add New Post
 var addListenerToNewPostForm = function(){
-  $("#new-post-form").submit(function(e){
+  $("#new-post-form").on('submit', '#new_post', function(e){
+    console.log('INSIDE $("#new-post-form").submit')
     e.preventDefault();
-    var formContainer = $(this);
     newPostAjaxCall();
   })
 }
 
 var newPostAjaxCall = function(){
+  console.log('INSIDE newPostAjaxCall')
   var request = $.ajax({
     url: $("#new_post").attr("action"),
     method: $("#new_post").attr("method"),
     data: $("#new_post").serialize()
   });
   request.done(function(response){
+    console.log('INSIDE newPostAjaxCall request.done')
+
     $('.post-field').prepend(response)
     $('#new_post')[0].reset()
   })
