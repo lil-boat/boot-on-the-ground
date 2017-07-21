@@ -1,39 +1,3 @@
-<!-- 
-  <div class="post-container" id="<%=@post.id %>">
-    <div class="post-author-info">
-      <div class="author-picture"></div>
-      <div class="author-name">
-        <%= @post.user.username %> 
-      </div>
-    </div>
-
-    <div class="post-main-content">
-      <%= @post.body %>
-    </div>
-
-    <div class="like-and-comment-section">
-      <img src="images/clappy-hands.png">
-      <p class="kudos-vote">Kudos <%= @post.likes.count %></p>
-    </div>
-
-    
-      <%if @post.comments.length != 0 %>
-
-      <div class="comment-container">
-          <%@post.comments.each do |comment| %>
-          <div class="individual-comment-container">
-            <div class="comment-author-picture"></div>
-            <div class="comment-author-name">
-              <%= comment.user.username %>
-            </div>
-            <div class="post-comment">
-              <p><%= comment.body %></p>
-            </div>
-          </div>
-          <% end %>
-        <% end %>
-    </div>
-  </div>    -->
 
 
      <div class="post-container" id="<%= @post.id %>">
@@ -56,14 +20,15 @@
         </div>
 
 
-          <%if @post.comments.length != 0 %>
+          
 
           <div class="comment-container">
-            <div class= comment-form-container>
+            <div class= "comment-form-container">
               <div class="comment-author-picture"></div>
 
               <div class = "comment-form">
-                <%= form_for @comment, remote: true do |f| %>
+                <%= form_for @comment do |f| %>
+                 <%= f.hidden_field :post_id, value: @post.id %>
                 <%= f.text_area :body, size:"50x2", placeholder: 'write comment...' %>
                 <div id="comment-submit">
                 <%= f.submit "comment", :id => 'comment-submit-button'%>
@@ -71,6 +36,7 @@
                 <% end %>
               </div>
 
+            <%if @post.comments.length != 0 %>
             </div>
               <%@post.comments.each do |comment| %>
               <div class="individual-comment-container" id="<%= comment.id %>">

@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 before_action :user_is_logged_in
   def index
-    @posts = Post.all
+    @comment = Comment.new
+    @posts = Post.all.reverse
     @post = Post.new
     @comment = Comment.new
   end
@@ -11,10 +12,14 @@ before_action :user_is_logged_in
   end
 
   def create
+    @comment = Comment.new
     @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post.user = current_user
+
+
     respond_to do |format| 
       if @post.save
+      
         format.html {render "_posts_partial", layout: false}
         format.js
         # render json: {new_post: @post }.to_json
