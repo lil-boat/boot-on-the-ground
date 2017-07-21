@@ -52,6 +52,22 @@
   }
 }
 
+.sign-up-home-button {
+  font-size: 25px;
+  width: 150px;
+  height: 50px;
+  background-color: #3fbfb8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+
+
 .log-button {
   width: 160px;
   margin: 30px auto;

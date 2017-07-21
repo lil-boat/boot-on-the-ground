@@ -13,12 +13,12 @@
   <p class="page-description">a place to find what boots are up to post bootcamp</p>
   <div class="log-button">
     <% if current_user %>
-      <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">enter</button></a>
+      <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">view profile</button></a>
     <% else %>
-      <button class="log-in-home-button" onclick="openLogin()">log in</button>
+      <button class="log-in-home-button" onclick="openLogin()">log in</button><br><br>
+
+      <button class="sign-up-home-button" onclick="openSignUp()">register</button>
     <% end %>
-    <button>
-    </button>
   </div>
   <p class="explore">explore</p>
   <div class="arrow">
