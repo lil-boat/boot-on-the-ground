@@ -147,6 +147,10 @@
   align-content: center;
   
 }
+/*
+#comment-form-container{
+  display: none;
+}*/
 
 #post-submit-button{
   padding: 5px;
@@ -286,3 +290,36 @@
   padding-bottom: 10px;
   font-size: 10pt;
 }
+
+.comment-form-container{
+  margin: auto;
+  width: 480px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.comment-form{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+#comment-submit{
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+
+#comment-submit-button{
+  padding: 5.5px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  background-color: #236361;
+  &:hover {
+    background-color: #3aafa9;
+  }
+
+}
+

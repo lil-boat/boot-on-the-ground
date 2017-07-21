@@ -3,6 +3,7 @@ before_action :user_is_logged_in
   def index
     @posts = Post.all
     @post = Post.new
+    @comment = Comment.new
   end
 
   def new

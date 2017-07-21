@@ -1,8 +1,10 @@
 
 $(document).ready(function() {
+  $(".comment-form-container").hide();
   addkudosEventListener();
   addListenerToNewPostForm();
   addkudosCommentEventListener();
+  postCommentEventListener();
 });
 
 // Add Kudos to Post
@@ -63,4 +65,14 @@ var newPostAjaxCall = function(){
     $('#new_post')[0].reset()
   })
 
+}
+
+//Add comment on post
+
+var postCommentEventListener = function(){
+  $(".message-board-container").on("click", ".comment-button", function(){
+    console.log("clicked comment")
+    $(".comment-form-container").slideDown();
+  })
+  
 }
