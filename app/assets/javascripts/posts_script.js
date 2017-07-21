@@ -71,8 +71,8 @@ var newPostAjaxCall = function(){
 
 var postCommentEventListener = function(){
   $(".message-board-container").on("click", ".comment-button", function(){
-    console.log("clicked comment")
-    $(".comment-form-container").slideDown();
+    var clickedComment = $(this).parent().siblings().last().find(".comment-form-container")
+    clickedComment.slideDown();
   })
   
 }
