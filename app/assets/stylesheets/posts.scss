@@ -32,13 +32,9 @@
   padding: 10px;
   width: 276px;
   border-style: none;
-  /*border-radius: 5px;*/
   font-size: 14pt;
-  /*color: #def2f1;*/
   color: black;
-  /*border: 1px solid #def2f1;*/
   border: 1px solid #8d8d8d;
-  /*background-color: #17252a;*/
   background-color: white;
   outline: none;
 }
@@ -50,16 +46,6 @@
   border-right: none;
   border-bottom: 1px solid #8d8d8d;
 }
-
-/* this is messing up some other styling. needs a new id or class tag */
-
-/*select {
-  margin-left: 50px;
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 12pt;
-  height: 20px;
-}*/
 
 .input-field-dropdown {
   display: block;
@@ -101,6 +87,7 @@
 
 .message-board-container {
   padding: 10px;
+  margin-top: -12px;
 }
 
 #new-post-form {
