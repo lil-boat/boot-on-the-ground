@@ -67,7 +67,6 @@
   }
 }
 
-
 .log-button {
   width: 160px;
   margin: 30px auto;
@@ -285,6 +284,39 @@
 
 .x {
   margin-left: 10px;
+}
+
+.oauth-login {
+  /*height: 30px;*/
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+  width: 285px;
+  text-align: center;
+  font-size: 16pt;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #0077b5;
+  cursor: pointer;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  i {
+    font-size: 16pt;
+    color: white;
+    margin-right: 4px;
+  }
+}
+
+.linkedin-logo {
+  height: 100px;
+  width: 100px;
+  background-color: #0077b5;
+  text-align: center;
+  i {
+    color: white;
+  }
 }
 
 /*MEDIA QUEREY*/
