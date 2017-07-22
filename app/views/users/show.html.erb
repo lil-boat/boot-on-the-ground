@@ -26,19 +26,17 @@
       <%= @user.company %><br>
       <%= @user.job_location %><br>
     </div>
-    
-    <div class="buttons">
-        <a href="<%= @user.urls %>"><button class="connect-button">Connect</button></a>
-    </div>
 
-    <% if @user == current_user %>
-      <div class="user-buttons">
-        <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">new project</button>
-      </div>
+    <div class="user-buttons">
+      <% if @user == current_user %>
+          <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">New Project</button>
+      <% else %>
+          <a href="<%= @user.urls %>"><button class="profile-connect-button">Connect</button></a>
+    </div>
     <% end %>
   </div>
-  <div class="user-projects-container">
-    <%= render '/projects/project_card' %>
-  </div>
-  <%= render '/projects/form' %>
+    <div class="user-projects-container">
+      <%= render '/projects/project_card' %>
+    </div>
+    <%= render '/projects/form' %>
 </div>

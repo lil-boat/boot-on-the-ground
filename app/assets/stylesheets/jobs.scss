@@ -77,3 +77,17 @@
     /*background-color: #eee;*/
   }
 }
+
+.profile-connect-button {
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  background: white;
+  border: 1.5px solid #3aafa9;
+  color: #3aafa9;
+  cursor: pointer;
+  &:hover {
+    border-width: 3px;
+    /*background-color: #eee;*/
+  }
+}
