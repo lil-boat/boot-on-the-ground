@@ -85,15 +85,13 @@ var postCommentEventListener = function(){
 var addCommentEventListener = function(){
   $(".message-board-container").on("submit", ".new_comment", function(e){
     e.preventDefault();
-    var commentForm = $(this).closest(".comment-container")
-    console.log(commentForm.find("#new_comment"))
-
-    newCommentAjaxCall(commentForm);
+    var commentContainer = $(this).closest(".comment-container")
+    newCommentAjaxCall(commentContainer);
   })
 }
 
-var newCommentAjaxCall = function(commentForm){
-  var newCommentForm = commentForm.find("#new_comment") 
+var newCommentAjaxCall = function(commentContainer){
+  var newCommentForm = commentContainer.find("#new_comment") 
   console.log($("#new_comment").serialize())
   var request = $.ajax({
     url: newCommentForm.attr("action"),
@@ -101,10 +99,11 @@ var newCommentAjaxCall = function(commentForm){
     data: newCommentForm.serialize()
   });
 
+
   request.done(function(response){
     console.log("we got a response")
     console.log(response)
-    $(commentForm).append(response);
+    $(commentContainer).append(response)
     $(".new_comment").each(function(){
       this.reset();
     });
