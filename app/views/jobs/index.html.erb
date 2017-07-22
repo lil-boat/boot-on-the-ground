@@ -12,7 +12,7 @@
         <p class="job-title"><%= user.job_title %></p>
         <p class="job-company"><%= user.company %></p>
       <div class="buttons">
-        <button class="connect-button">Connect</button>
+        <a href="<%= user.urls %>"><button class="connect-button">Connect</button></a>
       </div>
     </div>
   <% end  %>

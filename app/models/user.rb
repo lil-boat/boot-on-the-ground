@@ -31,6 +31,7 @@ class User < ApplicationRecord
       user.company = auth.extra.raw_info.positions.values[1][0].company.name
       user.job_title = auth.extra.raw_info.positions.values[1][0].title
       user.job_location = auth.extra.raw_info.positions.values[1][0].location.name
+      user.urls = auth.info.urls.public_profile
     end
   end
 end

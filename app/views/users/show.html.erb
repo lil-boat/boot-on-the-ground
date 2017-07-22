@@ -27,6 +27,9 @@
       <%= @user.job_location %><br>
     </div>
     
+    <div class="buttons">
+        <a href="<%= @user.urls %>"><button class="connect-button">Connect</button></a>
+    </div>
 
     <% if @user == current_user %>
       <div class="user-buttons">

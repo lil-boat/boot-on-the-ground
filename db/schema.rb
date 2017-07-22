@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(version: 20170721235635) do
     t.text "image"
     t.string "job_title"
     t.string "job_location"
+    t.string "urls"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
