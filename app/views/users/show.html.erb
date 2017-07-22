@@ -32,8 +32,8 @@
           <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">New Project</button>
       <% else %>
           <a href="<%= @user.urls %>"><button class="profile-connect-button">Connect</button></a>
-    </div>
     <% end %>
+    </div>
   </div>
     <div class="user-projects-container">
       <%= render '/projects/project_card' %>
