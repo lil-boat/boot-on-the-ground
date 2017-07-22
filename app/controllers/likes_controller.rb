@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-before_action :user_is_logged_in
+before_action :authenticate_user!
   def create
 
     def likeable_type

@@ -1,27 +1,31 @@
 <div class="container">
   
   <div class="user-info">
-    <% if @user.image.url(:medium) != "/images/medium/missing.png" %>
-      <%= image_tag @user.image.url(:medium) %>
-    <% else %>
-      <div class="profile-pic"></div>
-    <% end %>
-    <p class="username-profile"><%= @user.username %></p><br>
+      <div class="profile-pic">
+        <%= image_tag(@user.image, :class => "user-pic") %>
+      </div>
+    <p class="username-profile"><%= @user.name %></p><br>
 
     <div class="user-testimonial">
-      <%= @user.testimonial %>
+      <%= @user.description %>
     </div>
 
     <div class="user-location">
       <i class="fa fa-map-marker location-icon"></i>
-      <p class="location">San Francisco</p>
+      <p class="location"><%= @user.location %></p>
     </div>
 
     <div class="user-email">
       <i class="fa fa-envelope-o email-icon"></i>
-      <a href="#" class="email">tom123@gmail.com</a>
+      <p class="email"><%= @user.email %></p>
     </div>
-
+    
+    <div class="user-testimonial">
+    <br>
+      <%= @user.job_title %><br>
+      <%= @user.company %><br>
+      <%= @user.job_location %><br>
+    </div>
     
 
     <% if @user == current_user %>

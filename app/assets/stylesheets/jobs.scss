@@ -34,11 +34,16 @@
 }
 
 .user-picture {
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
   margin: 10px auto;
   border-radius: 90px;
-  background-image: url("https://unsplash.it/120/120?image=62");
+}
+
+.image {
+  height: 130px;
+  width: 130px;
+  border-radius: 90px;
 }
 
 .job-title {

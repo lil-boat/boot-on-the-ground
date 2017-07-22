@@ -1,3 +1,6 @@
+<% if !current_user %>
+  <%= session[:id].inspect %>
+<% end  %>
 <%= render './layouts/login' %>
 <%= render './layouts/signup' %>
 <div class="home-header">
@@ -17,8 +20,6 @@
       <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">view profile</button></a>
     <% else %>
       <button class="log-in-home-button" onclick="openLogin()">log in</button><br><br>
-
-      <!--       <button class="sign-up-home-button" onclick="openSignUp()">register</button> -->
     <% end %>
   </div>
   <p class="explore">explore</p>

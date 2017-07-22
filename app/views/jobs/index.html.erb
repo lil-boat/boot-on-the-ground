@@ -2,14 +2,15 @@
   <h1>employed boots</h1>
   <% @users.each do |user| %>
     <div class="user-box">
-      <div class="user-picture"></div>
-      <div class="user-name">
-         <a href="/users/<%= user.id %>"><%= user.username %></a> 
+      <div class="user-picture">
+        <%= image_tag(user.image, :class => "image")%>
       </div>
-      <% if user.jobs.any? %>
-        <p class="job-title"><%= user.jobs.first.title %></p>
-        <p class="job-company"><%= user.jobs.first.company.name %></p>
-      <% end %>
+      <div class="user-name">
+         <a href="/users/<%= user.id %>"><%= user.name %></a> 
+      </div>
+      
+        <p class="job-title"><%= user.job_title %></p>
+        <p class="job-company"><%= user.company %></p>
       <div class="buttons">
         <button class="connect-button">Connect</button>
       </div>

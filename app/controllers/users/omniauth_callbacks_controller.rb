@@ -15,4 +15,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def failure
     redirect_to root_path
   end
+
+  def show
+    @user = User.find(params[:id])
+    @jobs = Job.where(user_id: params[:id])
+    @job = Job.new
+    @project = Project.new
+    # @projects = @user.projects
+  end
 end
