@@ -30,14 +30,12 @@
 
     <% if @user == current_user %>
       <div class="user-buttons">
-        <button class="add-job-button user-button" id="add-job-button" onclick="jobPopUp()">add a job</button>
-        <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">add a project</button>
+        <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">new project</button>
       </div>
     <% end %>
   </div>
   <div class="user-projects-container">
     <%= render '/projects/project_card' %>
   </div>
-  <%= render '/jobs/form' %>
   <%= render '/projects/form' %>
 </div>

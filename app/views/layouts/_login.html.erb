@@ -3,6 +3,16 @@
   <div class="x">
     <a href="javascript:void(0)" class="logx" onclick="closeLogin()">&times;</a>
   </div>
+      <h2>Login</h2>
       
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.email_field :email, autofocus: true, :class => 'input-field'  %>
+
+    <%= f.password_field :password, autocomplete: "off", :class => 'input-field' %>
+
+    <%= f.submit "Log in" %>
+<% end %>
+
+<%= render "devise/shared/links" %>
     </div>
 </div>
