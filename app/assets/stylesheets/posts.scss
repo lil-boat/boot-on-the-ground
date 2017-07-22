@@ -228,6 +228,14 @@
   margin-right: 10px;
 }
 
+#comment-like-and-comment-section{
+  margin-left: 5px;
+  width: 100px;
+  float: right;
+  padding-top: 12px;
+  
+}
+
 #comment-like-and-comment-section button {
   border: none;
   background-color: rgb(246, 247, 249);
@@ -253,8 +261,8 @@
   background-color: rgb(246, 247, 249);
 }
 
-.post-comment {
-  width: 500px;
+.post-comment  p{
+  width: 300px;
 }
 
 .comment-author-picture {
