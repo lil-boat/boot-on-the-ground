@@ -11,6 +11,8 @@
           <% company.users.each do |employee| %>
             <p class="employee-name"><%= employee.username %></p>
           <% end %>
+        <p><%= link_to "Edit Company", edit_company_path(company)%></p>
+        <p><%= link_to 'Delete Posting', company_path(company), remote: true, method: :delete %></p>
       </div>
     </div>
   </div>

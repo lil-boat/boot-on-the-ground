@@ -1,0 +1,15 @@
+<%= image_tag @company.avatar_url(:large), :id => "cropbox" %>
+<%= form_for @company do |f| %> 
+	<div style="display: none">
+		<% %w[x y w h].each do |attribute| %> 
+			<%= f.text_field "crop_#{attribute}", as: :hidden %> <br> 
+		<% end %> 
+	</div>
+	<div class="actions"> 
+		<%= f.submit "Crop" %> 
+	</div>
+<% end %> 
+
+<div style="width:100px; height:100px; overflow:hidden">
+  <%= image_tag @company.avatar.url(:large), :id => "preview" %>
+</div>

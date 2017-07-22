@@ -86,8 +86,6 @@ var addCommentEventListener = function(){
   $(".message-board-container").on("submit", ".new_comment", function(e){
     e.preventDefault();
     var commentContainer = $(this).closest(".comment-container")
-    console.log(commentContainer.find("#new_comment"))
-
     newCommentAjaxCall(commentContainer);
   })
 }
@@ -106,7 +104,9 @@ var newCommentAjaxCall = function(commentContainer){
     console.log("we got a response")
     console.log(response)
     $(commentContainer).append(response)
-    $("#new_comment")[0].reset();
+    $(".new_comment").each(function(){
+      this.reset();
+    });
     $(".comment-form-container").slideUp();
 
   })

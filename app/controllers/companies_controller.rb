@@ -14,7 +14,11 @@ before_action :user_is_logged_in
   def create
     @company = Company.new(company_params)
     if @company.save
-      redirect_to companies_path
+      if params[:company][:avatar].blank?
+        redirect_to companies_path
+      else
+        render 'crop'
+      end
     else
       @errors = @company.errors.full_messages
       render 'new'
@@ -28,7 +32,11 @@ before_action :user_is_logged_in
   def update
     @company = Company.find(params[:id])
     if  @company.update_attributes(company_params)
-      redirect_to '/companies'
+      if params[:company][:avatar].blank?
+        redirect_to companies_path
+      else
+        render :action => 'crop'
+      end
     else
       @errors = @company.errors.full_messages
       render 'edit'
@@ -44,7 +52,7 @@ before_action :user_is_logged_in
   private
 
   def company_params
-    params.fetch(:company).permit(:name, :description, :logo, :url)
+    params.fetch(:company).permit(:name, :description, :logo, :url, :avatar, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 
 end
