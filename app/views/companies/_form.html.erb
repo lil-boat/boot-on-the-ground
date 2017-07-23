@@ -2,7 +2,7 @@
 	<%= form_for @company do |f| %>
 	  <%= f.text_field :name, placeholder: 'Company Name', :class => 'input-field' %>
 	  <%= f.text_area :description, size: "50x5", placeholder: 'Description', :class => 'input-field' %> 
-	  <%= f.file_field :logo, placeholder: 'Upload Logo', :class => 'input-field' %> 
+	  <%= f.file_field :avatar, placeholder: 'Upload Logo', :class => 'input-field' %> 
 	  <%= f.text_field :url, placeholder: 'website', :class => 'input-field' %>	  
 	  <%= f.submit "Save", :class => 'form-submit-button' %>
 	<% end %>

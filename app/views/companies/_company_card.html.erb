@@ -9,8 +9,10 @@
         <h2 class="company-name"><%= company.name %></h2>
         <h3 id="employees-title">Boots working here</h2>
           <% company.users.each do |employee| %>
-            <p class="employee-name"><%= employee.username %></p>
+            <a class="employee-url" href="/users/<%= employee.id %>"><p class="employee-name"><%= employee.username %></p></a>
           <% end %>
+        <p><%= link_to "Edit Company", edit_company_path(company)%></p>
+        <p><%= link_to 'Delete Posting', company_path(company), remote: true, method: :delete %></p>
       </div>
     </div>
   </div>

@@ -81,7 +81,6 @@
 /****** message board css ******/
 #posts-bg-color {
   width: 100%;
-  height: 100%;
   background-color: rgb(233, 235, 238);
 }
 
@@ -220,6 +219,14 @@
   margin-right: 10px;
 }
 
+#comment-like-and-comment-section{
+  margin-left: 5px;
+  width: 100px;
+  float: right;
+  padding-top: 12px;
+  
+}
+
 #comment-like-and-comment-section button {
   border: none;
   background-color: rgb(246, 247, 249);
@@ -235,7 +242,7 @@
   width: 500px;
   background-color: rgb(246, 247, 249);
   border-radius: 5px;
-  padding-bottom: 10px;
+  
 }
 
 .individual-comment-container {
@@ -245,8 +252,8 @@
   background-color: rgb(246, 247, 249);
 }
 
-.post-comment {
-  width: 500px;
+.post-comment  p{
+  width: 300px;
 }
 
 .comment-author-picture {
@@ -277,7 +284,9 @@
   font-size: 10pt;
 }
 
-.comment-form-container {
+
+.comment-form-container{
+  display: none;
   margin: auto;
   width: 480px;
   padding-top: 5px;
