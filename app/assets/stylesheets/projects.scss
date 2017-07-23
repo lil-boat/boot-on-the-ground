@@ -8,6 +8,7 @@
   margin: 1em;
   cursor: pointer;
   transition: all 0.5s ease;
+  border-radius: 5px;
   box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.34);
   &:hover {
     transition: all 0.5s ease;
@@ -34,6 +35,12 @@
   width: 300px;
   height: 300px;
   border-bottom: 1px solid #eee;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  img {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
 }
 
 .project-title {
@@ -76,11 +83,17 @@
 .project-description {
   width: 200;
   margin: 20px auto;
+  max-height: 150px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
   color: #8d8d8d;
+  overflow: auto;
 }
 
 .project-url {
   width: 250px;
+  text-align: center;
+  color: black;
   margin: 20px auto;
 }
 
