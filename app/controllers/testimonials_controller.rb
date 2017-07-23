@@ -1,5 +1,5 @@
 class TestimonialsController < ApplicationController
-before_action :user_is_logged_in  
+before_action :authenticate_user! 
   def index
     @users = User.all
   end

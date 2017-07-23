@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-before_action :user_is_logged_in
+before_action :authenticate_user!
   def index
     @projects = Project.all
   end
@@ -50,6 +50,6 @@ before_action :user_is_logged_in
 
 private
     def project_params
-      params.require(:project).permit(:title, :description, :image)
+      params.require(:project).permit(:title, :description, :image, :url)
     end
 end

@@ -1,3 +1,4 @@
+
 <%= render './layouts/login' %>
 <%= render './layouts/signup' %>
 <div class="home-header">
@@ -17,8 +18,6 @@
       <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">view profile</button></a>
     <% else %>
       <button class="log-in-home-button" onclick="openLogin()">log in</button><br><br>
-
-      <!--       <button class="sign-up-home-button" onclick="openSignUp()">register</button> -->
     <% end %>
   </div>
   <p class="explore">explore</p>
@@ -30,7 +29,7 @@
 <div class="about">
   <div class="descriptions">
     <div class="first-description">
-      <p class="a">Devbootcamp has helped more than 2,700 students develop careers in tech
+      <p class="a">dev bootcamp has helped more than 2,700 students develop careers in tech
       </p>
     </div>
     <div class="second-description">

@@ -18,8 +18,13 @@
 .profile-pic {
   width: 250px;
   height: 250px;
-  background-image: url("https://unsplash.it/250/250?image=1062");
   margin: 30px 100px;
+  border-radius: 5px;
+}
+
+.user-pic {
+  width: 250px;
+  height: 250px;
   border-radius: 5px;
 }
 
@@ -61,18 +66,24 @@
   border-bottom: 1px solid #eee;
 }
 
+.user-job-title {
+  font-size: 13pt;
+  color: black;
+  margin-bottom: 10px;
+}
+
 .user-buttons {
-  width: 200px;
+  width: 250px;
   margin-left: 100px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .user-button {
   margin: 10px auto;
-  width: 150px;
-  height: 35px;
-  font-size: 20px;
-  background-color: #3fbfb8;
+  width: 200px;
+  height: 55px;
+  font-size: 24px;
+  background-color: #3aafa9;
   border: none;
   border-radius: 5px;
   color: white;
@@ -82,6 +93,10 @@
   }
 }
 
+.profile-connect-button {
+  @extend .user-button;
+}
+
 .jobs-form {
   height: 100%;
   width: 0;
@@ -113,5 +128,5 @@
 }
 
 .project-form {
-  padding-top: 150px;
+  padding-top: 4%;
 }
