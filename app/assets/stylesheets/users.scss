@@ -22,6 +22,11 @@
   border-radius: 5px;
 }
 
+.no-profile-pic {
+  @extend .profile-pic;
+  background-image: url("https://unsplash.it/250/250?image=1062");
+}
+
 .user-pic {
   width: 250px;
   height: 250px;

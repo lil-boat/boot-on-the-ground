@@ -2,9 +2,15 @@
   <h1>employed boots</h1>
   <% @users.each do |user| %>
     <div class="user-box">
-      <div class="user-picture">
-        <%= image_tag(user.image, :class => "image")%>
-      </div>
+      <% if user.image %>
+        <div class="user-picture">
+          <%= image_tag(user.image, :class => "image")%>
+        </div>
+      <% else %>
+        <div class="no-user-picture">
+          
+        </div>
+      <% end %>
       <div class="user-name">
          <a href="/users/<%= user.id %>"><%= user.name %></a> 
       </div>

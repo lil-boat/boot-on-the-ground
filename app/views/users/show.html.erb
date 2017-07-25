@@ -1,9 +1,15 @@
 <div class="container">
   
   <div class="user-info">
-      <div class="profile-pic">
-        <%= image_tag(@user.image, :class => "user-pic") %>
-      </div>
+      <% if @user.image %>
+        <div class="profile-pic">
+          <%= image_tag(@user.image, :class => "user-pic") %>
+        </div>
+      <% else %>
+        <div class="no-profile-pic">
+          
+        </div>
+      <% end %>
     <p class="username-profile"><%= @user.name %></p><br>
 
     <div class="user-location">
