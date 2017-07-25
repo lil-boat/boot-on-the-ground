@@ -6,10 +6,6 @@
       </div>
     <p class="username-profile"><%= @user.name %></p><br>
 
-    <div class="user-testimonial">
-      <%= @user.description %>
-    </div>
-
     <div class="user-location">
       <i class="fa fa-map-marker location-icon"></i>
       <p class="location"><%= @user.location %></p>
@@ -20,12 +16,14 @@
       <p class="email"><%= @user.email %></p>
     </div>
     
-    <div class="user-testimonial">
-    <br>
-      <p class="user-job-title"><%= @user.job_title %></p>
-      <%= @user.company %><br>
-      <%= @user.job_location %><br>
-    </div>
+    <% if @user.company %>
+      <div class="user-testimonial">
+      <br>
+        <p class="user-job-title"><%= @user.job_title %></p>
+        <%= @user.company %><br>
+        <%= @user.job_location %><br>
+      </div>
+    <% end %>
 
     <div class="user-buttons">
       <% if @user == current_user %>
