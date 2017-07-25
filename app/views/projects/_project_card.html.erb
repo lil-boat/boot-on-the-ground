@@ -15,7 +15,9 @@
           <h2 class="project-title"> <%= project.title %></h2>
             <p class="project-description"><%= project.description %></p>
             <a class="project-url" href="<%= project.url %>"><%= project.url %></a>
-            <p class="delete-link"><%= link_to "Delete", project_path(project), method: :delete %></p>
+            <% if project.users.include?(current_user) %>
+              <p class="delete-link"><%= link_to "Delete", project_path(project), method: :delete %></p>
+            <% end %>
             
             <h2 id="contributers-title">Contributers</h2>
             <% project.users.each do |contributer| %>
