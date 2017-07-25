@@ -17,9 +17,6 @@ before_action :authenticate_user!
 
     if @project.save
       @user_project = UserProject.create(user_id: current_user.id, project_id: @project.id)
-    p ("*"* 100)
-    p @project.id
-    p @user_project
       redirect_to user_path(current_user)
     else
       render 'new'
@@ -44,7 +41,7 @@ before_action :authenticate_user!
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-    redirect_to "projects#index"
+    redirect_to user_path(current_user)
   end
 
 
