@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :company_users
   has_many :projects, through: :user_projects
   has_many :companies, through: :company_users
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -28,9 +29,11 @@ class User < ApplicationRecord
       user.image = auth.extra.raw_info.pictureUrls.values[1][0]
       user.location = auth.info.location
       user.description = auth.info.description
-      user.company = auth.extra.raw_info.positions.values[1][0].company.name
-      user.job_title = auth.extra.raw_info.positions.values[1][0].title
-      user.job_location = auth.extra.raw_info.positions.values[1][0].location.name
+      if !auth.extra.raw_info.positions
+        user.company = auth.extra.raw_info.positions.values[1][0].company.name
+        user.job_title = auth.extra.raw_info.positions.values[1][0].title
+        user.job_location = auth.extra.raw_info.positions.values[1][0].location.name
+      end
       user.urls = auth.info.urls.public_profile
     end
   end
