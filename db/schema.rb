@@ -26,7 +26,8 @@ ActiveRecord::Schema.define(version: 20170721235635) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name", null: false
-    t.string "description", null: false
+    t.string "description"
+    t.string "location"
     t.string "logo_file_name"
     t.string "logo_content_type"
     t.integer "logo_file_size"
