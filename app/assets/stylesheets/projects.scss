@@ -87,6 +87,7 @@
 
 .project-description {
   width: 200;
+  text-align: center;
   margin: 20px auto;
   max-height: 150px;
   border-bottom: 1px solid #eee;
@@ -97,9 +98,10 @@
 
 .project-url {
   width: 250px;
-  text-align: center;
-  color: black;
   margin: 20px auto;
+  text-align: center;
+  font-size: 10pt;
+  /*overflow: auto;*/
 }
 
 #contributers-title {
