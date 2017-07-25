@@ -1,8 +1,12 @@
 <div class="container" >
-
-<%= render 'company_card' %>
-
 <%= link_to "Add New Company", new_company_path %>
+  
+  <div class= "company-list">
+    <%= render 'company_card' %>
+  <% @companies.each do |company| %>
+<!--     Code to get the cropped company image <%= image_tag company.avatar.thumb %>  -->
+  <% end  %>
+  </div>
 </div>
 
 
