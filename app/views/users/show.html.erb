@@ -16,14 +16,14 @@
       <p class="email"><%= @user.email %></p>
     </div>
     
-    <% if @user.company %>
+    
       <div class="user-testimonial">
       <br>
         <p class="user-job-title"><%= @user.job_title %></p>
         <%= @user.company %><br>
         <%= @user.job_location %><br>
       </div>
-    <% end %>
+
 
     <div class="user-buttons">
       <% if @user == current_user %>

@@ -2,6 +2,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def linkedin
     # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.from_omniauth(request.env["omniauth.auth"])
+    @current_company = Company.create_company(request.env["omniauth.auth"])
+
+    p"*" * 100
+    p @user
+
 
     if @user.persisted?
       sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
@@ -16,11 +21,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to root_path
   end
 
-  def show
-    @user = User.find(params[:id])
-    @jobs = Job.where(user_id: params[:id])
-    @job = Job.new
-    @project = Project.new
-    # @projects = @user.projects
-  end
 end
