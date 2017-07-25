@@ -41,6 +41,11 @@
   border-radius: 90px;
 }
 
+.no-user-picture {
+  @extend .user-picture;
+  background-image: url("https://unsplash.it/130/130?image=1062");
+}
+
 .image {
   height: 130px;
   width: 130px;

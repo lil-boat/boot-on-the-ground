@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20170721235635) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "url"
+    t.integer "project_seed_pic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

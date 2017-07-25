@@ -50,6 +50,6 @@ before_action :authenticate_user!
 
 private
     def project_params
-      params.require(:project).permit(:title, :description, :image, :url)
+      params.require(:project).permit(:title, :description, :image, :url, :project_seed_pic)
     end
 end
