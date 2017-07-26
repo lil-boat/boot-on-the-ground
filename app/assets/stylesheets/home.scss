@@ -2,6 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@keyframes big-picture {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translate3d(0, 2em, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes title {
+  0% {
+    transform: translate3d(2em, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .big-picture {
   height: 100vh;
   width: 100%;
@@ -9,6 +41,8 @@
   background-attachment: fixed;
   background-repeat: none;
   background-size: cover;
+  animation: big-picture 3s forwards;
+  opacity: 0;
 }
 
 /*bus 672*/
@@ -25,6 +59,10 @@
   text-shadow: 1.5px 1.5px 1.5px #000;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  animation: big-picture 3s 2s forwards;
+  /*animation: title 3s forwards;*/
+  opacity: 0;
+  /*transform: translate3d(0, 0, 0);*/
 }
 
 .page-description {
@@ -35,6 +73,8 @@
   text-align: center;
   text-shadow: 1.5px 1.5px 1.5px black;
   padding-top: 40px;
+  animation: big-picture 3s 2s forwards;
+  opacity: 0;
 }
 
 .log-in-home-button {
@@ -47,6 +87,8 @@
   color: white;
   text-shadow: 0.5px 0.5px 0.5px #000;
   cursor: pointer;
+  animation: big-picture 3s 2s forwards;
+  opacity: 0;
   &:hover {
     background-color: #3aafa9;
   }
@@ -82,6 +124,9 @@
   text-shadow: 0.5px 0.5px 0.5px #000;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  animation: arrow 1s 4.25s forwards;
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
 }
 
 .arrow {
@@ -89,7 +134,9 @@
   width: 100px;
   margin: 20px auto;
   text-align: center;
-
+  animation: arrow 1s 4.25s forwards;
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
   .fa-arrow-down {
     color: white;
   }
@@ -102,12 +149,13 @@
   height: 400px;
   width: 550px;
   margin: 0;
-  /*background-image: url("https://unsplash.it/1250/800?image=630");*/
   display: inline-block;
 }
 
-.jobSlides {
-  display: none;
+.slides {
+  animation: big-picture 4s forwards;
+  /*background-color: white;*/
+  opacity: 1;
 }
 
 .section-description {
@@ -135,6 +183,8 @@
   background-color: #17252a;
   position: fixed;
   transition: all 0.5s ease;
+  opacity: 1;
+  z-index: 1;
 }
 
 .scroll-buttons {

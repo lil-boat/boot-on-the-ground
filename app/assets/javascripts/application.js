@@ -30,21 +30,23 @@ $(document).ready(function() {
   // tCarousel();
 });
 
-var myIndex = 0;
+var count = 0;
 var jobsCarousel = function() {
   var i;
-  var x = document.getElementsByClassName('jobSlide');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
+  var a = document.getElementsByClassName('jobSlide');
+  for (i = 0; i < a.length; i++) {
+    a[i].style.display = 'none';
+    console.log(a.length);
   }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
+  count++;
+  if (count > a.length) {
+    count = 1;
   }
-  x[myIndex - 1].style.display = 'block';
-  setTimeout(jobsCarousel, 3100);
+  a[count - 1].style.display = 'block';
+  console.log(count);
+  setTimeout(jobsCarousel, 5100);
 };
-
+var myIndex = 0;
 var projectsCarousel = function() {
   var i;
   var x = document.getElementsByClassName('projectSlide');
@@ -56,7 +58,7 @@ var projectsCarousel = function() {
     myIndex = 1;
   }
   x[myIndex - 1].style.display = 'block';
-  setTimeout(projectsCarousel, 3000);
+  setTimeout(projectsCarousel, 5000);
 };
 
 var tCarousel = function() {
