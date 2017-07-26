@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root "home#index"
   get '/testimonials', to: "testimonials#index"
 
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :users, only: [:index, :new, :show, :create, :edit]
