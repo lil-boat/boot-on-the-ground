@@ -15,6 +15,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree
+//= require jcrop
 
 $(document).ready(function() {
   scrollListener();
