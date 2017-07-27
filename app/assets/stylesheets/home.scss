@@ -41,12 +41,10 @@
   background-attachment: fixed;
   background-repeat: none;
   background-size: cover;
+  background-position: center;
   animation: big-picture 3s forwards;
   opacity: 0;
 }
-
-/*bus 672*/
-/*building feet 817*/
 
 .page-title {
   color: white;
@@ -163,7 +161,7 @@
   text-align: center;
   display: inline-block;
   letter-spacing: 0.225em;
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   text-transform: uppercase;
   font-weight: 800;
@@ -213,6 +211,7 @@
 
 .about {
   background-color: #3aafa9;
+  height: 100vh;
 }
 
 .descriptions {
