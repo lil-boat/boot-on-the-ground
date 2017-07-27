@@ -37,12 +37,12 @@
 .big-picture {
   height: 100vh;
   width: 100%;
-  background-image: url("https://unsplash.it/1250/800?image=672");
+  background-image: image-url("matthew-henry-6205.jpg");
   background-attachment: fixed;
   background-repeat: none;
   background-size: cover;
   background-position: center;
-  animation: big-picture 3s forwards;
+  animation: big-picture 4s forwards;
   opacity: 0;
 }
 
@@ -292,13 +292,11 @@
 .testimonialText {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 30px;
   width: 100%;
   font-size: 25pt;
   text-align: center;
-  z-index: 1;
   text-shadow: 1.5px 1.5px 1.5px #000;
-  /*text-transform: uppercase;*/
   color: white;
   font-family: 'Satisfy', cursive;
 }
@@ -418,5 +416,8 @@
     margin-left: 28%;
     margin-right: 25%;
     float: right;
+  }
+  .testimonialText {
+    left: 0;
   }
 }
