@@ -37,12 +37,12 @@
 .big-picture {
   height: 100vh;
   width: 100%;
-  background-image: url("https://unsplash.it/1250/800?image=672");
+  background-image: image-url("matthew-henry-6205.jpg");
   background-attachment: fixed;
   background-repeat: none;
   background-size: cover;
   background-position: center;
-  animation: big-picture 3s forwards;
+  animation: big-picture 4s forwards;
   opacity: 0;
 }
 
