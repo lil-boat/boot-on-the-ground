@@ -87,7 +87,7 @@ var textCarousel = function() {
     textCount = 1;
   }
   x[textCount - 1].style.display = 'block';
-  setTimeout(textCarousel, 11000);
+  setTimeout(textCarousel, 16000);
 };
 
 var scrollListener = function() {
@@ -115,7 +115,7 @@ var jobsButtonListener = function() {
   $('.jobs-button').on('click', function() {
     $('html, body').animate(
       {
-        scrollTop: $('.jobs').offset().top
+        scrollTop: $('.jobs').offset().top - 50
       },
       1500
     );
@@ -126,7 +126,7 @@ var projectsButtonListener = function() {
   $('.projects-button').on('click', function() {
     $('html, body').animate(
       {
-        scrollTop: $('.projects').offset().top
+        scrollTop: $('.projects').offset().top - 50
       },
       1500
     );
@@ -137,7 +137,7 @@ var testimonialsButtonListener = function() {
   $('.testimonials-button').on('click', function() {
     $('html, body').animate(
       {
-        scrollTop: $('.testimonials').offset().top
+        scrollTop: $('.testimonials').offset().top - 50
       },
       1500
     );
@@ -148,7 +148,7 @@ var bootsInTheWorldButtonListener = function() {
   $('.boots-in-the-world-button').on('click', function() {
     $('html, body').animate(
       {
-        scrollTop: $('.boots-in-the-world').offset().top
+        scrollTop: $('.boots-in-the-world').offset().top - 50
       },
       1500
     );

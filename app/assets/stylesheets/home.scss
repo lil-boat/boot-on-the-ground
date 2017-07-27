@@ -292,13 +292,11 @@
 .testimonialText {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 30px;
   width: 100%;
   font-size: 25pt;
   text-align: center;
-  z-index: 1;
   text-shadow: 1.5px 1.5px 1.5px #000;
-  /*text-transform: uppercase;*/
   color: white;
   font-family: 'Satisfy', cursive;
 }
@@ -418,5 +416,8 @@
     margin-left: 28%;
     margin-right: 25%;
     float: right;
+  }
+  .testimonialText {
+    left: 0;
   }
 }
