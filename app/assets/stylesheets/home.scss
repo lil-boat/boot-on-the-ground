@@ -50,7 +50,7 @@
   color: white;
   font-size: 50px;
   height: 50px;
-  width: 950px;
+  width: 800px;
   margin: auto;
   padding-top: 200px;
   text-align: center;
@@ -148,6 +148,7 @@
   width: 550px;
   margin: 0;
   display: inline-block;
+  position: relative;
 }
 
 .slides {
@@ -282,6 +283,26 @@
   background-color: #17252a;
 }
 
+.testimonialSlide {
+  height: 400px;
+  width: 550px;
+  /*position: fixed;*/
+}
+
+.testimonialText {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  font-size: 25pt;
+  text-align: center;
+  z-index: 1;
+  text-shadow: 1.5px 1.5px 1.5px #000;
+  /*text-transform: uppercase;*/
+  color: white;
+  font-family: 'Satisfy', cursive;
+}
+
 /*BOOTS IN THE WORLD*/
 
 .boots-in-the-world {
@@ -374,13 +395,13 @@
 
 /*MEDIA QUEREY*/
 
-@media (max-width: 1271px) {
+@media (max-width: 1311px) {
   .right-desc {
     margin-right: 0px;
   }
 }
 
-@media (max-width: 1153px) {
+@media (max-width: 1180px) {
   .jobs,
   .projects,
   .testimonials {
@@ -394,7 +415,7 @@
     margin: 6em 25% 6em 25%;
   }
   .carousel {
-    margin-left: 25%;
+    margin-left: 28%;
     margin-right: 25%;
     float: right;
   }

@@ -28,6 +28,7 @@ $(document).ready(function() {
   jobsCarousel();
   projectsCarousel();
   // tCarousel();
+  textCarousel();
 });
 
 var count = 0;
@@ -60,19 +61,34 @@ var projectsCarousel = function() {
   x[myIndex - 1].style.display = 'block';
   setTimeout(projectsCarousel, 5000);
 };
-
+var testCount = 0;
 var tCarousel = function() {
   var i;
   var x = document.getElementsByClassName('testimonialSlide');
   for (i = 0; i < x.length; i++) {
     x[i].style.display = 'none';
   }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
+  testCount++;
+  if (testCount > x.length) {
+    testCount = 1;
   }
-  x[myIndex - 1].style.display = 'block';
-  setTimeout(tCarousel, 3000);
+  x[testCount - 1].style.display = 'block';
+  setTimeout(tCarousel, 11000);
+};
+
+var textCount = 0;
+var textCarousel = function() {
+  var i;
+  var x = document.getElementsByClassName('testimonialText');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  textCount++;
+  if (textCount > x.length) {
+    textCount = 1;
+  }
+  x[textCount - 1].style.display = 'block';
+  setTimeout(textCarousel, 11000);
 };
 
 var scrollListener = function() {
