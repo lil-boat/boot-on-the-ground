@@ -31,6 +31,12 @@ body {
   background-color: white;
 }
 
+.card-container {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+}
+
 .container {
   width: 95%;
   margin: auto;
