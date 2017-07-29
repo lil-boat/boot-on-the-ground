@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170721235635) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170721235635) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
   end
 
   create_table "company_users", force: :cascade do |t|

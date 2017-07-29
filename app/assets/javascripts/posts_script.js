@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-  $(".comment-form-container").hide();
   addkudosEventListener();
   addListenerToNewPostForm();
   addkudosCommentEventListener();
@@ -49,20 +48,23 @@ var kudosCommentAjaxCall = function(clickedCommentKudos){
 
 // Add New Post
 var addListenerToNewPostForm = function(){
-  $("#new-post-form").submit(function(e){
+  $("#new-post-form").on('submit', '#new_post', function(e){
+    console.log('INSIDE $("#new-post-form").submit')
     e.preventDefault();
-    var formContainer = $(this);
     newPostAjaxCall();
   })
 }
 
 var newPostAjaxCall = function(){
+  console.log('INSIDE newPostAjaxCall')
   var request = $.ajax({
     url: $("#new_post").attr("action"),
     method: $("#new_post").attr("method"),
     data: $("#new_post").serialize()
   });
   request.done(function(response){
+    console.log('INSIDE newPostAjaxCall request.done')
+
     $('.post-field').prepend(response)
     $('#new_post')[0].reset()
   })
@@ -83,21 +85,29 @@ var postCommentEventListener = function(){
 var addCommentEventListener = function(){
   $(".message-board-container").on("submit", ".new_comment", function(e){
     e.preventDefault();
-    var submitCommentButton = $(this)
-    newCommentAjaxCall();
+    var commentContainer = $(this).closest(".comment-container")
+    newCommentAjaxCall(commentContainer);
   })
 }
 
-var newCommentAjaxCall = function(){
+var newCommentAjaxCall = function(commentContainer){
+  var newCommentForm = commentContainer.find("#new_comment") 
   console.log($("#new_comment").serialize())
   var request = $.ajax({
-    url: $("#new_comment").attr("action"),
-    method: $("#new_comment").attr("method"),
-    data: $("#new_comment").serialize()
+    url: newCommentForm.attr("action"),
+    method: newCommentForm.attr("method"),
+    data: newCommentForm.serialize()
   });
+
 
   request.done(function(response){
     console.log("we got a response")
     console.log(response)
+    $(commentContainer).append(response)
+    $(".new_comment").each(function(){
+      this.reset();
+    });
+    $(".comment-form-container").slideUp();
+
   })
 }
