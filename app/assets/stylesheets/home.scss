@@ -89,21 +89,7 @@
   cursor: pointer;
   animation: big-picture 3s 2s forwards;
   opacity: 0;
-  &:hover {
-    background-color: #3aafa9;
-  }
-}
-
-.sign-up-home-button {
-  font-size: 25px;
-  width: 150px;
-  height: 50px;
-  background-color: #3fbfb8;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  text-shadow: 0.5px 0.5px 0.5px #000;
-  cursor: pointer;
+  transition: all 1s ease;
   &:hover {
     background-color: #3aafa9;
   }
@@ -137,8 +123,17 @@
   animation: arrow 1s 4.25s forwards;
   transform: translate3d(0, 0, 0);
   opacity: 0;
-  .fa-arrow-down {
+  .arrow-icon {
     color: white;
+    font-size: 45pt;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 5px;
+    font-weight: 200;
+    transition: 2s all ease;
+    &:hover {
+      border-color: #3fbfb8;
+    }
   }
   &:hover {
     cursor: pointer;
@@ -289,6 +284,11 @@
 .projects {
   height: 400px;
   background-color: rgba(23, 37, 42, .97);
+}
+
+.project-pics {
+  height: 400px;
+  width: 550px;
 }
 
 /*TESTIMONIALS*/
