@@ -24,11 +24,17 @@
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
   background-color: white;
+}
+
+button {
+  font-weight: 800;
 }
 
 .card-container {
@@ -67,17 +73,25 @@ body {
   color: white;
 }
 
+.menu {
+  display: inline-block;
+  float: right;
+  margin: 25px 0px 0px 0px;
+  font-size: 13pt;
+  text-transform: uppercase;
+}
+
 #bars {
   display: inline-block;
   float: right;
-  margin: 18px 25px 0px 20px;
+  margin: 18px 25px 0px 10px;
   cursor: pointer;
 }
 
 #bars:hover {
   color: #3fbfb8;
 }
-.header p {
+.boots-title {
   font-size: 20px;
   text-transform: uppercase;
   display: inline-block;
