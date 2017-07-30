@@ -1,17 +1,19 @@
 <% @companies.each do |company| %>
-  <div class="company-card" onclick="flipCard()">
-    <div class="flipper">
-      <div class="front">
-        <div class="company-image"></div>
-        <h2 class="company-name-front"><%= company.name %></h2>
-      </div>
-      <div class="back">
-        <h2 class="company-name"><%= company.name %></h2>
-        <h3 id="employees-title">Boots working here</h2>
-          <% company.users.each do |employee| %>
-          <p class="employee-name"><%= link_to employee.name, user_path(employee)%></p>
-          <% end %>
+  <% if company.users.length >= 1 %>
+    <div class="company-card" onclick="flipCard()">
+      <div class="flipper">
+        <div class="front">
+          <div class="company-image"></div>
+          <h2 class="company-name-front"><%= company.name %></h2>
+        </div>
+        <div class="back">
+          <h2 class="company-name"><%= company.name %></h2>
+          <h3 id="employees-title">Boots working here</h2>
+            <% company.users.each do |employee| %>
+            <p class="employee-name"><%= link_to employee.name, user_path(employee)%></p>
+            <% end %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>  
 <% end %>
