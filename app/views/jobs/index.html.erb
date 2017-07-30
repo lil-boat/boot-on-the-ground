@@ -1,25 +1,27 @@
 <div class="card-container" id="container">
-  <h1>employed boots</h1>
+  <h1>Employed Boots</h1>
   <% @users.each do |user| %>
-    <div class="user-box">
-      <% if user.image %>
-        <div class="user-picture">
-          <%= image_tag(user.image, :class => "image")%>
+    <% if user.company  %>
+      <div class="user-box">
+        <% if user.image %>
+          <div class="user-picture">
+            <%= image_tag(user.image, :class => "image")%>
+          </div>
+        <% else %>
+          <div class="no-user-picture">
+            
+          </div>
+        <% end %>
+        <div class="user-name">
+           <a href="/users/<%= user.id %>"><%= user.name %></a> 
         </div>
-      <% else %>
-        <div class="no-user-picture">
-          
+        
+          <p class="job-title"><%= user.job_title %></p>
+          <p class="job-company"><%= user.company %></p>
+        <div class="buttons">
+          <a href="<%= user.urls %>"><button class="connect-button">Connect</button></a>
         </div>
-      <% end %>
-      <div class="user-name">
-         <a href="/users/<%= user.id %>"><%= user.name %></a> 
       </div>
-      
-        <p class="job-title"><%= user.job_title %></p>
-        <p class="job-company"><%= user.company %></p>
-      <div class="buttons">
-        <a href="<%= user.urls %>"><button class="connect-button">Connect</button></a>
-      </div>
-    </div>
+    <% end %>
   <% end  %>
 </div>

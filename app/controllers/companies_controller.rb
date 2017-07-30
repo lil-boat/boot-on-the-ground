@@ -1,7 +1,6 @@
 class CompaniesController < ApplicationController
 before_action :authenticate_user!
   def index
-    p user_session
     @companies = Company.all
   end
 
