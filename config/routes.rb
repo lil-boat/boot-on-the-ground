@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :users, only: [:index, :new, :show, :create, :edit]
-  # resources :sessions, only: [:new, :create, :destroy]
   resources :projects
   resources :posts do
     resources :likes, only: [:create]

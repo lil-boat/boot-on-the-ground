@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def after_sign_in_path_for(resource)
+    companies_path
+  end
+
   def resource_name
     :user
   end
@@ -15,7 +19,4 @@ module ApplicationHelper
     @devise_mapping ||= Devise.mappings[:user]
   end
 
-  def after_sign_in_path_for(resource)
-    current_user_path
-  end
 end
