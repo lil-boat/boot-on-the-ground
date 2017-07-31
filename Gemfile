@@ -33,6 +33,8 @@ gem 'faker'
 gem "paperclip", "~> 5.0.0"
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'clearbit'
+gem 'httparty'
 gem 'jcrop-rails-v2'
 gem 'mini_magick'
 gem 'carrierwave'

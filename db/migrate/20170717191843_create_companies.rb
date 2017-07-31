@@ -4,6 +4,7 @@ class CreateCompanies < ActiveRecord::Migration[5.1]
       t.string :name, null: false
       t.string :description
       t.string :location
+      t.string :image
       t.attachment :logo
       t.string :url 
       t.timestamps
