@@ -55,9 +55,9 @@
   margin: auto;
   padding-top: 200px;
   text-align: center;
-  text-shadow: 1.5px 1.5px 1.5px #000;
+  text-shadow: 0.5px 0.5px 0.5px #000;
   letter-spacing: 0.025em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   animation: big-picture 3s 2s forwards;
   opacity: 0;
 }
@@ -68,7 +68,7 @@
   width: 800px;
   margin: auto;
   text-align: center;
-  text-shadow: 1.5px 1.5px 1.5px black;
+  text-shadow: 0.5px 0.5px 0.5px #000;
   padding-top: 40px;
   padding-bottom: 20px;
   animation: big-picture 3s 2s forwards;
@@ -97,21 +97,6 @@
 .log-button {
   width: 160px;
   margin: 30px auto;
-}
-
-.explore {
-  color: white;
-  font-size: 25px;
-  width: 200px;
-  font-weight: 800;
-  text-align: center;
-  margin: 100px auto 0px auto;
-  text-shadow: 0.5px 0.5px 0.5px #000;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  animation: arrow 1s 4.25s forwards;
-  transform: translate3d(0, 0, 0);
-  opacity: 0;
 }
 
 .arrow {
@@ -158,6 +143,8 @@
   color: white;
   margin: 6em auto;
   p {
+    padding-top: 10px;
+    border-top: 3px solid #3fbfb8;
     font-weight: 600;
     line-height: 1.6;
     margin-top: 20px;
@@ -166,8 +153,7 @@
 
   h2 {
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-size: 25pt;
+    font-size: 30pt;
   }
 }
 

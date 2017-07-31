@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170721235635) do
     t.string "name", null: false
     t.string "description"
     t.string "location"
+    t.string "image"
     t.string "logo_file_name"
     t.string "logo_content_type"
     t.integer "logo_file_size"
