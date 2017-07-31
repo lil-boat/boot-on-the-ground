@@ -35,6 +35,10 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'clearbit'
 gem 'httparty'
+gem 'jcrop-rails-v2'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'rails-assets-jcrop', source: "https://rails-assets.org"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
