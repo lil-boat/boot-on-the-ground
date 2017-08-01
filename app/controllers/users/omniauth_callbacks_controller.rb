@@ -3,7 +3,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.from_omniauth(request.env["omniauth.auth"])
     if @user.company
       @current_company = Company.create_company(@user)
-      @CompanyUser.create_employee(@current_company, @user)
+      CompanyUser.create_employee(@current_company, @user)
     end
 
     if @user.persisted?
