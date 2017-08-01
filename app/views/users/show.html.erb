@@ -24,13 +24,15 @@
     
     
     <div class="user-testimonial">
-    <% if @user.companies.first.image %>
-      <img src="<%= @user.companies.first.image %>?size=60" style="margin: 10px 0px;">
-    <% end %>
-    <br>
-      <p class="user-job-title"><%= @user.job_title %></p>
-      <%= @user.company %><br>
-      <%= @user.job_location %><br>
+      <% if @user.company %>
+        <% if @user.companies.first.image %>
+          <img src="<%= @user.companies.first.image %>?size=60" style="margin: 10px 0px;">
+        <% end %>
+        <br>
+          <p class="user-job-title"><%= @user.job_title %></p>
+          <%= @user.company %><br>
+          <%= @user.job_location %><br>
+      <% end %>
     </div>
 
 
