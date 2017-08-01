@@ -14,8 +14,8 @@ class Company < ApplicationRecord
   validates :name, presence: true
 
   def self.create_company(auth)
-    where(name: auth.extra.raw_info.positions.values[1][0].company.name, location: auth.extra.raw_info.positions.values[1][0].location.name).first_or_create do |company|
-    x = auth.extra.raw_info.positions.values[1][0].company.name.strip
+    where(name: auth.company).first_or_create do |company|
+    x = auth.company.strip
     
     request = HTTParty.get("https://company.clearbit.com/v1/companies/search?query=name:#{x}", :headers =>{'Content-Type' => 'application/json' , 'authorization' => ENV["HTTP_CLEARBIT_KEY"]})
     
@@ -28,8 +28,8 @@ class Company < ApplicationRecord
     if domain
       company.url = domain
     end
-    company.name = auth.extra.raw_info.positions.values[1][0].company.name
-    company.location = auth.extra.raw_info.positions.values[1][0].location.name
+    company.name = auth.company
+    company.location = auth.job_location
     end
   end
   mount_uploader :avatar, AvatarUploader

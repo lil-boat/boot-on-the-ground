@@ -44,12 +44,12 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.0.6)
-    clearbit (0.2.7)
-      nestful (~> 1.1.0)
     carrierwave (1.1.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    clearbit (0.2.7)
+      nestful (~> 1.1.0)
     climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
@@ -216,8 +216,8 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  clearbit
   carrierwave
+  clearbit
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
@@ -228,8 +228,8 @@ DEPENDENCIES
   jcrop-rails-v2
   jquery-rails
   listen (>= 3.0.5, < 3.2)
-  omniauth-linkedin
   mini_magick
+  omniauth-linkedin
   paperclip (~> 5.0.0)
   pg (~> 0.18)
   puma (~> 3.7)
