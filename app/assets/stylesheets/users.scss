@@ -2,13 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user-info {
-  width: 380px;
+  width: 330px;
   display: inline-block;
   vertical-align: top;
 }
 
 .user-projects-container {
-  width: 65%;
+  width: 75%;
   margin: 30px auto;
   display: inline-block;
   vertical-align: top;
@@ -134,4 +134,10 @@
 
 .project-form {
   padding-top: 4%;
+}
+
+@media (max-width: 1409px) {
+  .user-projects-container {
+    width: 65%;
+  }
 }
