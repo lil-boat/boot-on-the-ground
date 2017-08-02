@@ -42,7 +42,7 @@
 .user-testimonial {
   width: 250px;
   margin-left: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: #6a737d;
   border-bottom: 1px solid #eee;
 }
@@ -50,7 +50,7 @@
 .user-location {
   @extend .username-profile;
   width: 250px;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 13pt;
   p,
   i {
