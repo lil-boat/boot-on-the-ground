@@ -136,8 +136,19 @@
   padding-top: 4%;
 }
 
+.container {
+  width: 95%;
+  margin: auto;
+}
+
 @media (max-width: 1409px) {
   .user-projects-container {
     width: 65%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .user-projects-container {
+    width: 45%;
   }
 }
