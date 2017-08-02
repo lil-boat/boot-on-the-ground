@@ -71,6 +71,7 @@ button {
   border-bottom: 2px solid #eee;
   background-color: #17252a;
   color: white;
+  font-weight: 900;
 }
 
 .menu {
@@ -114,6 +115,7 @@ button {
   padding-top: 20px;
   float: right;
   transition: all 0.5s ease;
+  font-weight: 900;
 }
 
 .sidenav a {
