@@ -20,7 +20,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  /*font-family: "Open Sans", Helvetica, sans-serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
@@ -46,7 +47,6 @@ button {
 .container {
   width: 95%;
   margin: auto;
-  /*background-color: rgb(245, 245, 245);*/
 }
 
 .right {
@@ -71,6 +71,7 @@ button {
   border-bottom: 2px solid #eee;
   background-color: #17252a;
   color: white;
+  font-weight: 900;
 }
 
 .menu {
@@ -114,6 +115,7 @@ button {
   padding-top: 20px;
   float: right;
   transition: all 0.5s ease;
+  font-weight: 900;
 }
 
 .sidenav a {
