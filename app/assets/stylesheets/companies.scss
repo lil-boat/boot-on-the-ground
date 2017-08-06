@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.company-search {
+.search {
   position: relative;
-  width: 28%;
+  width: 400px;
   margin: 0 auto;
   button {
     font-weight: 400;
@@ -24,7 +24,7 @@
     /*border: 1px solid #3fbfb8;*/
     outline: grey;
     padding: 5px;
-    width: 300px;
+    width: 70%;
   }
   .search-icon {
     position: absolute;
