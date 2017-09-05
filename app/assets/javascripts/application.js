@@ -61,6 +61,7 @@ var projectsCarousel = function() {
   x[myIndex - 1].style.display = 'block';
   setTimeout(projectsCarousel, 5000);
 };
+
 var testCount = 0;
 var tCarousel = function() {
   var i;

@@ -145,7 +145,7 @@
 }
 
 .section-description {
-  width: 550px;
+  width: 40%;
   display: inline-block;
   color: white;
   margin: 6em auto;
@@ -264,23 +264,26 @@
 
 .jobs {
   height: 400px;
-  background-color: rgba(23, 37, 42, .952);
+  background-color: rgba(23, 37, 42, .93);
 }
 
 .jobSlide {
   transition: all 1s ease-in-out;
+  width: 80%;
+  margin-left: 2em;
 }
 
 /*PROJECTS*/
 
 .projects {
   height: 400px;
-  background-color: rgba(23, 37, 42, .97);
+  background-color: rgba(23, 37, 42, .96);
 }
 
 .project-pics {
   height: 400px;
-  width: 550px;
+  /*width: 550px;*/
+  width: 100%;
 }
 
 /*TESTIMONIALS*/
@@ -401,7 +404,7 @@
 
 @media (max-width: 1311px) {
   .right-desc {
-    margin-right: 0px;
+    margin-left: 25px;
   }
   .left-desc {
     margin-left: 25px;
@@ -414,19 +417,143 @@
   .testimonials {
     height: 700px;
   }
-  .right-desc {
-    margin-right: 0;
-  }
 
-  .section-description {
+  /*  .section-description {
     margin: 6em 25% 6em 25%;
-  }
+  }*/
   .carousel {
     margin-left: 28%;
     margin-right: 25%;
     float: right;
+    margin-right: 25%;
+    width: 500px;
+    img {
+      margin: auto;
+    }
   }
   .testimonialText {
     left: 0;
+  }
+  .home-header {
+    display: none;
+  }
+  .section-description {
+    margin-top: 1em;
+  }
+  .jobSlide {
+    margin-left: 0em;
+  }
+  .right {
+    float: none;
+  }
+  .right-desc {
+    margin-left: 0%;
+    margin-right: 25%;
+  }
+  .left-desc {
+    margin-left: 0%;
+    margin-right: 25%;
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .carousel {
+    margin-right: 15%;
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .scroll-buttons {
+    font-size: 15px;
+  }
+  .dbc-image {
+    display: none;
+  }
+  .carousel {
+    margin-right: 15%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .big-picture {
+    width: 100%;
+    p {
+      width: 80%;
+    }
+  }
+  .page-description {
+    display: none;
+  }
+
+  .page-title {
+    padding-top: 0px;
+    font-size: 70px;
+  }
+  .log-button {
+    padding-top: 190px;
+  }
+  .home-header {
+    background-color: transparent;
+  }
+  .scroll-buttons {
+    display: none;
+  }
+  .first-description,
+  .second-description {
+    p {
+      font-size: 23px;
+    }
+  }
+  .first-description {
+    padding-top: 30px;
+  }
+  .carousel {
+    width: 450px;
+    padding-left: 0em;
+    /*    margin-right: auto;
+    margin-left: auto;*/
+  }
+  /* .slides {
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+    margin: 0 auto;
+  }*/
+  /*  .jobs img {
+    width: 100px;
+    height: 100px;
+  }*/
+  .jobSlide {
+    width: 100%;
+    padding: 0px;
+  }
+  .section-description {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel {
+    width: 80%;
+    margin-right: 10%;
+  }
+  /*  .jobs,
+  .projects,
+  .testimonials {
+    p {
+      display: none;
+    }
+  }*/
+}
+@media only screen and (max-width: 500px) {
+  .testimonials {
+    p {
+      display: none;
+    }
+    h2 {
+      margin-top: 5em;
+    }
   }
 }
