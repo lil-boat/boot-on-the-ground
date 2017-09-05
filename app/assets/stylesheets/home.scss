@@ -413,19 +413,19 @@
 
 @media (max-width: 1180px) {
   .jobs,
-  .projects,
-  .testimonials {
+  .projects {
     height: 700px;
   }
 
-  /*  .section-description {
-    margin: 6em 25% 6em 25%;
-  }*/
+  .testimonials {
+    height: 750px;
+  }
+
   .carousel {
     margin-left: 28%;
     margin-right: 25%;
+    margin-bottom: 20px;
     float: right;
-    margin-right: 25%;
     width: 500px;
     img {
       margin: auto;
@@ -433,6 +433,7 @@
   }
   .testimonialText {
     left: 0;
+    margin-top: 0px;
   }
   .home-header {
     display: none;
@@ -474,6 +475,11 @@
   .carousel {
     margin-right: 15%;
   }
+  .testimonialText {
+    font-size: 27px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -512,19 +518,7 @@
   .carousel {
     width: 450px;
     padding-left: 0em;
-    /*    margin-right: auto;
-    margin-left: auto;*/
   }
-  /* .slides {
-    width: 200px;
-    height: 200px;
-    padding: 0px;
-    margin: 0 auto;
-  }*/
-  /*  .jobs img {
-    width: 100px;
-    height: 100px;
-  }*/
   .jobSlide {
     width: 100%;
     padding: 0px;
@@ -539,21 +533,30 @@
     width: 80%;
     margin-right: 10%;
   }
-  /*  .jobs,
-  .projects,
-  .testimonials {
-    p {
-      display: none;
-    }
-  }*/
 }
 @media only screen and (max-width: 500px) {
   .testimonials {
-    p {
-      display: none;
-    }
     h2 {
-      margin-top: 5em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .first-description,
+  .second-description {
+    p {
+      font-size: 17px;
+    }
+  }
+  .testimonialText {
+    font-size: 24px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .section-description {
+    h2 {
+      font-size: 25px;
     }
   }
 }
