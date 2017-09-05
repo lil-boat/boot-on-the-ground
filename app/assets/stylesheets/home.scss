@@ -5,6 +5,9 @@
 .home {
   font-family: 'Source Sans Pro', sans-serif;
 }
+.right {
+  float: right;
+}
 
 @keyframes big-picture {
   0% {
@@ -264,6 +267,7 @@
 
 .jobs {
   height: 400px;
+  width: 100%;
   background-color: rgba(23, 37, 42, .93);
 }
 
@@ -277,12 +281,12 @@
 
 .projects {
   height: 400px;
+  width: 100%;
   background-color: rgba(23, 37, 42, .96);
 }
 
 .project-pics {
   height: 400px;
-  /*width: 550px;*/
   width: 100%;
 }
 
@@ -290,6 +294,7 @@
 
 .testimonials {
   height: 400px;
+  width: 100%;
   background-color: #17252a;
 }
 
@@ -412,6 +417,9 @@
 }
 
 @media (max-width: 1180px) {
+  .section-description {
+    display: block;
+  }
   .jobs,
   .projects {
     height: 700px;
@@ -422,14 +430,16 @@
   }
 
   .carousel {
-    margin-left: 28%;
-    margin-right: 25%;
+    /*    margin-left: 28%;
+    margin-right: 25%;*/
+    margin: auto;
     margin-bottom: 20px;
-    float: right;
+    display: block;
+    /*float: right;*/
     width: 500px;
-    img {
+    /*    img {
       margin: auto;
-    }
+    }*/
   }
   .testimonialText {
     left: 0;
@@ -442,26 +452,21 @@
     margin-top: 1em;
   }
   .jobSlide {
-    margin-left: 0em;
+    margin: auto;
   }
   .right {
     float: none;
   }
   .right-desc {
-    margin-left: 0%;
-    margin-right: 25%;
+    margin: auto;
+    /*    margin-left: 0%;
+    margin-right: 25%;*/
   }
   .left-desc {
-    margin-left: 0%;
-    margin-right: 25%;
-    float: right;
-  }
-}
-
-@media only screen and (max-width: 845px) {
-  .carousel {
-    margin-right: 15%;
-    width: 450px;
+    margin: auto;
+    /*    margin-left: 0%;
+    margin-right: 25%;*/
+    /*float: right;*/
   }
 }
 
@@ -473,7 +478,8 @@
     display: none;
   }
   .carousel {
-    margin-right: 15%;
+    /*margin-right: 15%;*/
+    width: 450px;
   }
   .testimonialText {
     font-size: 27px;
@@ -531,7 +537,7 @@
 @media only screen and (max-width: 600px) {
   .carousel {
     width: 80%;
-    margin-right: 10%;
+    /*margin-right: 10%;*/
   }
 }
 @media only screen and (max-width: 500px) {
