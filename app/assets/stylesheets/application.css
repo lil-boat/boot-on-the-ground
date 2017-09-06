@@ -153,3 +153,9 @@ button {
     font-size: 18px;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .menu {
+    display: none;
+  }
+}

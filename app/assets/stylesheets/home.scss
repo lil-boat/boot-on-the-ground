@@ -103,6 +103,14 @@
   }
 }
 
+.link {
+  display: none;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 .log-button {
   width: 160px;
   margin: 30px auto;
@@ -594,5 +602,14 @@
     h2 {
       font-size: 25px;
     }
+  }
+  .link {
+    display: block;
+  }
+  .no-link {
+    display: none;
+  }
+  .menu {
+    display: none;
   }
 }
