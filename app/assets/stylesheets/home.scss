@@ -317,8 +317,30 @@
 /*BOOTS IN THE WORLD*/
 
 .boots-in-the-world {
-  height: 700px;
+  height: 25%;
   background-color: #236361;
+  h2 {
+    width: 40%;
+    text-align: center;
+    color: white;
+    margin: auto;
+    letter-spacing: 0.05em;
+    font-size: 30pt;
+    border-bottom: 2px solid #3fbfb8;
+    padding: 10px;
+  }
+}
+
+.bootSlide {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  margin: 40px auto 0 auto;
+  width: 50%;
+  height: 80%;
+  margin-bottom: 5%;
 }
 
 /*LOGIN*/
@@ -489,6 +511,9 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .center {
+    width: 90%;
+  }
   .big-picture {
     width: 100%;
     p {
@@ -538,6 +563,11 @@
   .carousel {
     width: 80%;
     /*margin-right: 10%;*/
+  }
+  .boots-in-the-world {
+    h2 {
+      font-size: 25px;
+    }
   }
 }
 @media only screen and (max-width: 500px) {
