@@ -2,13 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user-info {
-  width: 380px;
+  width: 330px;
   display: inline-block;
   vertical-align: top;
 }
 
 .user-projects-container {
-  width: 65%;
+  width: 75%;
   margin: 30px auto;
   display: inline-block;
   vertical-align: top;
@@ -42,7 +42,7 @@
 .user-testimonial {
   width: 250px;
   margin-left: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: #6a737d;
   border-bottom: 1px solid #eee;
 }
@@ -50,7 +50,7 @@
 .user-location {
   @extend .username-profile;
   width: 250px;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 13pt;
   p,
   i {
@@ -134,4 +134,27 @@
 
 .project-form {
   padding-top: 4%;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.delete-link {
+  width: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 1409px) {
+  .user-projects-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .user-projects-container {
+    width: 45%;
+  }
 }

@@ -27,6 +27,7 @@ $(document).ready(function() {
   bootsOnTheGroundButtonListener();
   jobsCarousel();
   projectsCarousel();
+  bootCarousel();
   // tCarousel();
   textCarousel();
 });
@@ -37,14 +38,12 @@ var jobsCarousel = function() {
   var a = document.getElementsByClassName('jobSlide');
   for (i = 0; i < a.length; i++) {
     a[i].style.display = 'none';
-    console.log(a.length);
   }
   count++;
   if (count > a.length) {
     count = 1;
   }
   a[count - 1].style.display = 'block';
-  console.log(count);
   setTimeout(jobsCarousel, 5100);
 };
 var myIndex = 0;
@@ -61,6 +60,7 @@ var projectsCarousel = function() {
   x[myIndex - 1].style.display = 'block';
   setTimeout(projectsCarousel, 5000);
 };
+
 var testCount = 0;
 var tCarousel = function() {
   var i;
@@ -91,6 +91,21 @@ var textCarousel = function() {
   setTimeout(textCarousel, 16000);
 };
 
+var picCount = 0;
+var bootCarousel = function() {
+  var i;
+  var x = document.getElementsByClassName('bootSlide');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  picCount++;
+  if (picCount > x.length) {
+    picCount = 1;
+  }
+  x[picCount - 1].style.display = 'block';
+  setTimeout(bootCarousel, 11000);
+};
+
 var scrollListener = function() {
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 700) {
@@ -107,7 +122,7 @@ var aboutButtonListener = function() {
       {
         scrollTop: $('.about').offset().top
       },
-      1500
+      1000
     );
   });
 };
@@ -118,7 +133,7 @@ var jobsButtonListener = function() {
       {
         scrollTop: $('.jobs').offset().top - 50
       },
-      1500
+      1000
     );
   });
 };
@@ -129,7 +144,7 @@ var projectsButtonListener = function() {
       {
         scrollTop: $('.projects').offset().top - 50
       },
-      1500
+      1000
     );
   });
 };
@@ -140,7 +155,7 @@ var testimonialsButtonListener = function() {
       {
         scrollTop: $('.testimonials').offset().top - 50
       },
-      1500
+      1000
     );
   });
 };
@@ -151,7 +166,7 @@ var bootsInTheWorldButtonListener = function() {
       {
         scrollTop: $('.boots-in-the-world').offset().top - 50
       },
-      1500
+      1000
     );
   });
 };
@@ -162,7 +177,7 @@ var bootsOnTheGroundButtonListener = function() {
       {
         scrollTop: $('.big-picture').offset().top
       },
-      1500
+      1000
     );
   });
 };

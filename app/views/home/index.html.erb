@@ -1,4 +1,4 @@
-
+<div class="home">
 <%= render './layouts/login' %>
 <%= render './layouts/signup' %>
 <div class="home-header">
@@ -12,13 +12,14 @@
 
 <div class="big-picture">
 <div class="home-container" style="background-color: rgba(0, 0, 0, 0.3);height:100vh">
-  <p class="page-title">Boots On The Ground</p>
+  <p class="page-title">Boots on the Ground</p>
   <p class="page-description">a place to find what boots are up to post bootcamp</p>
   <div class="log-button">
     <% if current_user %>
       <a href="/users/<%= current_user.id %>"><button class="log-in-home-button">view profile</button></a>
     <% else %>
-      <button class="log-in-home-button" onclick="openLogin()">log in</button><br><br>
+      <button class="log-in-home-button no-link" onclick="openLogin()">log in</button><br><br>
+      <button class="log-in-home-button link"><a href="/users/sign_in">login</a></button><br><br>
     <% end %>
   </div>
   <div class="arrow">
@@ -45,14 +46,14 @@
 </div>
 
 <div class="jobs">
-  <div class="carousel" style="padding-left: 4em;">
-    <img class="jobSlide slides" src="https://watch.zeen.one/images/apple.png" style="height: 300px; width: 400px; padding-top:3em; padding-left:2em; margin-left: ">
-    <img class="jobSlide slides" src="images/search.png" style="height: 300px; width: 400px;padding-top:3em; padding-left:2em;">
-    <img class="jobSlide slides" src="images/Logo-2CRev-128px-TM.png" style="height: 150px; width: 400px;padding-top:6em; padding-left:3em; ">
-    <img class="jobSlide slides" src="images/logo_standard_pink.png" style="height: 300px; width: 400px;padding-top:3em; padding-left:2em;">
-    <img class="jobSlide slides" src="images/adobe.png" style="height: 300px; width: 400px;padding-top:3em; padding-left:2em; ">
-    <img class="jobSlide slides" src="images/Playstation-logo-colour.png" style="height: 300px; width: 400px; padding-top:3em; padding-left:2em;">
-    <img class="jobSlide slides" src="https://www.twilio.com/marketing/bundles/company-brand/img/logos/red/twilio-mark-red.png" style="height: 500px; width: 500px;margin-top: -4em;">
+  <div class="carousel">
+    <img class="jobSlide slides" src="https://watch.zeen.one/images/apple.png" style="height: 300px;  padding-top:3em; ">
+    <img class="jobSlide slides" src="images/search.png" style="height: 300px; padding-top:3em; ">
+    <img class="jobSlide slides" src="images/Logo-2CRev-128px-TM.png" style="height: 150px; padding-top:6em; ">
+    <img class="jobSlide slides" src="images/logo_standard_pink.png" style="height: 300px; padding-top:3em; ">
+    <img class="jobSlide slides" src="images/adobe.png" style="height: 300px; padding-top:3em;  ">
+    <img class="jobSlide slides" src="images/Playstation-logo-colour.png" style="height: 300px;  padding-top:3em; ">
+    <!-- <img class="jobSlide slides" src="https://www.twilio.com/marketing/bundles/company-brand/img/logos/red/twilio-mark-red.png" style="height: 500px; padding-right: 4em;"> -->
   </div>
   <div class="section-description right right-desc">
     <h2>Jobs</h2>
@@ -88,5 +89,18 @@
 </div>
 
 <div class="boots-in-the-world">
-  <h1>Where we are now</h1>
+    <h2>Where we are now</h2>
+  <div class="center">
+    <img class="bootSlide slides" src="images/1.jpg">
+    <img class="bootSlide slides" src="images/2.jpg">
+    <img class="bootSlide slides" src="images/3.jpg">
+    <img class="bootSlide slides" src="images/4.jpg">
+    <img class="bootSlide slides" src="images/5.jpg">
+    <img class="bootSlide slides" src="images/6.jpg">
+    <img class="bootSlide slides" src="images/7.jpg">
+    <img class="bootSlide slides" src="images/8.jpg">
+    <img class="bootSlide slides" src="images/9.jpg">
+    <img class="bootSlide slides" src="images/10.jpg">
+  </div>
+</div>
 </div>

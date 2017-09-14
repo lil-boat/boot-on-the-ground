@@ -1,7 +1,10 @@
+<div class="search">
+  <span class="material-icons search-icon">search</span>
+  <input type="text" name="" placeholder="search boots">
+  <button>Search</button>
+</div>
 <div class="card-container" id="container">
-  <h1>Employed Boots</h1>
   <% @users.each do |user| %>
-    <% if user.company  %>
       <div class="user-box">
         <% if user.image %>
           <div class="user-picture">
@@ -9,7 +12,6 @@
           </div>
         <% else %>
           <div class="no-user-picture">
-            
           </div>
         <% end %>
         <div class="user-name">
@@ -22,6 +24,5 @@
           <a href="<%= user.urls %>"><button class="connect-button">Connect</button></a>
         </div>
       </div>
-    <% end %>
   <% end  %>
 </div>
