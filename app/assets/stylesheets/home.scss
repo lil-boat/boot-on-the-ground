@@ -9,6 +9,170 @@
   float: right;
 }
 
+@media (max-width: 1311px) {
+  .right-desc {
+    margin-left: 25px;
+  }
+  .left-desc {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .section-description {
+    display: block;
+  }
+  .jobs,
+  .projects {
+    height: 700px;
+  }
+
+  .testimonials {
+    height: 750px;
+  }
+
+  .carousel {
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+    width: 500px;
+  }
+  .testimonialText {
+    left: 0;
+    margin-top: 0px;
+  }
+  .home-header {
+    display: none;
+  }
+  .section-description {
+    margin-top: 1em;
+  }
+  .jobSlide {
+    margin: auto;
+  }
+  .right {
+    float: none;
+  }
+  .right-desc {
+    margin: auto;
+  }
+  .left-desc {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .scroll-buttons {
+    font-size: 15px;
+  }
+  .dbc-image {
+    display: none;
+  }
+  .carousel {
+    width: 450px;
+  }
+  .testimonialText {
+    font-size: 27px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .center {
+    width: 90%;
+  }
+  .big-picture {
+    width: 100%;
+    p {
+      width: 80%;
+    }
+  }
+  .page-description {
+    display: none;
+  }
+
+  .page-title {
+    padding-top: 0px;
+    font-size: 70px;
+  }
+  .log-button {
+    padding-top: 190px;
+  }
+  .home-header {
+    background-color: transparent;
+  }
+  .scroll-buttons {
+    display: none;
+  }
+  .first-description,
+  .second-description {
+    p {
+      font-size: 25px;
+    }
+  }
+  .first-description {
+    padding-top: 30px;
+  }
+  .carousel {
+    width: 450px;
+    padding-left: 0em;
+  }
+  .jobSlide {
+    width: 100%;
+    padding: 0px;
+  }
+  .section-description {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel {
+    width: 80%;
+  }
+  .boots-in-the-world {
+    h2 {
+      font-size: 25px;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .testimonials {
+    h2 {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .no-link {
+    display: none;
+  }
+  .link {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .first-description,
+  .second-description {
+    p {
+      font-size: 20px;
+    }
+  }
+  .testimonialText {
+    font-size: 24px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .section-description {
+    h2 {
+      font-size: 25px;
+    }
+  }
+}
+
 @keyframes big-picture {
   0% {
     opacity: 0;
@@ -436,166 +600,4 @@
 
 /*MEDIA QUEREY*/
 
-@media (max-width: 1311px) {
-  .right-desc {
-    margin-left: 25px;
-  }
-  .left-desc {
-    margin-left: 25px;
-  }
-}
 
-@media (max-width: 1180px) {
-  .section-description {
-    display: block;
-  }
-  .jobs,
-  .projects {
-    height: 700px;
-  }
-
-  .testimonials {
-    height: 750px;
-  }
-
-  .carousel {
-    margin: auto;
-    margin-bottom: 20px;
-    display: block;
-    width: 500px;
-  }
-  .testimonialText {
-    left: 0;
-    margin-top: 0px;
-  }
-  .home-header {
-    display: none;
-  }
-  .section-description {
-    margin-top: 1em;
-  }
-  .jobSlide {
-    margin: auto;
-  }
-  .right {
-    float: none;
-  }
-  .right-desc {
-    margin: auto;
-  }
-  .left-desc {
-    margin: auto;
-  }
-}
-
-@media only screen and (max-width: 845px) {
-  .scroll-buttons {
-    font-size: 15px;
-  }
-  .dbc-image {
-    display: none;
-  }
-  .carousel {
-    width: 450px;
-  }
-  .testimonialText {
-    font-size: 27px;
-    margin-top: 0px;
-    padding-top: 0px;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .center {
-    width: 90%;
-  }
-  .big-picture {
-    width: 100%;
-    p {
-      width: 80%;
-    }
-  }
-  .page-description {
-    display: none;
-  }
-
-  .page-title {
-    padding-top: 0px;
-    font-size: 70px;
-  }
-  .log-button {
-    padding-top: 190px;
-  }
-  .home-header {
-    background-color: transparent;
-  }
-  .scroll-buttons {
-    display: none;
-  }
-  .first-description,
-  .second-description {
-    p {
-      font-size: 25px;
-    }
-  }
-  .first-description {
-    padding-top: 30px;
-  }
-  .carousel {
-    width: 450px;
-    padding-left: 0em;
-  }
-  .jobSlide {
-    width: 100%;
-    padding: 0px;
-  }
-  .section-description {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .carousel {
-    width: 80%;
-  }
-  .boots-in-the-world {
-    h2 {
-      font-size: 25px;
-    }
-  }
-}
-@media only screen and (max-width: 500px) {
-  .testimonials {
-    h2 {
-      margin-top: 0.5em;
-    }
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .no-link {
-    display: none;
-  }
-  .link {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .first-description,
-  .second-description {
-    p {
-      font-size: 20px;
-    }
-  }
-  .testimonialText {
-    font-size: 24px;
-    margin-top: 0px;
-    padding-top: 0px;
-  }
-  .section-description {
-    h2 {
-      font-size: 25px;
-    }
-  }
-}
