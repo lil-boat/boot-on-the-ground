@@ -1,0 +1,28 @@
+<div class="search">
+  <span class="material-icons search-icon">search</span>
+  <input type="text" name="" placeholder="search boots">
+  <button>Search</button>
+</div>
+<div class="card-container" id="container">
+  <% @users.each do |user| %>
+      <div class="user-box">
+        <% if user.image %>
+          <div class="user-picture">
+            <%= image_tag(user.image, :class => "image")%>
+          </div>
+        <% else %>
+          <div class="no-user-picture">
+          </div>
+        <% end %>
+        <div class="user-name">
+           <a href="/users/<%= user.id %>"><%= user.name %></a> 
+        </div>
+        
+          <p class="job-title"><%= user.job_title %></p>
+          <p class="job-company"><%= user.company %></p>
+        <div class="buttons">
+          <a href="<%= user.urls %>"><button class="connect-button">Connect</button></a>
+        </div>
+      </div>
+  <% end  %>
+</div>

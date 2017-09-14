@@ -1,0 +1,125 @@
+// Place all the styles related to the companies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  button {
+    font-weight: 400;
+    font-size: 15pt;
+    background-color: #3fbfb8;
+    border: none;
+    padding: 7px;
+    color: white;
+    width: 75px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  input {
+    text-indent: 32px;
+    font-size: 15pt;
+    /*border: 1px solid #3fbfb8;*/
+    outline: grey;
+    padding: 5px;
+    width: 70%;
+  }
+  .search-icon {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    color: grey;
+    font-size: 17pt;
+  }
+}
+
+.company-box {
+  border-bottom: 1px solid #eee;
+  margin: 20px;
+  width: 500px;
+}
+
+.company-card {
+  perspective: 1000px;
+  display: inline-block;
+  margin: 1em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.34);
+  &:hover {
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 0px #fff;
+    position: relative;
+    top: 3px;
+    border: none;
+  }
+}
+
+.company-card:hover .flipper,
+.company-card.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.company-card,
+.front,
+.back {
+  width: 300px;
+  height: 400px;
+}
+
+.company-image {
+  width: 300px;
+  height: 300px;
+  background-image: url("https://unsplash.it/300/300?image=2");
+}
+
+.company-name {
+  width: 300;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.company-name-front {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+#employees-title {
+  width: 250px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.employee-name {
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}

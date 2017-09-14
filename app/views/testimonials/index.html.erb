@@ -1,0 +1,8 @@
+<h1>testimonials</h1>
+
+  <%@users.each do |user| %>
+    <div>
+      <p><%= user.testimonial %></p>
+      <p><%= user.username %></p>
+    </div>
+  <% end %>

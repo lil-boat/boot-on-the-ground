@@ -10,6 +10,152 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
  *= require_tree .
+ *= require font-awesome
  *= require_self
+ *= require jcrop
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  /*font-family: "Open Sans", Helvetica, sans-serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: white;
+}
+
+button {
+  font-weight: 800;
+}
+
+.card-container {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 50px;
+  width: 950px;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/*HEADER*/
+
+.header {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  background-color: #17252a;
+  color: white;
+  font-weight: 900;
+}
+
+.menu {
+  display: inline-block;
+  float: right;
+  margin: 25px 0px 0px 0px;
+  font-size: 13pt;
+  text-transform: uppercase;
+}
+
+#bars {
+  display: inline-block;
+  float: right;
+  margin: 18px 25px 0px 10px;
+  cursor: pointer;
+  transition: 1s all ease;
+}
+
+#bars:hover {
+  color: #3fbfb8;
+}
+.boots-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 20px 20px 0px 20px;
+}
+
+/*SIDENAV*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #17252a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  float: right;
+  transition: all 0.5s ease;
+  font-weight: 900;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: all 1s ease;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #3fbfb8;
+}
+
+.sidenav .closebtn {
+  top: 0;
+  left: 30px;
+  font-size: 36px;
+  margin-left: 5px;
+}
+
+.closebtn {
+  top: 0;
+  left: 30px;
+  font-size: 36px;
+  margin-left: 5px;
+  width: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .menu {
+    display: none;
+  }
+}

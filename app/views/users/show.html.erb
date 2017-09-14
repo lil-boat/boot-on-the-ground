@@ -1,0 +1,51 @@
+<div class="container">
+  
+  <div class="user-info">
+      <% if @user.image %>
+        <div class="profile-pic">
+          <%= image_tag(@user.image, :class => "user-pic") %>
+        </div>
+      <% else %>
+        <div class="no-profile-pic">
+          
+        </div>
+      <% end %>
+    <p class="username-profile"><%= @user.name %></p><br>
+
+    <div class="user-location">
+      <i class="fa fa-map-marker location-icon"></i>
+      <p class="location"><%= @user.location %></p>
+    </div>
+
+    <div class="user-email">
+      <i class="fa fa-envelope-o email-icon"></i>
+      <p class="email"><%= @user.email %></p>
+    </div>
+    
+    
+    <div class="user-testimonial">
+      <% if @user.company %>
+        <% if @user.companies.first.image %>
+          <img src="<%= @user.companies.first.image %>?size=60" style="margin: 10px 0px;">
+        <% end %>
+        <br>
+          <p class="user-job-title"><%= @user.job_title %></p>
+          <%= @user.company %><br>
+          <%= @user.job_location %><br>
+      <% end %>
+    </div>
+
+
+    <div class="user-buttons">
+      <% if @user == current_user %>
+          <button class="add-project-button user-button" id="add-project-button" onclick="projectPopUp()">New Project</button>
+      <% else %>
+          <a href="<%= @user.urls %>"><button class="profile-connect-button">Connect</button></a>
+    <% end %>
+    </div>
+  </div>
+    <div class="user-projects-container">
+      <%= render '/projects/project_card' %>
+    </div>
+    <%= render '/projects/form' %>
+</div>

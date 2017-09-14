@@ -1,0 +1,12 @@
+
+
+  <%= form_for @post, remote: true do |f| %>
+  
+  <%= f.select :category, options_for_select(["Job", "Projects", "Other"]), {include_blank: "Select Category"}, { :class => 'input-field-dropdown' }%>
+
+
+    <%= f.text_area :body, placeholder: 'content...', :class => 'input-field' %>
+    
+    <%= f.submit "Post", :class => 'form-submit-button', :id => "new-post-submit" %>
+    <% end %>
+

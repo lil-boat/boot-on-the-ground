@@ -1,0 +1,30 @@
+<% @projects.each do |project| %>
+  <div class="project-card" onclick="flipCard()">
+    <div class="flipper">
+      <div class="front">
+        <div class="project-image">
+          <% if project.image_file_name == nil %>
+            <img class="project-image-seed" src="https://unsplash.it/300/300/?image=<%= project.project_seed_pic %>" alt="ooppsss">
+          <% else %>
+            <%= image_tag project.image.url(:medium) %>
+          <% end %>
+        </div>
+        <h2 class="project-title-front"> <%= project.title %></h2>
+      </div>
+      <div class="back">
+      <h2 class="project-title"> <%= project.title %></h2>
+        <p class="project-description"><%= project.description %></p>
+        <div class="project-url"><a href="<%= project.url %>"><%= project.url %></a></div>
+        <% if project.users.include?(current_user) %>
+          <p class="delete-link"><%= link_to "Delete", project_path(project), method: :delete %></p>
+          
+        <% end %>
+        
+        <h2 id="contributers-title">Contributers</h2>
+        <% project.users.each do |contributer| %>
+          <a href="/users/<%= contributer.id %>"><p class="contributer-name"><%= contributer.name %></p></a> 
+        <% end  %>
+      </div>
+    </div>
+  </div>
+<% end %>

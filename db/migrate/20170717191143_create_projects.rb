@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.string :description, null: false
       t.attachment :image
       t.string :url
+      t.integer :project_seed_pic
       t.timestamps
     end
   end

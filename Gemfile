@@ -28,9 +28,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem "paperclip", "~> 5.0.0"
+gem 'jquery-rails'
+gem "font-awesome-rails"
+gem 'clearbit'
+gem 'httparty'
+gem 'jcrop-rails-v2'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'rails-assets-jcrop', source: "https://rails-assets.org"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -51,3 +59,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
+gem 'omniauth-linkedin'
+gem 'dotenv-rails'

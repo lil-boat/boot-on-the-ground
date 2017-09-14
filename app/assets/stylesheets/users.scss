@@ -1,0 +1,160 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-info {
+  width: 330px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.user-projects-container {
+  width: 75%;
+  margin: 30px auto;
+  display: inline-block;
+  vertical-align: top;
+  border-top: 1px solid #eee;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  margin: 30px 50px;
+  border-radius: 5px;
+}
+
+.no-profile-pic {
+  @extend .profile-pic;
+  background-image: url("https://unsplash.it/250/250?image=1062");
+}
+
+.user-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.username-profile {
+  width: 250px;
+  margin-left: 50px;
+  font-size: 25pt;
+}
+
+.user-testimonial {
+  width: 250px;
+  margin-left: 50px;
+  padding-bottom: 5px;
+  color: #6a737d;
+  border-bottom: 1px solid #eee;
+}
+
+.user-location {
+  @extend .username-profile;
+  width: 250px;
+  margin-top: 5px;
+  font-size: 13pt;
+  p,
+  i {
+    display: inline-block;
+  }
+  a {
+    margin-left: px;
+  }
+  i {
+    width: 20px;
+    text-align: center;
+  }
+}
+
+.user-email {
+  @extend .user-location;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-job-title {
+  font-size: 13pt;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.user-buttons {
+  width: 250px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.user-button {
+  margin: 10px auto;
+  width: 200px;
+  height: 55px;
+  font-size: 24px;
+  background-color: #3aafa9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+
+.profile-connect-button {
+  @extend .user-button;
+}
+
+.jobs-form {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: right;
+}
+
+.jobs-form {
+  padding-top: 150px;
+}
+
+.project-form {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: right;
+}
+
+.project-form {
+  padding-top: 4%;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.delete-link {
+  width: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 1409px) {
+  .user-projects-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .user-projects-container {
+    width: 45%;
+  }
+}

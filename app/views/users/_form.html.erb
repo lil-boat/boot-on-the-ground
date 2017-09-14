@@ -1,0 +1,16 @@
+<%= form_for(@user) do |f| %>
+<%= f.text_field :username, placeholder: 'username', :class => 'input-field' %>
+
+
+<%= f.password_field :password, placeholder: 'password', :class => 'input-field' %>
+
+
+<%= f.password_field :password_confirmation, placeholder: 'confirm password', :class => 'input-field' %>
+
+
+<%= f.text_area :testimonial, size:"100x10", placeholder: 'DBC testimonial', :class => 'input-field' %>
+
+<%= f.file_field :image, placeholder: 'Upload Logo', :class => 'input-field' %> 
+
+<%= f.submit "Create Account", :class => 'form-submit-button' %>
+<% end %>

@@ -1,0 +1,318 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/****** Form css ******/
+
+.form-container {
+  margin: auto;
+  /*color: #def2f1;*/
+  width: 400px;
+  /*background-color: #17252a;*/
+  background-color: white;
+  border-radius: 2px;
+}
+
+.form-container h2 {
+  padding-top: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.input-field {
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 276px;
+  border-style: none;
+  font-size: 14pt;
+  color: black;
+  border: 1px solid #8d8d8d;
+  background-color: white;
+  outline: none;
+}
+
+.log-field {
+  @extend .input-field;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8d8d8d;
+}
+
+.input-field-dropdown {
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 300px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 14pt;
+  color: #def2f1;
+  border: 1px solid #def2f1;
+  background-color: #17252a;
+}
+
+.form-submit-button {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 300px;
+  font-size: 18pt;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #3fbfb8;
+  cursor: pointer;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+/****** message board css ******/
+#posts-bg-color {
+  width: 100%;
+  background-color: rgb(233, 235, 238);
+}
+
+.message-board-container {
+  padding: 10px;
+  margin-top: -12px;
+}
+
+#new-post-form {
+  width: 500px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#new-post-form .input-field {
+  display: inline-block;
+  color: black;
+  font-size: 12pt;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(35, 99, 97, 0.5);
+  margin: 0;
+  margin-bottom: 5px;
+  width: 480px;
+  background-color: white;
+}
+
+#categories-drop-down {
+  margin-left: 285px;
+  padding: 2.5px;
+  background-color: #236361;
+  display: inline-block;
+}
+
+#cat-drop-down {
+  border: none;
+  padding: 5px;
+  font-size: 12pt;
+  color: white;
+  background-color: #236361;
+}
+
+#post-submit {
+  background-color: blue;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  align-content: center;
+}
+/*
+#comment-form-container{
+  display: none;
+}*/
+
+#post-submit-button {
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  background-color: #236361;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}
+
+.post-container {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.post-author-info {
+  margin: auto;
+  width: 480px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.author-picture {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.user-pic-post {
+  height: 50px;
+  width: 50px;
+}
+
+.author-name {
+  display: inline-block;
+  color: #236361;
+  font-weight: bold;
+  margin-top: 17px;
+  margin-left: 5px;
+  vertical-align: top;
+  font-size: 12pt;
+}
+
+.post-main-content {
+  margin: auto;
+  width: 480px;
+  padding-bottom: 10px;
+  font-size: 12pt;
+}
+
+.like-and-comment-section {
+  margin: auto;
+  width: 480px;
+  padding-bottom: 10px;
+  color: red;
+}
+
+.like-and-comment-section img {
+  width: 25px;
+}
+
+#post-like-and-comment-section button {
+  border: none;
+  background-color: white;
+  color: #3aafa9;
+  font-size: 12pt;
+  display: inline-block;
+  margin-top: 8px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+#comment-like-and-comment-section{
+  margin-left: 5px;
+  width: 100px;
+  float: right;
+  padding-top: 12px;
+  
+}
+
+#comment-like-and-comment-section button {
+  border: none;
+  background-color: rgb(246, 247, 249);
+  color: #3aafa9;
+  font-size: 12pt;
+  display: inline-block;
+  margin-top: 8px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.comment-container {
+  width: 500px;
+  background-color: rgb(246, 247, 249);
+  border-radius: 5px;
+  
+}
+
+.individual-comment-container {
+  margin: auto;
+  width: 480px;
+  border-top: 1px solid rgba(35, 99, 97, 0.5);
+  background-color: rgb(246, 247, 249);
+}
+
+.post-comment  p{
+  width: 300px;
+}
+
+.comment-author-picture {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 40px;
+  width: 40px;
+  /*background-color: lightgrey;*/
+  background-image: url("https://unsplash.it/50/50?image=162");
+}
+
+.comment-author-name {
+  display: inline-block;
+  color: #236361;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+  vertical-align: top;
+  font-size: 10pt;
+}
+
+.post-comment {
+  width: 420px;
+  margin-left: 60px;
+  margin-top: -22px;
+  padding-bottom: 10px;
+  font-size: 10pt;
+}
+
+
+.comment-form-container{
+  display: none;
+  margin: auto;
+  width: 480px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.comment-form {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+#comment-submit {
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+
+#comment-submit-button {
+  padding: 5.5px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  background-color: #236361;
+  &:hover {
+    background-color: #3aafa9;
+  }
+}

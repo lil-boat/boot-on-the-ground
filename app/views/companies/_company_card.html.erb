@@ -1,0 +1,24 @@
+<% @companies.each do |company| %>
+  <% if company.users.length >= 1 %>
+    <div class="company-card" onclick="flipCard()">
+      <div class="flipper">
+        <div class="front">
+          <div class="company-image">
+            <% if company.image %>
+              <img src="<%= company.image %>?size=300">
+            <% end %>
+          </div>
+          <h2 class="company-name-front"><%= company.name %></h2>
+        </div>
+        <div class="back">
+          <h2 class="company-name"><%= company.name %></h2>
+          <a href="https://<%= company.url %>">www.<%= company.url %></a>
+          <h3 id="employees-title">Boots working here</h2>
+            <% company.users.each do |employee| %>
+            <p class="employee-name"><%= link_to employee.name, user_path(employee)%></p>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>  
+<% end %>

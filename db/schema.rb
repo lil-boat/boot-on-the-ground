@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717193128) do
+ActiveRecord::Schema.define(version: 20170801013104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,15 @@ ActiveRecord::Schema.define(version: 20170717193128) do
     t.string "body", null: false
     t.integer "post_id"
     t.integer "user_id"
-    t.integer "likes_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "companies", force: :cascade do |t|
     t.string "name", null: false
-    t.string "description", null: false
+    t.string "description"
+    t.string "location"
+    t.string "image"
     t.string "logo_file_name"
     t.string "logo_content_type"
     t.integer "logo_file_size"
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170717193128) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
   end
 
   create_table "company_users", force: :cascade do |t|
@@ -59,8 +61,8 @@ ActiveRecord::Schema.define(version: 20170717193128) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "posts", force: :cascade do |t|
-    t.string "title", null: false
     t.string "body", null: false
     t.string "category", null: false
     t.integer "user_id"
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(version: 20170717193128) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "url"
+    t.integer "project_seed_pic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -89,15 +92,31 @@ ActiveRecord::Schema.define(version: 20170717193128) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "password_digest", null: false
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
-    t.string "testimonal"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "location"
+    t.string "description"
+    t.string "company"
+    t.text "image"
+    t.string "job_title"
+    t.string "job_location"
+    t.string "urls"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 
 end
