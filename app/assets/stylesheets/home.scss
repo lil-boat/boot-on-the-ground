@@ -64,7 +64,6 @@
   text-align: center;
   text-shadow: 0.5px 0.5px 0.5px #000;
   letter-spacing: 0.025em;
-  /*text-transform: uppercase;*/
   animation: big-picture 3s 2s forwards;
   opacity: 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -460,16 +459,10 @@
   }
 
   .carousel {
-    /*    margin-left: 28%;
-    margin-right: 25%;*/
     margin: auto;
     margin-bottom: 20px;
     display: block;
-    /*float: right;*/
     width: 500px;
-    /*    img {
-      margin: auto;
-    }*/
   }
   .testimonialText {
     left: 0;
@@ -489,14 +482,9 @@
   }
   .right-desc {
     margin: auto;
-    /*    margin-left: 0%;
-    margin-right: 25%;*/
   }
   .left-desc {
     margin: auto;
-    /*    margin-left: 0%;
-    margin-right: 25%;*/
-    /*float: right;*/
   }
 }
 
@@ -508,7 +496,6 @@
     display: none;
   }
   .carousel {
-    /*margin-right: 15%;*/
     width: 450px;
   }
   .testimonialText {
@@ -548,7 +535,7 @@
   .first-description,
   .second-description {
     p {
-      font-size: 23px;
+      font-size: 25px;
     }
   }
   .first-description {
@@ -570,7 +557,6 @@
 @media only screen and (max-width: 600px) {
   .carousel {
     width: 80%;
-    /*margin-right: 10%;*/
   }
   .boots-in-the-world {
     h2 {
@@ -586,11 +572,20 @@
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .no-link {
+    display: none;
+  }
+  .link {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .first-description,
   .second-description {
     p {
-      font-size: 17px;
+      font-size: 20px;
     }
   }
   .testimonialText {
@@ -602,14 +597,5 @@
     h2 {
       font-size: 25px;
     }
-  }
-  .link {
-    display: block;
-  }
-  .no-link {
-    display: none;
-  }
-  .menu {
-    display: none;
   }
 }
